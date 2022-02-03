@@ -1,0 +1,64 @@
+{
+  "name": "@bluframe/grapple",
+  "version": "0.1.0",
+  "description": "Blu Frame Grapple",
+  "main": "build/cjs/index.js",
+  "module": "build/esm/index.js",
+  "author": "Edoardo L'Astorina <edoardo@blufra.me>",
+  "license": "MIT",
+  "engines": {
+    "node": "16"
+  },
+  "exports": {
+    ".": "./build/esm/index.js",
+    "./useOnScreen": "./build/esm/useOnScreen.js",
+    "./useTrimText": "./build/esm/useTrimText.js"
+  },
+  "files": [
+    "build/esm/*"
+  ],
+  "scripts": {
+    "build": "NODE_ENV=production rollup -c",
+    "build:ci": "NODE_ENV=production rollup -c",
+    "clean": "rm -fr build/*",
+    "flow": "flow",
+    "flow:ci": "flow --quiet",
+    "lint": "eslint src/",
+    "lint:ci": "eslint --quiet src/",
+    "test": "echo Blu Frame Grapple Tests",
+    "test:ci": "echo Blu Frame Grapple Tests"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.12",
+    "@babel/eslint-parser": "^7.16.5",
+    "@babel/plugin-syntax-flow": "^7.16.7",
+    "@babel/plugin-transform-react-jsx": "^7.16.7",
+    "@babel/plugin-transform-runtime": "^7.16.10",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-flow": "^7.16.7",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/runtime": "^7.16.7",
+    "@rollup/plugin-babel": "^5.3.0",
+    "babel-jest": "^27.4.6",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-flowtype": "^7.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jest": "^25.7.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "flow-bin": "^0.169.0",
+    "jest": "^27.4.7",
+    "jest-resolve": "^27.4.6",
+    "jest-watch-typeahead": "^0.6.5",
+    "prettier": "^2.5.1",
+    "resolve": "^1.22.0",
+    "rollup": "^2.66.1",
+    "rollup-plugin-includepaths": "^0.2.4"
+  },
+  "moduleRoots": [
+    "src"
+  ]
+}
