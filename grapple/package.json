@@ -1,6 +1,6 @@
 {
   "name": "@bluframe/grapple",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Blu Frame Grapple",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
@@ -10,12 +10,21 @@
     "node": "16"
   },
   "exports": {
-    ".": "./lib/esm/index.js",
-    "./useOnScreen": "./lib/esm/useOnScreen.js",
-    "./useTrimText": "./lib/esm/useTrimText.js"
+    ".": {
+      "import": "./lib/esm/index.js",
+      "require": "./lib/cjs/index.js"
+    },
+    "./useOnScreen": {
+      "import": "./lib/esm/useOnScreen.js",
+      "require": "./lib/cjs/useOnScreen.js"
+    },
+    "./useTrimText": {
+      "import": "./lib/esm/useTrimText.js",
+      "require": "./lib/cjs/useTrimText.js"
+    }
   },
   "files": [
-    "lib/esm/*"
+    "lib"
   ],
   "scripts": {
     "build": "NODE_ENV=production rollup -c",
