@@ -1,0 +1,34 @@
+{
+  "name": "@bluframe/bluframe",
+  "version": "0.1.0",
+  "description": "Blu Frame Open Source!",
+  "main": "index.js",
+  "repository": "git@github.com:bluframe/bluframe.git",
+  "author": "Edoardo L'Astorina <edoardo@blufra.me>",
+  "license": "MIT",
+  "engines": {
+    "node": "16"
+  },
+  "scripts": {
+    "build": "yarn workspaces foreach -pt --exclude @bluframe/bluframe run build",
+    "build:ci": "yarn workspaces foreach -pt --exclude @bluframe/bluframe run build:ci",
+    "clean": "yarn workspaces foreach -p --exclude @bluframe/bluframe run clean",
+    "flow": "yarn workspaces foreach -pi --exclude @bluframe/bluframe run flow",
+    "flow:ci": "yarn workspaces foreach -p -j 3 --exclude @bluframe/bluframe run flow:ci",
+    "lint": "yarn workspaces foreach -pi --exclude @bluframe/bluframe run lint",
+    "lint:ci": "yarn workspaces foreach -p -j 4 --exclude @bluframe/bluframe run lint:ci",
+    "postinstall": "husky install",
+    "set:version": "cd scripts && node ./setVersion.js",
+    "show:version": "cd scripts && node ./showVersion.js",
+    "test": "yarn workspaces foreach -pi --exclude @bluframe/bluframe run test",
+    "test:ci": "yarn workspaces foreach -p -j 3 --exclude @bluframe/bluframe run test:ci --runInBand"
+  },
+  "packageManager": "yarn@3.1.1",
+  "workspaces": [
+    "grapple"
+  ],
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "husky": "^7.0.4"
+  }
+}

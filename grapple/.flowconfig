@@ -1,0 +1,16 @@
+[options]
+module.name_mapper='^helpers\(\/?.*\)$' -> '<PROJECT_ROOT>/src/helpers/\1'
+module.name_mapper='^hocs\(\/?.*\)$' -> '<PROJECT_ROOT>/src/hocs/\1'
+module.name_mapper='^hooks\(\/?.*\)$' -> '<PROJECT_ROOT>/src/hooks/\1'
+module.system.node.resolve_dirname=node_modules
+
+[ignore]
+
+[include]
+
+[libs]
+flow-typed/*.js
+
+[lints]
+
+[strict]
