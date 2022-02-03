@@ -2,25 +2,25 @@
   "name": "@bluframe/grapple",
   "version": "0.1.0",
   "description": "Blu Frame Grapple",
-  "main": "build/cjs/index.js",
-  "module": "build/esm/index.js",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
   "author": "Edoardo L'Astorina <edoardo@blufra.me>",
   "license": "MIT",
   "engines": {
     "node": "16"
   },
   "exports": {
-    ".": "./build/esm/index.js",
-    "./useOnScreen": "./build/esm/useOnScreen.js",
-    "./useTrimText": "./build/esm/useTrimText.js"
+    ".": "./lib/esm/index.js",
+    "./useOnScreen": "./lib/esm/useOnScreen.js",
+    "./useTrimText": "./lib/esm/useTrimText.js"
   },
   "files": [
-    "build/esm/*"
+    "lib/esm/*"
   ],
   "scripts": {
     "build": "NODE_ENV=production rollup -c",
     "build:ci": "NODE_ENV=production rollup -c",
-    "clean": "rm -fr build/*",
+    "clean": "rm -fr lib/*",
     "flow": "flow",
     "flow:ci": "flow --quiet",
     "lint": "eslint src/",

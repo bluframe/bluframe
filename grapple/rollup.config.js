@@ -30,7 +30,7 @@ const config = [
     external,
     input,
     output: {
-      dir: "build/cjs",
+      dir: "lib/cjs",
       exports: "named",
       format: "cjs"
     },
@@ -40,7 +40,7 @@ const config = [
    external,
    input,
    output: {
-      dir: "build/esm",
+      dir: "lib/esm",
       format: "esm"
     },
     plugins
