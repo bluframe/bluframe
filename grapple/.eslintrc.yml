@@ -2,6 +2,7 @@ env:
   browser: true
   es6: true
   node: true
+
 globals:
   NODE_ENV: true
 
@@ -43,15 +44,16 @@ rules:
       avoidEscape: true
   react/jsx-uses-vars: 1
   react/jsx-indent:
+    - error
     - 2
-    - 2
-  react/jsx-indent-props:
-    - 2
-    - 2
+  react/jsx-indent-props: 0
   react/jsx-max-props-per-line:
-    - 2
+    - warn
     - maximum: 1
-  react/jsx-first-prop-new-line: 1
+      when: multiline
+  react/jsx-first-prop-new-line:
+    - warn
+    - multiline-multiprop
   react/no-danger: 0
   react/prefer-stateless-function: 1
   react/no-will-update-set-state: 0
@@ -61,7 +63,7 @@ rules:
   react/jsx-wrap-multilines: 0
   react/jsx-closing-tag-location: 0
   react/jsx-closing-bracket-location:
-    - 1
+    - warn
     - tag-aligned
   react/jsx-no-undef:
     - 1
@@ -72,13 +74,14 @@ rules:
   react/jsx-filename-extension: 0
   react/jsx-props-no-spreading: 0
   react-hooks/rules-of-hooks: error
-  react-hooks/exhaustive-deps: 0
+  react-hooks/exhaustive-deps: warn
   react/function-component-definition:
     - error
     - namedComponents: arrow-function
   react/jsx-max-depth:
     - warn
     - max: 4
+  react/react-in-jsx-scope: 0
   no-console: 1
   no-inner-declarations: 1
   max-len: 0
