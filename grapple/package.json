@@ -18,6 +18,10 @@
       "import": "./lib/esm/useOnScreen.js",
       "require": "./lib/cjs/useOnScreen.js"
     },
+    "./usePrevious": {
+      "import": "./lib/esm/usePrevious.js",
+      "require": "./lib/cjs/usePrevious.js"
+    },
     "./useTrimText": {
       "import": "./lib/esm/useTrimText.js",
       "require": "./lib/cjs/useTrimText.js"

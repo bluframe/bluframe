@@ -4,6 +4,7 @@ import includePaths from "rollup-plugin-includepaths"
 const input = {
   index: "src/index.js",
   useOnScreen: "src/useOnScreen.js",
+  usePrevious: "src/usePrevious.js",
   useTrimText: "src/useTrimText.js"
 }
 
@@ -34,12 +35,12 @@ const config = [
       exports: "named",
       format: "cjs"
     },
-   plugins
+    plugins
   },
   {
-   external,
-   input,
-   output: {
+    external,
+    input,
+    output: {
       dir: "lib/esm",
       format: "esm"
     },
