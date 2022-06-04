@@ -20,7 +20,7 @@ const plugins = [
   copy({
     targets: [
       {
-        dest: "./build/css",
+        dest: "./lib/css",
         rename: "blublocks.css",
         src: "./src/styles/foundation/css/foundation.css"
       }
@@ -45,7 +45,7 @@ const config = [
     input,
     onwarn,
     output: {
-      dir: "build/cjs",
+      dir: "lib/cjs",
       exports: "named",
       format: "cjs"
     },
@@ -55,7 +55,7 @@ const config = [
     input,
     onwarn,
     output: {
-      dir: "build/esm",
+      dir: "lib/esm",
       format: "esm"
     },
     plugins

@@ -1,6 +1,6 @@
 {
   "name": "@bluframe/blublocks",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Blu Frame Blu Blocks",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
@@ -12,24 +12,21 @@
   "exports": {
     ".": {
       "import": "./lib/esm/index.js",
-      "require": "./lib/esm/index.js"
+      "require": "./lib/cjs/index.js"
     },
     "./BluBlocksProvider": {
       "import": "./lib/esm/BluBlocksProvider.js",
-      "require": "./lib/esm/BluBlocksProvider.js"
+      "require": "./lib/cjs/BluBlocksProvider.js"
     },
     "./Button": {
       "import": "./lib/esm/Button.js",
-      "require": "./lib/esm/Button.js"
+      "require": "./lib/cjs/Button.js"
     },
     "./Content": {
       "import": "./lib/esm/Content.js",
-      "require": "./lib/esm/Content.js"
+      "require": "./lib/cjs/Content.js"
     },
-    "./blublocks.css": {
-      "import": "./lib/css/blublocks.css",
-      "require": "./lib/css/blublocks.css"
-    }
+    "./blublocks.css": "./lib/css/blublocks.css"
   },
   "files": [
     "lib"
