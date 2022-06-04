@@ -1,6 +1,6 @@
 {
   "name": "@bluframe/blublocks",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Blu Frame Blu Blocks",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
@@ -25,6 +25,10 @@
     "./Content": {
       "import": "./lib/esm/Content.js",
       "require": "./lib/cjs/Content.js"
+    },
+    "./Hamburger": {
+      "import": "./lib/esm/Hamburger.js",
+      "require": "./lib/cjs/Hamburger.js"
     },
     "./blublocks.css": "./lib/css/blublocks.css"
   },
