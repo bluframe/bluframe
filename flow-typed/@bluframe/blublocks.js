@@ -59,6 +59,7 @@ declare module "@bluframe/blublocks" {
   declare type ProviderComponent = React$ComponentType<ProviderProps>
 
   // Exports
+  declare var Animations: any
   declare var BluBlocksProvider: ProviderComponent
   declare var Button: ButtonComponent
   declare var Column: StyledComponent<{}, mixed, HTMLDivElement>
@@ -73,6 +74,10 @@ declare module "@bluframe/blublocks" {
   declare var Section: StyledComponent<{}, mixed, HTMLElement>
   declare var colors: any
   declare var mediaQueries: any
+}
+
+declare module "@bluframe/blublocks/Animations" {
+  declare export default any
 }
 
 declare module "@bluframe/blublocks/BluBlocksProvider" {
