@@ -1,6 +1,6 @@
 {
   "name": "@bluframe/blublocks",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Blu Frame Blu Blocks",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
@@ -45,7 +45,7 @@
     "test:ci": "jest --coverage --silent"
   },
   "dependencies": {
-    "@bluframe/grapple": "workspace:^",
+    "@bluframe/grapple": "^0.4.0",
     "@fortawesome/fontawesome-svg-core": "^1.3.0",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.17",
