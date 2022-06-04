@@ -10,13 +10,13 @@ const useOnScreen = (
 ): [boolean, {| current: ?HTMLElement |}] => {
   const ref = useRef<?HTMLElement>(null)
 
-  const [isOnScreen, setOnScreen] = useState<boolean>(DEFAULT_IS_VISIBLE)
+  const [isOnScreen, setIsOnScreen] = useState<boolean>(DEFAULT_IS_VISIBLE)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setOnScreen(entry.isIntersecting)
+          setIsOnScreen(entry.isIntersecting)
         }
       },
       {

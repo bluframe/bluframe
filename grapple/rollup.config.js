@@ -3,6 +3,7 @@ import includePaths from "rollup-plugin-includepaths"
 
 const input = {
   index: "src/index.js",
+  prepareComponent: "src/prepareComponent.js",
   useOnScreen: "src/useOnScreen.js",
   usePrevious: "src/usePrevious.js",
   useTrimText: "src/useTrimText.js"
