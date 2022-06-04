@@ -11,6 +11,7 @@ const input = {
   Button: "src/components/buttons/Button/index.js",
   Content: "src/components/Content/index.js",
   Hamburger: "src/components/Hamburger/index.js",
+  Icon: "src/components/Icon/index.js",
   index: "src/index.js"
 }
 

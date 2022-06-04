@@ -1,16 +1,12 @@
 // @flow
 
 import Icon from "./Icon"
+import type { IconProps } from "@bluframe/blublocks"
 import ionIcons from "./ionIcons"
 import { prepareComponent } from "@bluframe/grapple"
 
-type IconGroup = "ion"
-
 export type Props = {|
-  +color?: string,
-  +group: IconGroup,
-  +name: string,
-  +size?: string
+  ...IconProps
 |}
 
 export type ComponentProps = {|

@@ -4,6 +4,9 @@
 declare module "@bluframe/blublocks" {
   import type { StyledComponent } from "styled-components"
 
+  declare type IconGroup = "ion"
+
+  // Theme
   declare type Theme = {|
     +font: {|
       +family: string
@@ -47,6 +50,13 @@ declare module "@bluframe/blublocks" {
     +onClick?: () => void
   |}
 
+  declare type IconProps = {|
+    +color?: string,
+    +group: IconGroup,
+    +name: string,
+    +size?: string
+  |}
+
   declare type ProviderProps = {|
     +children: React$Node,
     +theme: Theme
@@ -56,6 +66,7 @@ declare module "@bluframe/blublocks" {
   declare type ButtonComponent = React$ComponentType<ButtonProps>
   declare type ContentComponent = React$ComponentType<ContentProps>
   declare type HamburgerComponent = React$ComponentType<HamburgerProps>
+  declare type IconComponent = React$ComponentType<IconProps>
   declare type ProviderComponent = React$ComponentType<ProviderProps>
 
   // Exports
@@ -69,6 +80,7 @@ declare module "@bluframe/blublocks" {
   declare var FadeIn: any
   declare var Flip: any
   declare var Hamburger: HamburgerComponent
+  declare var Icon: IconComponent
   declare var Lead: StyledComponent<{}, mixed, HTMLDivElement>
   declare var Row: StyledComponent<{}, mixed, HTMLDivElement>
   declare var Section: StyledComponent<{}, mixed, HTMLElement>
@@ -102,4 +114,10 @@ declare module "@bluframe/blublocks/Hamburger" {
   import type { HamburgerComponent } from "@bluframe/blublocks"
 
   declare export default HamburgerComponent
+}
+
+declare module "@bluframe/blublocks/Icon" {
+  import type { IconComponent } from "@bluframe/blublocks"
+
+  declare export default IconComponent
 }

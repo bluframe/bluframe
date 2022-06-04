@@ -1,6 +1,6 @@
 {
   "name": "@bluframe/blublocks",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Blu Frame Blu Blocks",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
@@ -13,6 +13,10 @@
     ".": {
       "import": "./lib/esm/index.js",
       "require": "./lib/cjs/index.js"
+    },
+    "./Animations": {
+      "import": "./lib/esm/Animations.js",
+      "require": "./lib/cjs/Animations.js"
     },
     "./BluBlocksProvider": {
       "import": "./lib/esm/BluBlocksProvider.js",
@@ -29,6 +33,10 @@
     "./Hamburger": {
       "import": "./lib/esm/Hamburger.js",
       "require": "./lib/cjs/Hamburger.js"
+    },
+    "./Icon": {
+      "import": "./lib/esm/Icon.js",
+      "require": "./lib/cjs/Icon.js"
     },
     "./blublocks.css": "./lib/css/blublocks.css"
   },
