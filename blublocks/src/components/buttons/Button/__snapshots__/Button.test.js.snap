@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders 1`] = `
+<button
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb gvmNje"
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`Button renders bold 1`] = `
+<button
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb fjwBVq"
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`Button renders padded 1`] = `
+<button
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb eTRCj"
+  type="button"
+>
+  Button
+</button>
+`;

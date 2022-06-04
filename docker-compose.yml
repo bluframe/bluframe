@@ -1,0 +1,19 @@
+version: "3.4"
+
+x-bindvolume: &bindvolume
+  volumes:
+    - type: bind
+      source: .
+      target: /srv/bluframe
+
+services:
+  blublocks:
+    build:
+      context: .
+      dockerfile: ./blublocks/Dockerfile
+    container_name: "bluframe-blublocks"
+    ports:
+      - "6008:6006"
+    <<: *bindvolume
+    user: bluframe
+    command: ["yarn", "workspace", "@bluframe/blublocks", "storybook"]
