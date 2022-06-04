@@ -43,6 +43,10 @@ declare module "@bluframe/blublocks" {
     +stripMarkdown?: boolean
   |}
 
+  declare type HamburgerProps = {|
+    +onClick?: () => void
+  |}
+
   declare type ProviderProps = {|
     +children: React$Node,
     +theme: Theme
@@ -51,6 +55,7 @@ declare module "@bluframe/blublocks" {
   // Components
   declare type ButtonComponent = React$ComponentType<ButtonProps>
   declare type ContentComponent = React$ComponentType<ContentProps>
+  declare type HamburgerComponent = React$ComponentType<HamburgerProps>
   declare type ProviderComponent = React$ComponentType<ProviderProps>
 
   // Exports
@@ -62,6 +67,7 @@ declare module "@bluframe/blublocks" {
   declare var FAIcon: any
   declare var FadeIn: any
   declare var Flip: any
+  declare var Hamburger: HamburgerComponent
   declare var Lead: StyledComponent<{}, mixed, HTMLDivElement>
   declare var Row: StyledComponent<{}, mixed, HTMLDivElement>
   declare var Section: StyledComponent<{}, mixed, HTMLElement>
@@ -85,4 +91,10 @@ declare module "@bluframe/blublocks/Content" {
   import type { ContentComponent } from "@bluframe/blublocks"
 
   declare export default ContentComponent
+}
+
+declare module "@bluframe/blublocks/Hamburger" {
+  import type { HamburgerComponent } from "@bluframe/blublocks"
+
+  declare export default HamburgerComponent
 }

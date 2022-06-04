@@ -1,9 +1,10 @@
 // @flow
 
 import Hamburger from "./Hamburger"
+import type { HamburgerProps } from "@bluframe/blublocks"
 
 export type ComponentProps = {|
-  +onClick?: () => void
+  ...HamburgerProps
 |}
 
 export default Hamburger

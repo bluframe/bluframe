@@ -3,7 +3,7 @@
 import styled, { type StyledComponent } from "styled-components"
 
 export const Bar: StyledComponent<any, mixed, HTMLSpanElement> = styled.span`
-  background-color: ${({ theme }) => theme.palette.primary.main};
+  background: ${({ theme }) => theme.palette.secondary.main};
   display: block;
   width: 24px;
   height: 4px;

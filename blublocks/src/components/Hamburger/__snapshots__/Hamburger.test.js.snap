@@ -11,13 +11,13 @@ exports[`Hamburger renders 1`] = `
     Toggle navigation
   </span>
   <span
-    class="styled__Bar-sc-45lonn-0 hJVEsH"
+    class="styled__Bar-sc-45lonn-0 kUYBpF"
   />
   <span
-    class="styled__Bar-sc-45lonn-0 hJVEsH"
+    class="styled__Bar-sc-45lonn-0 kUYBpF"
   />
   <span
-    class="styled__Bar-sc-45lonn-0 hJVEsH"
+    class="styled__Bar-sc-45lonn-0 kUYBpF"
   />
 </button>
 `;
