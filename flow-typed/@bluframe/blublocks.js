@@ -57,6 +57,11 @@ declare module "@bluframe/blublocks" {
     +size?: string
   |}
 
+  declare type FAIconProps = {|
+    +name: string,
+    +fontSize?: string
+  |}
+
   declare type ProviderProps = {|
     +children: React$Node,
     +theme: Theme
@@ -65,6 +70,7 @@ declare module "@bluframe/blublocks" {
   // Components
   declare type ButtonComponent = React$ComponentType<ButtonProps>
   declare type ContentComponent = React$ComponentType<ContentProps>
+  declare type FAIconComponent = React$ComponentType<FAIconProps>
   declare type HamburgerComponent = React$ComponentType<HamburgerProps>
   declare type IconComponent = React$ComponentType<IconProps>
   declare type ProviderComponent = React$ComponentType<ProviderProps>
@@ -76,7 +82,7 @@ declare module "@bluframe/blublocks" {
   declare var Column: StyledComponent<{}, mixed, HTMLDivElement>
   declare var Container: StyledComponent<{}, mixed, HTMLDivElement>
   declare var Content: ContentComponent
-  declare var FAIcon: any
+  declare var FAIcon: FAIconComponent
   declare var FadeIn: any
   declare var Flip: any
   declare var Hamburger: HamburgerComponent
@@ -108,6 +114,12 @@ declare module "@bluframe/blublocks/Content" {
   import type { ContentComponent } from "@bluframe/blublocks"
 
   declare export default ContentComponent
+}
+
+declare module "@bluframe/blublocks/FAIcon" {
+  import type { FAIconComponent } from "@bluframe/blublocks"
+
+  declare export default FAIconComponent
 }
 
 declare module "@bluframe/blublocks/Hamburger" {
