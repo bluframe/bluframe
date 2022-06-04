@@ -17,14 +17,19 @@
     "flow:ci": "yarn workspaces foreach -p -j 3 --exclude @bluframe/bluframe run flow:ci",
     "lint": "yarn workspaces foreach -pi --exclude @bluframe/bluframe run lint",
     "lint:ci": "yarn workspaces foreach -p -j 4 --exclude @bluframe/bluframe run lint:ci",
+    "logs": "docker compose logs",
     "postinstall": "husky install",
+    "restart": "docker compose restart",
     "set:version": "cd scripts && node ./setVersion.js",
     "show:version": "cd scripts && node ./showVersion.js",
+    "start": "docker compose up -d",
+    "stop": "docker compose down",
     "test": "yarn workspaces foreach -pi --exclude @bluframe/bluframe run test",
     "test:ci": "yarn workspaces foreach -p -j 3 --exclude @bluframe/bluframe run test:ci --runInBand"
   },
-  "packageManager": "yarn@3.1.1",
+  "packageManager": "yarn@3.2.0",
   "workspaces": [
+    "blublocks",
     "grapple"
   ],
   "devDependencies": {

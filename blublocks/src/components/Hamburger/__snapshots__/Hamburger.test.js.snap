@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hamburger renders 1`] = `
+<button
+  class="styled__Button-sc-45lonn-1 kASBxd"
+  type="button"
+>
+  <span
+    class="styled__ScreenReaderOnly-sc-45lonn-2 iQoRVS"
+  >
+    Toggle navigation
+  </span>
+  <span
+    class="styled__Bar-sc-45lonn-0 hJVEsH"
+  />
+  <span
+    class="styled__Bar-sc-45lonn-0 hJVEsH"
+  />
+  <span
+    class="styled__Bar-sc-45lonn-0 hJVEsH"
+  />
+</button>
+`;

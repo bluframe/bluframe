@@ -1,0 +1,106 @@
+env:
+  browser: true
+  es6: true
+  node: true
+globals:
+  NODE_ENV: true
+
+extends:
+  - eslint:all
+  - plugin:react/all
+  - plugin:flowtype/recommended
+  - plugin:jest/recommended
+  - plugin:prettier/recommended
+
+parser: "@babel/eslint-parser"
+
+parserOptions:
+  ecmaFeatures:
+    experimentalObjectRestSpread: true
+    jsx: true
+  sourceType: module
+
+plugins:
+  - react
+  - react-hooks
+  - flowtype
+  - html
+  - jest
+
+settings:
+  react:
+    pragma: "React"
+    version: "16.13"
+
+rules:
+  no-unused-vars: 1
+  linebreak-style:
+    - error
+    - unix
+  quotes:
+    - error
+    - double
+    - allowTemplateLiterals: true
+      avoidEscape: true
+  semi:
+    - error
+    - never
+  react/jsx-uses-vars: 1
+  react/jsx-indent:
+    - error
+    - 2
+  react/jsx-indent-props: 0
+  react/jsx-max-props-per-line:
+    - warn
+    - maximum: 1
+      when: multiline
+  react/jsx-first-prop-new-line:
+    - warn
+    - multiline-multiprop
+  react/no-danger: 0
+  react/prefer-stateless-function: 1
+  react/no-will-update-set-state: 0
+  react/default-props-match-prop-types: 0
+  react/require-default-props: 0
+  react/no-redundant-should-component-update: 0
+  react/jsx-wrap-multilines: 0
+  react/jsx-closing-tag-location: 0
+  react/jsx-closing-bracket-location:
+    - warn
+    - tag-aligned
+  react/jsx-no-undef:
+    - 1
+    - allowGlobals: true
+  react/prop-types: 0
+  react/forbid-component-props: 0
+  react/jsx-curly-brace-presence: 0
+  react/jsx-filename-extension: 0
+  react/jsx-props-no-spreading: 0
+  react-hooks/rules-of-hooks: error
+  react-hooks/exhaustive-deps: warn
+  react/function-component-definition:
+    - error
+    - namedComponents: arrow-function
+  react/jsx-max-depth:
+    - warn
+    - max: 4
+  react/react-in-jsx-scope: 0
+  no-console: 1
+  no-inner-declarations: 1
+  indent: 0
+  max-len: 0
+  quote-props: 0
+  object-curly-newline: 0
+  dot-location:
+    - 1
+    - property
+  sort-vars: 0
+  one-var:
+    - 1
+    - never
+  new-cap:
+    - 1
+    - capIsNew: false
+  capitalized-comments: 0
+  multiline-comment-style: 0
+  jest/no-mocks-import: 0

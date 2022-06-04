@@ -14,3 +14,7 @@ dist/
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# Jest
+.jest/
+coverage/
