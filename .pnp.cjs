@@ -21754,14 +21754,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],\
       ["styled-components", [\
         ["npm:5.3.5", {\
-          "packageLocation": "./.yarn/unplugged/styled-components-virtual-93e67b60f5/node_modules/styled-components/",\
+          "packageLocation": "./.yarn/cache/styled-components-npm-5.3.5-88e3937b59-05a664dfe4.zip/node_modules/styled-components/",\
           "packageDependencies": [\
             ["styled-components", "npm:5.3.5"]\
           ],\
           "linkType": "SOFT"\
         }],\
         ["virtual:a49150a01cb6db64e50bc40bd79ae225f619f6fbe048b86b18c6cf5a9c3e202c5b1c3bcdc2558e2bca133ef0f4485cb44c674e48c02f1c35b3eb5e9c7c917cd1#npm:5.3.5", {\
-          "packageLocation": "./.yarn/unplugged/styled-components-virtual-93e67b60f5/node_modules/styled-components/",\
+          "packageLocation": "./.yarn/__virtual__/styled-components-virtual-93e67b60f5/0/cache/styled-components-npm-5.3.5-88e3937b59-05a664dfe4.zip/node_modules/styled-components/",\
           "packageDependencies": [\
             ["styled-components", "virtual:a49150a01cb6db64e50bc40bd79ae225f619f6fbe048b86b18c6cf5a9c3e202c5b1c3bcdc2558e2bca133ef0f4485cb44c674e48c02f1c35b3eb5e9c7c917cd1#npm:5.3.5"],\
             ["@babel/helper-module-imports", "npm:7.16.7"],\

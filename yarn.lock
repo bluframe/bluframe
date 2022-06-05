@@ -1712,6 +1712,8 @@ __metadata:
     styled-components: ^5.3.5
     webpack: ^4
     what-input: ^5.2.10
+  peerDependencies:
+    styled-components: ^5.3.5
   languageName: unknown
   linkType: soft
 
@@ -1721,6 +1723,9 @@ __metadata:
   dependencies:
     concurrently: ^7.0.0
     husky: ^7.0.4
+  dependenciesMeta:
+    styled-components:
+      built: false
   languageName: unknown
   linkType: soft
 
