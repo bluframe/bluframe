@@ -1,6 +1,6 @@
 {
   "name": "@bluframe/blublocks",
-  "version": "0.1.8",
+  "version": "0.2.0",
   "description": "Blu Frame Blu Blocks",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
@@ -41,6 +41,10 @@
     "./Icon": {
       "import": "./lib/esm/Icon.js",
       "require": "./lib/cjs/Icon.js"
+    },
+    "./ResetButton": {
+      "import": "./lib/esm/ResetButton.js",
+      "require": "./lib/cjs/ResetButton.js"
     },
     "./blublocks.css": "./lib/css/blublocks.css"
   },

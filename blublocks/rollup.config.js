@@ -13,6 +13,7 @@ const input = {
   FAIcon: "src/components/FAIcon/index.js",
   Hamburger: "src/components/Hamburger/index.js",
   Icon: "src/components/Icon/index.js",
+  ResetButton: "src/components/buttons/Reset.js",
   index: "src/index.js"
 }
 
