@@ -17,6 +17,7 @@ const blacksAndGrays = {
   quillGray: "#D3D3D2",
   shark: "#191A1C",
   silver: "#CCCCCC",
+  silverChalice: "#A6A6A6",
   tundora: "#444444",
   white: "#FFFFFF"
 }

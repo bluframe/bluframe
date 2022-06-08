@@ -12,7 +12,7 @@ And if you are using `npm`
 
 ## How to import
 
-`import Content from "@bluframe/blublocks/Content`
+`import Content from "@bluframe/blublocks/Content"`
 or
 `import { Content } from "@bluframe/blublocks"`
 

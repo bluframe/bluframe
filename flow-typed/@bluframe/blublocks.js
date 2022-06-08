@@ -12,6 +12,10 @@ declare module "@bluframe/blublocks" {
       +family: string
     |},
     +palette: {|
+      +disabled: {|
+        +contrast: string,
+        +main: string
+      |},
       +primary: {|
         +contrast: string,
         +main: string
@@ -26,12 +30,18 @@ declare module "@bluframe/blublocks" {
 
   // Props
   declare type ButtonProps = {|
+    +bold?: boolean,
     +buttonType?: string,
     +className?: string,
-    +isBold?: boolean,
-    +isPadded?: boolean,
+    +disabled?: boolean,
+    +iconEnd?: React$Node,
+    +iconStart?: React$Node,
     +label: string,
-    +onClick?: () => void
+    +noHoverHighlight?: boolean,
+    +onClick?: () => void,
+    +outlined?: boolean,
+    +padded?: boolean,
+    +secondary?: boolean
   |}
 
   declare type ContentComponents = {|

@@ -21,13 +21,13 @@ describe("Button", () => {
   })
 
   it("renders bold", () => {
-    const { container } = render(<Button {...props} isBold />)
+    const { container } = render(<Button {...props} bold />)
 
     expect(container.firstChild).toMatchSnapshot()
   })
 
   it("renders padded", () => {
-    const { container } = render(<Button {...props} isPadded />)
+    const { container } = render(<Button {...props} padded />)
 
     expect(container.firstChild).toMatchSnapshot()
   })

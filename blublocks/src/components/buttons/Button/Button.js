@@ -1,25 +1,38 @@
 // @flow
+/* eslint-disable no-ternary */
 
-import { type ComponentProps } from "."
+import { IconEnd, IconStart, Wrapper } from "./styled"
+import type { ComponentProps } from "."
 import React from "react"
-import { Wrapper } from "./styled"
 
 const Button = ({
+  bold,
   buttonType = "button",
   className,
-  isBold,
-  isPadded,
+  disabled,
+  iconEnd,
+  iconStart,
   label,
-  onClick
+  noHoverHighlight,
+  onClick,
+  outlined,
+  padded,
+  secondary
 }: ComponentProps): React$Node => (
   <Wrapper
+    bold={bold}
     className={className}
-    isBold={isBold}
-    isPadded={isPadded}
+    disabled={disabled}
+    noHoverHighlight={noHoverHighlight}
     onClick={onClick}
+    outlined={outlined}
+    padded={padded}
+    secondary={secondary}
     type={buttonType}
   >
+    {iconStart ? <IconStart>{iconStart}</IconStart> : null}
     {label}
+    {iconEnd ? <IconEnd>{iconEnd}</IconEnd> : null}
   </Wrapper>
 )
 

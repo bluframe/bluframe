@@ -8,6 +8,10 @@ const theme: Theme = {
     family: "Roboto, sans-serif"
   },
   palette: {
+    disabled: {
+      contrast: colors.white,
+      main: colors.alto
+    },
     primary: {
       contrast: colors.white,
       main: colors.boulder
