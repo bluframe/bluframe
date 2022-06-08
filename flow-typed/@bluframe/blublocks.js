@@ -74,6 +74,11 @@ declare module "@bluframe/blublocks" {
   declare type HamburgerComponent = React$ComponentType<HamburgerProps>
   declare type IconComponent = React$ComponentType<IconProps>
   declare type ProviderComponent = React$ComponentType<ProviderProps>
+  declare type ResetButtonComponent = StyledComponent<
+    {},
+    mixed,
+    HTMLButtonElement
+  >
 
   // Exports
   declare var Animations: any
@@ -88,6 +93,7 @@ declare module "@bluframe/blublocks" {
   declare var Hamburger: HamburgerComponent
   declare var Icon: IconComponent
   declare var Lead: StyledComponent<{}, mixed, HTMLDivElement>
+  declare var ResetButton: ResetButtonComponent
   declare var Row: StyledComponent<{}, mixed, HTMLDivElement>
   declare var Section: StyledComponent<{}, mixed, HTMLElement>
   declare var colors: any
@@ -132,4 +138,10 @@ declare module "@bluframe/blublocks/Icon" {
   import type { IconComponent } from "@bluframe/blublocks"
 
   declare export default IconComponent
+}
+
+declare module "@bluframe/blublocks/ResetButton" {
+  import type { ResetButtonComponent } from "@bluframe/blublocks"
+
+  declare export default ResetButtonComponent
 }
