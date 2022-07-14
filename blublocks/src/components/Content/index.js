@@ -12,6 +12,7 @@ type Props = {|
 |}
 
 export type ComponentProps = {|
+  +className?: string,
   +components: ContentComponents,
   +content: string,
   +rehypePlugins: any[],
@@ -19,6 +20,7 @@ export type ComponentProps = {|
 |}
 
 const usePrepareComponent = ({
+  className,
   components: overrideComponents = {},
   content,
   max = Infinity,
@@ -42,6 +44,7 @@ const usePrepareComponent = ({
   const rehypePlugins = []
 
   return {
+    className,
     components: {
       ...components,
       ...overrideComponents
@@ -54,4 +57,4 @@ const usePrepareComponent = ({
 
 export default (prepareComponent<Props, ComponentProps>(usePrepareComponent)(
   Content
-): React$AbstractComponent<Props, ComponentProps>)
+): React$ComponentType<Props>)

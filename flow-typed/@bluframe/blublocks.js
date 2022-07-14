@@ -49,6 +49,7 @@ declare module "@bluframe/blublocks" {
   |}
 
   declare type ContentProps = {|
+    +className?: string,
     +components?: ContentComponents,
     +content: string,
     +max?: number,
