@@ -14,7 +14,7 @@ const input = {
   Hamburger: "src/components/Hamburger/index.js",
   Icon: "src/components/Icon/index.js",
   ResetButton: "src/components/buttons/Reset.js",
-  Select: "src/components/inputs/Select.js",
+  Select: "src/components/inputs/Select/index.js",
   index: "src/index.js"
 }
 
