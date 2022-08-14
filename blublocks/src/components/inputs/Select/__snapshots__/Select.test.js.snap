@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select renders 1`] = `
+<div
+  class="styled__Wrapper-sc-nm33db-0 jdNAoM"
+>
+  <div
+    class="styled__Control-sc-nm33db-1 doVFjM"
+  >
+    <div
+      class="styled__Label-sc-nm33db-2 hSqRti"
+    />
+    <div
+      class="styled__Triangle-sc-nm33db-3 fAGIZP"
+    />
+  </div>
+  <input
+    class="styled__Input-sc-nm33db-6"
+    name="fruit"
+    type="hidden"
+    value=""
+  />
+</div>
+`;

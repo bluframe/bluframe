@@ -46,6 +46,10 @@
       "import": "./lib/esm/ResetButton.js",
       "require": "./lib/cjs/ResetButton.js"
     },
+    "./Select": {
+      "import": "./lib/esm/Select.js",
+      "require": "./lib/cjs/Select.js"
+    },
     "./blublocks.css": "./lib/css/blublocks.css"
   },
   "files": [
