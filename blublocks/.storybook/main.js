@@ -12,18 +12,6 @@ module.exports = {
       path.resolve(__dirname, "..", "src")
     ]
 
-    config.resolve.alias = {
-      ...(config.resolve.alias || {}),
-      "@bluframe/bluterrine": path.join(
-        __dirname,
-        "..",
-        "..",
-        "bluterrine",
-        "build",
-        "esm"
-      )
-    }
-
     // Resolves a babel-loader problem in remote deployment
     config.module.rules.push({
       test: /\.js$/,

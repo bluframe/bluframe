@@ -1,12 +1,14 @@
+// @flow
+
 import "styles/foundation/css/foundation.css"
 import "styles/bootstrap.css"
 import "styles/font-awesome.min.css"
 import React from "react"
-import { ThemeProvider } from "styled-components"
+import ThemeProvider from "styles/theme/Provider"
 import theme from "styles/theme"
 
 export const decorators = [
-  (Story: any) => (
+  (Story: any): any => (
     <ThemeProvider theme={theme}>
       <Story />
     </ThemeProvider>

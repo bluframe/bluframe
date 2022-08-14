@@ -21,6 +21,6 @@ copy package.json .
 copy .yarnrc.yml .
 copy .yarn .yarn
 
-# @bluframe/bluterrine
+# @bluframe/brapple
 copy grapple grapple
 run yarn workspace @bluframe/grapple build

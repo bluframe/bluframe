@@ -1,9 +1,9 @@
 // @flow
 
-import type { Theme } from "@bluframe/blublocks"
+import type { BaseTheme } from "@bluframe/blublocks"
 import colors from "styles/colors"
 
-const theme: Theme = {
+const baseTheme: BaseTheme = {
   font: {
     family: "Roboto, sans-serif"
   },
@@ -20,8 +20,11 @@ const theme: Theme = {
       contrast: colors.white,
       main: colors.dustyGray
     },
-    text: colors.mineShaft
+    text: {
+      contrast: colors.white,
+      main: colors.mineShaft
+    }
   }
 }
 
-export default theme
+export default baseTheme

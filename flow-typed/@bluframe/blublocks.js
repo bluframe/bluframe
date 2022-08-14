@@ -6,26 +6,50 @@ declare module "@bluframe/blublocks" {
 
   declare type IconGroup = "ion"
 
+  declare type BaseColorGrades = {|
+    +contrast: string,
+    +dark?: string,
+    +light?: string,
+    +main: string
+  |}
+
+  declare type ColorGrades = {|
+    +contrast: string,
+    +dark: string,
+    +light: string,
+    +main: string
+  |}
+
+  declare type BasePalette = {|
+    +disabled: BaseColorGrades,
+    +primary: BaseColorGrades,
+    +secondary: BaseColorGrades,
+    +text: BaseColorGrades
+  |}
+
+  declare type Palette = {|
+    +disabled: ColorGrades,
+    +primary: ColorGrades,
+    +secondary: ColorGrades,
+    +text: ColorGrades
+  |}
+
+  declare type Colors = {|
+    +gray: ColorGrades
+  |}
+
   // Theme
-  declare type Theme = {|
+  declare type BaseTheme = {|
     +font: {|
       +family: string
     |},
-    +palette: {|
-      +disabled: {|
-        +contrast: string,
-        +main: string
-      |},
-      +primary: {|
-        +contrast: string,
-        +main: string
-      |},
-      +secondary: {|
-        +contrast: string,
-        +main: string
-      |},
-      +text: string
-    |}
+    +palette: BasePalette
+  |}
+
+  declare type Theme = {|
+    ...BaseTheme,
+    +colors: Colors,
+    +palette: Palette
   |}
 
   // Props
@@ -75,7 +99,21 @@ declare module "@bluframe/blublocks" {
 
   declare type ProviderProps = {|
     +children: React$Node,
-    +theme: Theme
+    +theme: BaseTheme
+  |}
+
+  declare type SelectOption = {|
+    +label: string,
+    +value: number | string
+  |}
+
+  declare type SelectProps = {|
+    +className?: string,
+    +name: string,
+    +onSelect: () => void,
+    +options: SelectOption[],
+    +placeholder?: string,
+    +selected: number | string | null
   |}
 
   // Components
