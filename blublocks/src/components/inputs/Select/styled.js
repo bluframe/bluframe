@@ -11,6 +11,7 @@ export const Wrapper: StyledComponent<{||}, Theme, HTMLDivElement> = styled.div`
 
 export const Control: StyledComponent<{||}, Theme, HTMLDivElement> = styled.div`
   align-items: center;
+  background: ${({ theme }) => theme.palette.text.contrast};
   border: 1px solid ${({ theme }) => theme.colors.gray.light};
   border-radius: 2px;
   cursor: pointer;
@@ -51,6 +52,7 @@ export const Options: StyledComponent<{||}, Theme, HTMLDivElement> = styled.div`
 `
 
 export const Option: StyledComponent<{||}, Theme, HTMLDivElement> = styled.div`
+  background: ${({ theme }) => theme.palette.text.contrast};
   color: ${({ theme }) => theme.palette.text.main};
   cursor: pointer;
   padding: 5px 10px;

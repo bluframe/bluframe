@@ -128,6 +128,7 @@ declare module "@bluframe/blublocks" {
     mixed,
     HTMLButtonElement
   >
+  declare type SelectComponent = React$ComponentType<SelectProps>
 
   // Exports
   declare var Animations: any
@@ -187,6 +188,12 @@ declare module "@bluframe/blublocks/Icon" {
   import type { IconComponent } from "@bluframe/blublocks"
 
   declare export default IconComponent
+}
+
+declare module "@bluframe/blublocks/Select" {
+  import type { SelectComponent } from "@bluframe/blublocks"
+
+  declare export default SelectComponent
 }
 
 declare module "@bluframe/blublocks/ResetButton" {
