@@ -14,6 +14,7 @@ export const Control: StyledComponent<{||}, Theme, HTMLDivElement> = styled.div`
   background: ${({ theme }) => theme.palette.text.contrast};
   border: 1px solid ${({ theme }) => theme.colors.gray.light};
   border-radius: 2px;
+  column-gap: 20px;
   cursor: pointer;
   display: grid;
   grid-template-columns: auto 20px;
