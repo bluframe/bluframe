@@ -1,6 +1,6 @@
 {
   "name": "@bluframe/blublocks",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "description": "Blu Frame Blu Blocks",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
@@ -65,6 +65,7 @@
     "lint": "eslint src/",
     "lint:ci": "eslint --quiet src/",
     "prepublish": "yarn lint && yarn flow && yarn test && yarn build:ci",
+    "publish": "yarn npm publish --access public",
     "storybook": "start-storybook -p 6006 -s ./public",
     "test": "jest --coverage --verbose",
     "test:ci": "jest --coverage --silent"

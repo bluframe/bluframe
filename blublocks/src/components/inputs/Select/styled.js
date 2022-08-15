@@ -19,7 +19,7 @@ export const Control: StyledComponent<{||}, Theme, HTMLDivElement> = styled.div`
   display: grid;
   grid-template-columns: auto 20px;
   padding: 5px 10px;
-  height: 40px;
+  height: 44px;
 `
 
 export const Label: StyledComponent<
