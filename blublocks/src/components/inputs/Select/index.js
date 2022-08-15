@@ -13,6 +13,7 @@ export type ComponentProps = {|
   ...SelectProps,
   +isOpen: boolean,
   +label: string,
+  +onSelect: (value: number | string | null) => () => void,
   +onToggleIsOpen: () => void
 |}
 
@@ -37,8 +38,8 @@ const usePrepareComponent = (props: Props): ComponentProps => {
     setIsOpen(!isOpen)
   }
 
-  const onSelect = () => {
-    props.onSelect()
+  const onSelect = (value: number | string | null) => () => {
+    props.onSelect(value)
     setIsOpen(false)
   }
 

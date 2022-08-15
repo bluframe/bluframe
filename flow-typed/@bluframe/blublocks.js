@@ -110,7 +110,7 @@ declare module "@bluframe/blublocks" {
   declare type SelectProps = {|
     +className?: string,
     +name: string,
-    +onSelect: () => void,
+    +onSelect: (selected: number | string | null) => void,
     +options: SelectOption[],
     +placeholder?: string,
     +selected: number | string | null
