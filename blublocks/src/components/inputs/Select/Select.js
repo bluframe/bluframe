@@ -32,7 +32,7 @@ const Select = ({
     {isOpen ? (
       <Options>
         {options.map((option) => (
-          <Option key={option.value} onClick={onSelect}>
+          <Option key={option.value} onClick={onSelect(option.value)}>
             {option.label}
           </Option>
         ))}
