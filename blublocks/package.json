@@ -1,6 +1,6 @@
 {
   "name": "@bluframe/blublocks",
-  "version": "0.5.5",
+  "version": "0.5.6",
   "description": "Blu Frame Blu Blocks",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
