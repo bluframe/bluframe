@@ -48,8 +48,11 @@ export const Triangle: StyledComponent<
 `
 
 export const Options: StyledComponent<{||}, Theme, HTMLDivElement> = styled.div`
+  max-height: 200px;
+  overflow-y: auto;
   position: absolute;
   width: 100%;
+  z-index: 10;
 `
 
 export const Option: StyledComponent<{||}, Theme, HTMLDivElement> = styled.div`
