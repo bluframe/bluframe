@@ -21,6 +21,26 @@ const options = [
   {
     label: "Orange",
     value: "orange"
+  },
+  {
+    label: "Banana",
+    value: "banana"
+  },
+  {
+    label: "Lemon",
+    value: "lemon"
+  },
+  {
+    label: "Pear",
+    value: "pear"
+  },
+  {
+    label: "Kiwi",
+    value: "kiwi"
+  },
+  {
+    label: "Mango",
+    value: "mango"
   }
 ]
 
