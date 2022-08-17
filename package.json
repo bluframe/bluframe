@@ -1,6 +1,6 @@
 {
   "name": "@bluframe/bluframe",
-  "version": "0.6.6",
+  "version": "0.6.7",
   "description": "Blu Frame Open Source!",
   "main": "index.js",
   "repository": "git@github.com:bluframe/bluframe.git",
