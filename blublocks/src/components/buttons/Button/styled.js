@@ -69,6 +69,7 @@ export const Wrapper: StyledComponent<
   padding: ${({ padded }) => (padded ? "15px 42px" : "10px 20px")};
   transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition-property: background-color, color, opacity;
+  width: ${({ expanded }) => (expanded ? "100%" : "auto")};
 
   &:hover {
     ${(props) =>
