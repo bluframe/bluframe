@@ -10,6 +10,7 @@ const Button = ({
   buttonType = "button",
   className,
   disabled,
+  expanded,
   iconEnd,
   iconStart,
   label,
@@ -23,6 +24,7 @@ const Button = ({
     bold={bold}
     className={className}
     disabled={disabled}
+    expanded={expanded}
     noHoverHighlight={noHoverHighlight}
     onClick={onClick}
     outlined={outlined}

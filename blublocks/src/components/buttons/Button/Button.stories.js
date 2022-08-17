@@ -1,13 +1,17 @@
 // @flow
 
-import Button, { type ComponentProps } from "components/buttons/Button"
+import Button, { type Props } from "components/buttons/Button"
+import styled, { type StyledComponent } from "styled-components"
 import FAIcon from "components/FAIcon"
 import React from "react"
+import type { Theme } from "@bluframe/blublocks"
+import mediaQueries from "styles/mediaQueries"
 
 const stories = {
   argTypes: {
     bold: { control: { type: "boolean" } },
     disabled: { control: { type: "boolean" } },
+    expanded: { control: { type: "boolean" } },
     onClick: { action: "button click" },
     outlined: { control: { type: "boolean" } },
     padded: { control: { type: "boolean" } },
@@ -17,7 +21,26 @@ const stories = {
   title: "Buttons/Button"
 }
 
-const Template = (args: ComponentProps) => <Button {...args} />
+const Template = (args: Props) => <Button {...args} />
+
+const ExpandedWrapper: StyledComponent<
+  {||},
+  Theme,
+  HTMLDivElement
+> = styled.div`
+  width: 300px;
+
+  ${mediaQueries.tablet} {
+    width: 300px;
+  }
+`
+
+// eslint-disable-next-line react/no-multi-comp
+const ExpandedTemplate = (args: Props) => (
+  <ExpandedWrapper>
+    <Button {...args} />
+  </ExpandedWrapper>
+)
 
 export const Default: any = Template.bind({})
 Default.args = {
@@ -64,6 +87,12 @@ export const Padded: any = Template.bind({})
 Padded.args = {
   label: "Button",
   padded: true
+}
+
+export const Expanded: any = ExpandedTemplate.bind({})
+Expanded.args = {
+  expanded: true,
+  label: "Button"
 }
 
 export const Secondary: any = Template.bind({})

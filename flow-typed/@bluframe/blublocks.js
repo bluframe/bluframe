@@ -58,6 +58,7 @@ declare module "@bluframe/blublocks" {
     +buttonType?: string,
     +className?: string,
     +disabled?: boolean,
+    +expanded?: boolean,
     +iconEnd?: React$Node,
     +iconStart?: React$Node,
     +label: string,
