@@ -1,6 +1,6 @@
 {
   "name": "@bluframe/grapple",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Blu Frame Grapple",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
@@ -38,6 +38,8 @@
     "flow:ci": "flow --quiet",
     "lint": "eslint src/",
     "lint:ci": "eslint --quiet src/",
+    "prepublish": "yarn lint:ci && yarn flow:ci && yarn test:ci && yarn build:ci",
+    "publish": "yarn npm publish --access public",
     "test": "echo Blu Frame Grapple Tests",
     "test:ci": "echo Blu Frame Grapple Tests"
   },
@@ -71,6 +73,12 @@
     "rollup": "^2.66.1",
     "rollup-plugin-includepaths": "^0.2.4"
   },
+  "keywords": [
+    "react",
+    "react hooks",
+    "frontend",
+    "hooks"
+  ],
   "moduleRoots": [
     "src"
   ]
