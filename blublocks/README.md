@@ -18,9 +18,9 @@ And if you are using `npm`
 
 ## How to import
 
-`import Content from "@bluframe/blublocks/Content"`
+`import Button from "@bluframe/blublocks/Button"`
 or
-`import { Content } from "@bluframe/blublocks"`
+`import { Button } from "@bluframe/blublocks"`
 
 ## Components
 
