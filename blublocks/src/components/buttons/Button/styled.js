@@ -4,6 +4,7 @@
 import styled, { type StyledComponent } from "styled-components"
 import Reset from "components/buttons/Reset"
 import type { Theme } from "@bluframe/blublocks"
+import getColorGrades from "helpers/getColorGrades"
 import { rgba } from "polished"
 
 type Props = {|
@@ -17,36 +18,22 @@ type Props = {|
 
 const BACKGROUND_ALPHA = 0.7
 
-const getPalette = (props: {| ...Props, +theme: Theme |}) => {
-  let palette = props.theme.palette.primary
-
-  if (props.secondary) {
-    palette = props.theme.palette.secondary
-  }
-
-  if (props.disabled) {
-    palette = props.theme.palette.disabled
-  }
-
-  return palette
-}
-
 const getBackground = (props: {| ...Props, +theme: Theme |}) => {
-  const palette = getPalette(props)
+  const colorGrades = getColorGrades(props)
 
-  return props.outlined ? palette.contrast : palette.main
+  return props.outlined ? colorGrades.contrast : colorGrades.main
 }
 
 const getBorder = (props: {| ...Props, +theme: Theme |}) => {
-  const palette = getPalette(props)
+  const colorGrades = getColorGrades(props)
 
-  return `1px solid ${palette.main}`
+  return `1px solid ${colorGrades.main}`
 }
 
 const getColor = (props: {| ...Props, +theme: Theme |}) => {
-  const palette = getPalette(props)
+  const colorGrades = getColorGrades(props)
 
-  return props.outlined ? palette.main : palette.contrast
+  return props.outlined ? colorGrades.main : colorGrades.contrast
 }
 
 export const Wrapper: StyledComponent<
@@ -83,8 +70,7 @@ export const Wrapper: StyledComponent<
 
   & i,
   svg {
-    color: ${({ outlined, theme }) =>
-      outlined ? theme.palette.primary.main : theme.palette.primary.contrast};
+    color: ${getColor};
   }
 `
 

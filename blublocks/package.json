@@ -42,6 +42,10 @@
       "import": "./lib/esm/Icon.js",
       "require": "./lib/cjs/Icon.js"
     },
+    "./Loading": {
+      "import": "./lib/esm/Loading.js",
+      "require": "./lib/cjs/Loading.js"
+    },
     "./ResetButton": {
       "import": "./lib/esm/ResetButton.js",
       "require": "./lib/cjs/ResetButton.js"

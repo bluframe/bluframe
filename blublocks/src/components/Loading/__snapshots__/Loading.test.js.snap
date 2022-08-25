@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading renders 1`] = `
+<div
+  class="styled__Wrapper-sc-1pom3vg-0 kNmpvj"
+  size="16"
+/>
+`;
