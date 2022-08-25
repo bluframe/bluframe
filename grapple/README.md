@@ -1,7 +1,10 @@
+<p align="center">
+  <a href="https://blufra.me">
+    <img style="margin: 0 auto" width="200" src="https://snowflakes.blufra.me/sites/blufra.me/img/BluFrameLogo512.png" />
+  </a>
+</p>
 
 # React Hooks from Blu Frame
-
-React Hooks from Blu Frame
 
 ## How to Install
 
