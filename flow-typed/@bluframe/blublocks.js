@@ -62,6 +62,7 @@ declare module "@bluframe/blublocks" {
     +iconEnd?: React$Node,
     +iconStart?: React$Node,
     +label: string,
+    +loading?: boolean,
     +noHoverHighlight?: boolean,
     +onClick?: () => void,
     +outlined?: boolean,
@@ -98,6 +99,13 @@ declare module "@bluframe/blublocks" {
     +fontSize?: string
   |}
 
+  declare type LoadingProps = {|
+    +contrast?: boolean,
+    +disabled?: boolean,
+    +secondary?: boolean,
+    +size?: number
+  |}
+
   declare type ProviderProps = {|
     +children: React$Node,
     +theme: BaseTheme
@@ -123,6 +131,7 @@ declare module "@bluframe/blublocks" {
   declare type FAIconComponent = React$ComponentType<FAIconProps>
   declare type HamburgerComponent = React$ComponentType<HamburgerProps>
   declare type IconComponent = React$ComponentType<IconProps>
+  declare type LoadingComponent = React$ComponentType<LoadingProps>
   declare type ProviderComponent = React$ComponentType<ProviderProps>
   declare type ResetButtonComponent = StyledComponent<
     {},
@@ -143,7 +152,6 @@ declare module "@bluframe/blublocks" {
   declare var Flip: any
   declare var Hamburger: HamburgerComponent
   declare var Icon: IconComponent
-  declare var Lead: StyledComponent<{}, mixed, HTMLDivElement>
   declare var ResetButton: ResetButtonComponent
   declare var Row: StyledComponent<{}, mixed, HTMLDivElement>
   declare var Section: StyledComponent<{}, mixed, HTMLElement>
@@ -189,6 +197,12 @@ declare module "@bluframe/blublocks/Icon" {
   import type { IconComponent } from "@bluframe/blublocks"
 
   declare export default IconComponent
+}
+
+declare module "@bluframe/blublocks/Loading" {
+  import type { LoadingComponent } from "@bluframe/blublocks"
+
+  declare export default LoadingComponent
 }
 
 declare module "@bluframe/blublocks/Select" {

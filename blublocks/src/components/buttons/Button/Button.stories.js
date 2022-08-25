@@ -12,6 +12,7 @@ const stories = {
     bold: { control: { type: "boolean" } },
     disabled: { control: { type: "boolean" } },
     expanded: { control: { type: "boolean" } },
+    loading: { control: { type: "boolean" } },
     onClick: { action: "button click" },
     outlined: { control: { type: "boolean" } },
     padded: { control: { type: "boolean" } },
@@ -57,6 +58,12 @@ export const Disabled: any = Template.bind({})
 Disabled.args = {
   disabled: true,
   label: "Button"
+}
+
+export const Loading: any = Template.bind({})
+Loading.args = {
+  label: "Button",
+  loading: true
 }
 
 export const IconEnd: any = Template.bind({})

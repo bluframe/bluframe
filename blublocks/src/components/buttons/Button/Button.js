@@ -3,6 +3,7 @@
 
 import { IconEnd, IconStart, Wrapper } from "./styled"
 import type { ComponentProps } from "."
+import Loading from "components/Loading"
 import React from "react"
 
 const Button = ({
@@ -14,6 +15,7 @@ const Button = ({
   iconEnd,
   iconStart,
   label,
+  loading,
   noHoverHighlight,
   onClick,
   outlined,
@@ -35,6 +37,11 @@ const Button = ({
     {iconStart ? <IconStart>{iconStart}</IconStart> : null}
     {label}
     {iconEnd ? <IconEnd>{iconEnd}</IconEnd> : null}
+    {loading ? (
+      <IconEnd>
+        <Loading contrast={!outlined} />
+      </IconEnd>
+    ) : null}
   </Wrapper>
 )
 
