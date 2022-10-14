@@ -26,10 +26,14 @@ declare module "@bluframe/grapple" {
   ) => Prepare<Props, ComponentProps>
 
   // Hooks
+  declare type UsePrevious = <T>(value: T) => ?T
+  declare type UseToggle = (defaultValue?: boolean) => [boolean, ()=>void] 
   declare type UseTrimText = (text: string, max: number) => string
 
   // Exports
   declare var prepareComponent: PrepareComponent
+  declare var usePrevious: UsePrevious
+  declare var useToggle: UseToggle
   declare var useTrimText: UseTrimText
 }
 
@@ -37,6 +41,18 @@ declare module "@bluframe/grapple/prepareComponent" {
   import type { PrepareComponent } from "@bluframe/grapple"
 
   declare export default PrepareComponent
+}
+
+declare module "@bluframe/grapple/usePrevious" {
+  import type { UsePrevious } from "@bluframe/grapple"
+
+  declare export default UsePrevious
+}
+
+declare module "@bluframe/grapple/useToggle" {
+  import type { UseToggle } from "@bluframe/grapple"
+
+  declare export default UseToggle
 }
 
 declare module "@bluframe/grapple/useTrimText" {

@@ -6,6 +6,7 @@ const input = {
   prepareComponent: "src/prepareComponent.js",
   useOnScreen: "src/useOnScreen.js",
   usePrevious: "src/usePrevious.js",
+  useToggle: "src/useToggle.js",
   useTrimText: "src/useTrimText.js"
 }
 
