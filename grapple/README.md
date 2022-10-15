@@ -30,5 +30,8 @@ Stores the previous value of a constant
 ### useOnScreen
 Uses `IntersectionObserver` and notifies when an element appears on screen
 
+### useToggle
+Creates a `boolean` value and as easy toggle function
+
 ### useTrimText
 Trims text to max characters and adds `...` when content exceeds max

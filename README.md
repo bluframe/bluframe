@@ -19,13 +19,17 @@ Here is our collection of React Hooks - check out [Grapple](grapple) and make yo
 ## How to Install
 
 If you are using `yarn`
+
 `yarn add @bluframe/blublocks` and `yarn add @bluframe/grapple`
 
 And if you are using `npm`
-`npm i @bluframe/grapple` and `npm i @bluframe/grapple`
+
+`npm i @bluframe/blublocks` and `npm i @bluframe/grapple`
 
 ## How to import
 
 `import Button from "@bluframe/blublocks/Button"`
+
 or
+
 `import { Button } from "@bluframe/blublocks"`

@@ -1,6 +1,6 @@
 {
   "name": "@bluframe/grapple",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Blu Frame Grapple",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
