@@ -14,6 +14,10 @@
       "import": "./lib/esm/index.js",
       "require": "./lib/cjs/index.js"
     },
+    "./prepareComponent": {
+      "import": "./lib/esm/prepareComponent.js",
+      "require": "./lib/cjs/prepareComponent.js"
+    },
     "./useOnScreen": {
       "import": "./lib/esm/useOnScreen.js",
       "require": "./lib/cjs/useOnScreen.js"
@@ -21,6 +25,10 @@
     "./usePrevious": {
       "import": "./lib/esm/usePrevious.js",
       "require": "./lib/cjs/usePrevious.js"
+    },
+    "./useToggle": {
+      "import": "./lib/esm/useToggle.js",
+      "require": "./lib/cjs/useToggle.js"
     },
     "./useTrimText": {
       "import": "./lib/esm/useTrimText.js",
