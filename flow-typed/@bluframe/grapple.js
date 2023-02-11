@@ -17,7 +17,7 @@ declare module "@bluframe/grapple" {
 
   declare type PrepareComponentOptions = {|
     +onlyRenderIf?: (props: any) => boolean,
-    +onlyUpdate?: string[]
+    +onlyUpdate?: string[],
   |}
 
   declare type PrepareComponent = <Props, ComponentProps>(
@@ -26,12 +26,16 @@ declare module "@bluframe/grapple" {
   ) => Prepare<Props, ComponentProps>
 
   // Hooks
+  declare type UseOnScreen = (
+    offset?: string
+  ) => [boolean, {| current: ?HTMLElement |}]
   declare type UsePrevious = <T>(value: T) => ?T
-  declare type UseToggle = (defaultValue?: boolean) => [boolean, ()=>void] 
+  declare type UseToggle = (defaultValue?: boolean) => [boolean, () => void]
   declare type UseTrimText = (text: string, max: number) => string
 
   // Exports
   declare var prepareComponent: PrepareComponent
+  declare var useOnScreen: UseOnScreen
   declare var usePrevious: UsePrevious
   declare var useToggle: UseToggle
   declare var useTrimText: UseTrimText
@@ -41,6 +45,12 @@ declare module "@bluframe/grapple/prepareComponent" {
   import type { PrepareComponent } from "@bluframe/grapple"
 
   declare export default PrepareComponent
+}
+
+declare module "@bluframe/grapple/useOnScreen" {
+  import type { UseOnScreen } from "@bluframe/grapple"
+
+  declare export default UseOnScreen
 }
 
 declare module "@bluframe/grapple/usePrevious" {

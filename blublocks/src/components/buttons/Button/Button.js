@@ -20,7 +20,8 @@ const Button = ({
   onClick,
   outlined,
   padded,
-  secondary
+  secondary,
+  small
 }: ComponentProps): React$Node => (
   <Wrapper
     bold={bold}
@@ -32,6 +33,7 @@ const Button = ({
     outlined={outlined}
     padded={padded}
     secondary={secondary}
+    small={small}
     type={buttonType}
   >
     {iconStart ? <IconStart>{iconStart}</IconStart> : null}

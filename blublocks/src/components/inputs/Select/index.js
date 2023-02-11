@@ -1,9 +1,9 @@
 // @flow
 
-import { useMemo, useState } from "react"
+import { prepareComponent, useToggle } from "@bluframe/grapple"
 import Select from "./Select"
 import type { SelectProps } from "@bluframe/blublocks"
-import { prepareComponent } from "@bluframe/grapple"
+import { useMemo } from "react"
 
 export type Props = {|
   ...SelectProps
@@ -20,27 +20,37 @@ export type ComponentProps = {|
 const DEFAULT_IS_OPEN = false
 
 const usePrepareComponent = (props: Props): ComponentProps => {
-  const [isOpen, setIsOpen] = useState(DEFAULT_IS_OPEN)
+  const [isOpen, toggleIsOpen] = useToggle(DEFAULT_IS_OPEN)
 
+  // Get label
   const label = useMemo(() => {
+    // Get selected option
     const selectedOption = props.options.find(
       (option) => option.value === props.selected
     )
 
+    // Return label from selected option
     if (selectedOption) {
       return selectedOption.label
     }
 
+    // Return empty label
     return ""
   }, [props.options, props.selected])
 
   const onToggleIsOpen = () => {
-    setIsOpen(!isOpen)
+    // Toggle options dropdown
+    toggleIsOpen()
   }
 
   const onSelect = (value: number | string | null) => () => {
+    // Select via onSelect from props
     props.onSelect(value)
-    setIsOpen(false)
+
+    // If open close options dropdown
+    if (isOpen) {
+      toggleIsOpen()
+    }
   }
 
   return {

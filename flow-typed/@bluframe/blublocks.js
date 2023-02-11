@@ -67,7 +67,8 @@ declare module "@bluframe/blublocks" {
     +onClick?: () => void,
     +outlined?: boolean,
     +padded?: boolean,
-    +secondary?: boolean
+    +secondary?: boolean,
+    +small?: boolean
   |}
 
   declare type ContentComponents = {|
