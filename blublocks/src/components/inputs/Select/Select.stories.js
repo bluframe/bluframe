@@ -44,25 +44,24 @@ const options = [
   }
 ]
 
-export const Default: any = Template.bind({})
-Default.args = {
+const args = {
   name: "fruit",
   options,
   selected: null
 }
 
+export const Default: any = Template.bind({})
+Default.args = args
+
 export const Placeholder: any = Template.bind({})
 Placeholder.args = {
-  name: "fruit",
-  options,
-  placeholder: "Select a fruit",
-  selected: null
+  ...args,
+  placeholder: "Select a fruit"
 }
 
 export const Selected: any = Template.bind({})
 Selected.args = {
-  name: "fruit",
-  options,
+  ...args,
   placeholder: "Select a fruit",
   selected: "orange"
 }
