@@ -13,7 +13,8 @@ type Props = {|
   +noHoverHighlight?: boolean,
   +outlined?: boolean,
   +padded?: boolean,
-  +secondary?: boolean
+  +secondary?: boolean,
+  +small?: boolean
 |}
 
 const BACKGROUND_ALPHA = 0.7
@@ -49,11 +50,12 @@ export const Wrapper: StyledComponent<
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
   display: flex;
   font-family: ${({ theme }) => theme.font.family};
-  font-size: 16px;
+  font-size: ${({ small }) => (small ? "14px" : "16px")};
   font-weight: ${({ bold }) => (bold ? "700" : "300")};
   justify-content: center;
   line-height: 1.33;
-  padding: ${({ padded }) => (padded ? "15px 42px" : "10px 20px")};
+  padding: ${({ padded, small }) =>
+    small ? "6px 12px" : padded ? "15px 42px" : "10px 20px"};
   transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition-property: background-color, color, opacity;
   width: ${({ expanded }) => (expanded ? "100%" : "auto")};

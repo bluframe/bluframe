@@ -31,4 +31,10 @@ describe("Button", () => {
 
     expect(container.firstChild).toMatchSnapshot()
   })
+
+  it("renders small", () => {
+    const { container } = render(<Button {...props} small />)
+
+    expect(container.firstChild).toMatchSnapshot()
+  })
 })

@@ -16,7 +16,8 @@ const stories = {
     onClick: { action: "button click" },
     outlined: { control: { type: "boolean" } },
     padded: { control: { type: "boolean" } },
-    secondary: { control: { type: "boolean" } }
+    secondary: { control: { type: "boolean" } },
+    small: { control: { type: "boolean" } }
   },
   component: Button,
   title: "Buttons/Button"
@@ -106,6 +107,12 @@ export const Secondary: any = Template.bind({})
 Secondary.args = {
   label: "Button",
   secondary: true
+}
+
+export const Small: any = Template.bind({})
+Small.args = {
+  label: "Button",
+  small: true
 }
 
 export default stories
