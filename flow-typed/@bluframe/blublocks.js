@@ -40,6 +40,11 @@ declare module "@bluframe/blublocks" {
     +gray: ColorGrades
   |}
 
+  declare type MediaQueries = {|
+    +desktop: string,
+    +tablet: string
+  |}
+
   // Theme
   declare type BaseTheme = {|
     +font: {|
@@ -159,7 +164,7 @@ declare module "@bluframe/blublocks" {
   declare var Row: StyledComponent<{}, mixed, HTMLDivElement>
   declare var Section: StyledComponent<{}, mixed, HTMLElement>
   declare var colors: any
-  declare var mediaQueries: any
+  declare var mediaQueries: MediaQueries 
 }
 
 declare module "@bluframe/blublocks/Animations" {
@@ -289,3 +294,10 @@ declare module "@bluframe/blublocks/ResetButton" {
 
   declare export default ResetButtonComponent
 }
+
+declare module "@bluframe/blublocks/mediaQueries" {
+  import type { MediaQueries } from "@bluframe/blublocks"
+
+  declare export default MediaQueries 
+}
+

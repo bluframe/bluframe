@@ -94,7 +94,11 @@
       "import": "./lib/esm/Typography/SubtitleH3.js",
       "require": "./lib/cjs/Typography/SubtitleH3.js"
     },
-    "./blublocks.css": "./lib/css/blublocks.css"
+    "./blublocks.css": "./lib/css/blublocks.css",
+    "./mediaQueries": {
+      "import": "./lib/esm/mediaQueries.js",
+      "require": "./lib/cjs/mediaQueries.js"
+    }
   },
   "files": [
     "lib"
