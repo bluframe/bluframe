@@ -26,13 +26,25 @@ const Select = ({
 }: ComponentProps): React$Node => (
   <Wrapper className={className}>
     <Control onClick={onToggleIsOpen}>
-      <Label isSelected={Boolean(selected)}>{label || placeholder}</Label>
+      <Label id={`${name}-label`} isSelected={Boolean(selected)}>
+        {label || placeholder}
+      </Label>
       <Triangle isOpen={isOpen} />
     </Control>
     {isOpen ? (
-      <Options>
-        {options.map((option) => (
-          <Option key={option.value} onClick={onSelect(option.value)}>
+      <Options
+        aria-labelledby={`${name}-label`}
+        id={`${name}-listbox`}
+        role="listbox"
+      >
+        {options.map((option, index) => (
+          <Option
+            aria-selected={option.value === selected}
+            id={`${name}-listbox-${index}`}
+            key={option.value}
+            onClick={onSelect(option.value)}
+            role="option"
+          >
             {option.label}
           </Option>
         ))}

@@ -7,8 +7,9 @@ exports[`Select renders 1`] = `
   <div
     class="styled__Control-sc-nm33db-1 fjGPPF"
   >
-    <div
-      class="styled__Label-sc-nm33db-2 hSqRti"
+    <label
+      class="styled__Label-sc-nm33db-2 hueppR"
+      id="fruit-label"
     />
     <div
       class="styled__Triangle-sc-nm33db-3 fAGIZP"
