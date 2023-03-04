@@ -42,6 +42,7 @@ declare module "@bluframe/blublocks" {
 
   declare type MediaQueries = {|
     +desktop: string,
+    +largeDesktop: string,
     +tablet: string
   |}
 
