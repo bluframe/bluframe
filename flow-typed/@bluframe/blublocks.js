@@ -24,6 +24,7 @@ declare module "@bluframe/blublocks" {
     +disabled: BaseColorGrades,
     +primary: BaseColorGrades,
     +secondary: BaseColorGrades,
+    +subtitle: BaseColorGrades,
     +text: BaseColorGrades
   |}
 
@@ -31,6 +32,7 @@ declare module "@bluframe/blublocks" {
     +disabled: ColorGrades,
     +primary: ColorGrades,
     +secondary: ColorGrades,
+    +subtitle: ColorGrades,
     +text: ColorGrades
   |}
 
@@ -188,6 +190,48 @@ declare module "@bluframe/blublocks/FAIcon" {
   declare export default FAIconComponent
 }
 
+declare module "@bluframe/blublocks/Typography/H1" {
+  import type { StyledComponent } from "styled-components"
+  import type { Theme } from "@bluframe/blublocks"
+
+  declare export default StyledComponent<{||}, Theme, HTMLHeadingElement>
+}
+
+declare module "@bluframe/blublocks/Typography/H2" {
+  import type { StyledComponent } from "styled-components"
+  import type { Theme } from "@bluframe/blublocks"
+
+  declare export default StyledComponent<{||}, Theme, HTMLHeadingElement>
+}
+
+declare module "@bluframe/blublocks/Typography/H3" {
+  import type { StyledComponent } from "styled-components"
+  import type { Theme } from "@bluframe/blublocks"
+
+  declare export default StyledComponent<{||}, Theme, HTMLHeadingElement>
+}
+
+declare module "@bluframe/blublocks/Typography/H4" {
+  import type { StyledComponent } from "styled-components"
+  import type { Theme } from "@bluframe/blublocks"
+
+  declare export default StyledComponent<{||}, Theme, HTMLHeadingElement>
+}
+
+declare module "@bluframe/blublocks/Typography/H5" {
+  import type { StyledComponent } from "styled-components"
+  import type { Theme } from "@bluframe/blublocks"
+
+  declare export default StyledComponent<{||}, Theme, HTMLHeadingElement>
+}
+
+declare module "@bluframe/blublocks/Typography/H6" {
+  import type { StyledComponent } from "styled-components"
+  import type { Theme } from "@bluframe/blublocks"
+
+  declare export default StyledComponent<{||}, Theme, HTMLHeadingElement>
+}
+
 declare module "@bluframe/blublocks/Hamburger" {
   import type { HamburgerComponent } from "@bluframe/blublocks"
 
@@ -206,10 +250,38 @@ declare module "@bluframe/blublocks/Loading" {
   declare export default LoadingComponent
 }
 
+declare module "@bluframe/blublocks/Typography/Paragraph" {
+  import type { StyledComponent } from "styled-components"
+  import type { Theme } from "@bluframe/blublocks"
+
+  declare export default StyledComponent<{||}, Theme, HTMLParagraphElement>
+}
+
 declare module "@bluframe/blublocks/Select" {
   import type { SelectComponent } from "@bluframe/blublocks"
 
   declare export default SelectComponent
+}
+
+declare module "@bluframe/blublocks/Typography/SubtitleH1" {
+  import type { StyledComponent } from "styled-components"
+  import type { Theme } from "@bluframe/blublocks"
+
+  declare export default StyledComponent<{||}, Theme, HTMLParagraphElement>
+}
+
+declare module "@bluframe/blublocks/Typography/SubtitleH2" {
+  import type { StyledComponent } from "styled-components"
+  import type { Theme } from "@bluframe/blublocks"
+
+  declare export default StyledComponent<{||}, Theme, HTMLParagraphElement>
+}
+
+declare module "@bluframe/blublocks/Typography/SubtitleH3" {
+  import type { StyledComponent } from "styled-components"
+  import type { Theme } from "@bluframe/blublocks"
+
+  declare export default StyledComponent<{||}, Theme, HTMLParagraphElement>
 }
 
 declare module "@bluframe/blublocks/ResetButton" {

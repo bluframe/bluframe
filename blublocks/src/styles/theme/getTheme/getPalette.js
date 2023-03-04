@@ -30,6 +30,11 @@ const getPalette = (theme: BaseTheme): Palette => {
       dark: getDark(basePalette.secondary),
       light: getLight(basePalette.secondary)
     },
+    subtitle: {
+      ...basePalette.subtitle,
+      dark: getDark(basePalette.subtitle),
+      light: getLight(basePalette.subtitle)
+    },
     text: {
       ...basePalette.text,
       dark: getDark(basePalette.text),

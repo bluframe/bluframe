@@ -16,6 +16,16 @@ const input = {
   Loading: "src/components/Loading/index.js",
   ResetButton: "src/components/buttons/Reset.js",
   Select: "src/components/inputs/Select/index.js",
+  "Typography/H1": "src/components/Typography/H1.js",
+  "Typography/H2": "src/components/Typography/H2.js",
+  "Typography/H3": "src/components/Typography/H3.js",
+  "Typography/H4": "src/components/Typography/H4.js",
+  "Typography/H5": "src/components/Typography/H5.js",
+  "Typography/H6": "src/components/Typography/H6.js",
+  "Typography/Paragraph": "src/components/Typography/Paragraph.js",
+  "Typography/SubtitleH1": "src/components/Typography/SubtitleH1.js",
+  "Typography/SubtitleH2": "src/components/Typography/SubtitleH2.js",
+  "Typography/SubtitleH3": "src/components/Typography/SubtitleH3.js",
   index: "src/index.js"
 }
 
