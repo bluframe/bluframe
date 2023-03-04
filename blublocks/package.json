@@ -94,7 +94,11 @@
       "import": "./lib/esm/Typography/SubtitleH3.js",
       "require": "./lib/cjs/Typography/SubtitleH3.js"
     },
-    "./blublocks.css": "./lib/css/blublocks.css"
+    "./blublocks.css": "./lib/css/blublocks.css",
+    "./mediaQueries": {
+      "import": "./lib/esm/mediaQueries.js",
+      "require": "./lib/cjs/mediaQueries.js"
+    }
   },
   "files": [
     "lib"
@@ -108,7 +112,7 @@
     "flow:ci": "flow --quiet",
     "lint": "eslint src/",
     "lint:ci": "eslint --quiet src/",
-    "prepublish": "yarn lint:ci && yarn flow:ci && yarn test:ci && yarn build:ci",
+    "prepublish": "yarn lint:ci && yarn flow:ci && yarn test:ci && yarn clean && yarn build:ci",
     "publish": "yarn npm publish --access public",
     "storybook": "start-storybook -p 6006 -s ./public",
     "test": "jest --coverage --verbose",

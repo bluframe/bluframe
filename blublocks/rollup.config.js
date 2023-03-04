@@ -26,7 +26,8 @@ const input = {
   "Typography/SubtitleH1": "src/components/Typography/SubtitleH1.js",
   "Typography/SubtitleH2": "src/components/Typography/SubtitleH2.js",
   "Typography/SubtitleH3": "src/components/Typography/SubtitleH3.js",
-  index: "src/index.js"
+  index: "src/index.js",
+  mediaQueries: "src/styles/mediaQueries"
 }
 
 const plugins = [
