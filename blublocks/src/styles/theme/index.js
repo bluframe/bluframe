@@ -20,6 +20,10 @@ const baseTheme: BaseTheme = {
       contrast: colors.white,
       main: colors.dustyGray
     },
+    subtitle: {
+      contrast: colors.white,
+      main: colors.dustyGray
+    },
     text: {
       contrast: colors.white,
       main: colors.mineShaft

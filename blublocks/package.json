@@ -34,6 +34,30 @@
       "import": "./lib/esm/FAIcon.js",
       "require": "./lib/cjs/FAIcon.js"
     },
+    "./Typography/H1": {
+      "import": "./lib/esm/Typography/H1.js",
+      "require": "./lib/cjs/Typography/H1.js"
+    },
+    "./Typography/H2": {
+      "import": "./lib/esm/Typography/H2.js",
+      "require": "./lib/cjs/Typography/H2.js"
+    },
+    "./Typography/H3": {
+      "import": "./lib/esm/Typography/H3.js",
+      "require": "./lib/cjs/Typography/H3.js"
+    },
+    "./Typography/H4": {
+      "import": "./lib/esm/Typography/H4.js",
+      "require": "./lib/cjs/Typography/H4.js"
+    },
+    "./Typography/H5": {
+      "import": "./lib/esm/Typography/H5.js",
+      "require": "./lib/cjs/Typography/H5.js"
+    },
+    "./Typography/H6": {
+      "import": "./lib/esm/Typography/H6.js",
+      "require": "./lib/cjs/Typography/H6.js"
+    },
     "./Hamburger": {
       "import": "./lib/esm/Hamburger.js",
       "require": "./lib/cjs/Hamburger.js"
@@ -46,6 +70,10 @@
       "import": "./lib/esm/Loading.js",
       "require": "./lib/cjs/Loading.js"
     },
+    "./Typography/Paragraph": {
+      "import": "./lib/esm/Typography/Paragraph.js",
+      "require": "./lib/cjs/Typography/Paragraph.js"
+    },
     "./ResetButton": {
       "import": "./lib/esm/ResetButton.js",
       "require": "./lib/cjs/ResetButton.js"
@@ -53,6 +81,18 @@
     "./Select": {
       "import": "./lib/esm/Select.js",
       "require": "./lib/cjs/Select.js"
+    },
+    "./Typography/SubtitleH1": {
+      "import": "./lib/esm/Typography/SubtitleH1.js",
+      "require": "./lib/cjs/Typography/SubtitleH1.js"
+    },
+    "./Typography/SubtitleH2": {
+      "import": "./lib/esm/Typography/SubtitleH2.js",
+      "require": "./lib/cjs/Typography/SubtitleH2.js"
+    },
+    "./Typography/SubtitleH3": {
+      "import": "./lib/esm/Typography/SubtitleH3.js",
+      "require": "./lib/cjs/Typography/SubtitleH3.js"
     },
     "./blublocks.css": "./lib/css/blublocks.css"
   },
@@ -175,8 +215,5 @@
     "frontend",
     "component",
     "components"
-  ],
-  "moduleRoots": [
-    "src"
   ]
 }
