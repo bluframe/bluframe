@@ -25,10 +25,13 @@ export const Control: StyledComponent<{||}, Theme, HTMLDivElement> = styled.div`
 export const Label: StyledComponent<
   {| +isSelected: boolean |},
   Theme,
-  HTMLDivElement
-> = styled.div`
+  HTMLLabelElement
+> = styled.label`
   color: ${({ isSelected, theme }) =>
     isSelected ? theme.palette.text.main : theme.palette.text.light};
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
 `
 
 export const Triangle: StyledComponent<
@@ -47,7 +50,13 @@ export const Triangle: StyledComponent<
   transform: rotate(${({ isOpen }) => (isOpen ? "-45deg" : "135deg")});
 `
 
-export const Options: StyledComponent<{||}, Theme, HTMLDivElement> = styled.div`
+export const Options: StyledComponent<
+  {||},
+  Theme,
+  HTMLUListElement
+> = styled.ul`
+  list-style: none;
+  margin: 0;
   max-height: 200px;
   overflow-y: auto;
   position: absolute;
@@ -55,7 +64,7 @@ export const Options: StyledComponent<{||}, Theme, HTMLDivElement> = styled.div`
   z-index: 10;
 `
 
-export const Option: StyledComponent<{||}, Theme, HTMLDivElement> = styled.div`
+export const Option: StyledComponent<{||}, Theme, HTMLLIElement> = styled.li`
   background: ${({ theme }) => theme.palette.text.contrast};
   color: ${({ theme }) => theme.palette.text.main};
   cursor: pointer;
