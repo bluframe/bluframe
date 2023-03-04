@@ -1,6 +1,6 @@
 {
   "name": "@bluframe/bluframe",
-  "version": "0.11.0",
+  "version": "0.11.1",
   "description": "Blu Frame Open Source!",
   "main": "index.js",
   "repository": "git@github.com:bluframe/bluframe.git",
@@ -19,7 +19,8 @@
     "lint:ci": "yarn workspaces foreach -p -j 4 --exclude @bluframe/bluframe run lint:ci",
     "logs": "docker compose logs",
     "postinstall": "husky install",
-    "publish": "yarn clean && yarn build && yarn workspaces foreach -p run npm publish",
+    "prepublish": "yarn lint:ci && yarn flow:ci && yarn test:ci && yarn clean && yarn build:ci",
+    "publish": "yarn workspaces foreach -p yarn run npm publish --access public",
     "restart": "docker compose restart",
     "set:version": "cd scripts && node ./setVersion.js",
     "show:version": "cd scripts && node ./showVersion.js",
