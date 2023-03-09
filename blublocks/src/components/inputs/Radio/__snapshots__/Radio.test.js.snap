@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radio renders 1`] = `
+<div
+  class="styled__Wrapper-sc-xszf5l-0 ChdSW"
+>
+  <div
+    aria-checked="true"
+    class="styled__Circle-sc-xszf5l-1 dlVTcX"
+    id="apple-radio"
+    role="radio"
+  />
+  <input
+    checked=""
+    class="styled__Input-sc-xszf5l-2 fdhJkT"
+    name="Oat Milk"
+    type="radio"
+  />
+  <label
+    class="styled__Label-sc-xszf5l-3 fpblxE"
+    id="apple-radio-label"
+  >
+    Apple
+  </label>
+</div>
+`;
