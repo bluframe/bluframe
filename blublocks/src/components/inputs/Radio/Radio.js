@@ -10,9 +10,11 @@ const Radio = ({
   isChecked,
   label,
   labelId,
-  name
+  name,
+  onChange,
+  value
 }: ComponentProps): React$Node => (
-  <Wrapper>
+  <Wrapper onClick={onChange}>
     <Circle
       aria-checked={isChecked}
       aria-labelledby={labelId}
@@ -21,7 +23,7 @@ const Radio = ({
       role="radio"
     />
 
-    <Input defaultChecked={isChecked} name={name} />
+    <Input defaultChecked={isChecked} name={name} value={value} />
 
     <Label id={inputId ? `${inputId}-label` : ""}>{label}</Label>
   </Wrapper>

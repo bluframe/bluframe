@@ -74,6 +74,14 @@
       "import": "./lib/esm/Typography/Paragraph.js",
       "require": "./lib/cjs/Typography/Paragraph.js"
     },
+    "./Radio": {
+      "import": "./lib/esm/Radio.js",
+      "require": "./lib/cjs/Radio.js"
+    },
+    "./RadioGroup": {
+      "import": "./lib/esm/RadioGroup.js",
+      "require": "./lib/cjs/RadioGroup.js"
+    },
     "./ResetButton": {
       "import": "./lib/esm/ResetButton.js",
       "require": "./lib/cjs/ResetButton.js"

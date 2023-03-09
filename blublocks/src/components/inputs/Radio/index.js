@@ -1,13 +1,11 @@
 // @flow
 
 import Radio from "./Radio"
+import type { RadioProps } from "@bluframe/blublocks"
 import { prepareComponent } from "@bluframe/grapple"
 
 export type Props = {|
-  +inputId?: string,
-  +isChecked: boolean,
-  +label: string,
-  +name: string
+  ...RadioProps
 |}
 
 export type ComponentProps = {|
@@ -18,9 +16,14 @@ export type ComponentProps = {|
 const usePrepareComponent = (props: Props): ComponentProps => {
   const labelId = props.inputId && `${props.inputId}-label`
 
+  const onChange = () => {
+    props.onChange(props.value)
+  }
+
   return {
     ...props,
-    labelId
+    labelId,
+    onChange
   }
 }
 

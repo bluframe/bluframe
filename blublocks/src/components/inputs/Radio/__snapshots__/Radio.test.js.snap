@@ -2,7 +2,7 @@
 
 exports[`Radio renders 1`] = `
 <div
-  class="styled__Wrapper-sc-xszf5l-0 ChdSW"
+  class="styled__Wrapper-sc-xszf5l-0 jAPGKW"
 >
   <div
     aria-checked="true"
@@ -13,8 +13,9 @@ exports[`Radio renders 1`] = `
   <input
     checked=""
     class="styled__Input-sc-xszf5l-2 fdhJkT"
-    name="Oat Milk"
+    name="Fruit"
     type="radio"
+    value="apple"
   />
   <label
     class="styled__Label-sc-xszf5l-3 fpblxE"

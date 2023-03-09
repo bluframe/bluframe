@@ -1,5 +1,5 @@
 // @flow
-/* eslint-disable sort-imports, no-duplicate-imports */
+/* eslint-disable sort-imports, no-duplicate-imports, max-lines */
 
 declare module "@bluframe/blublocks" {
   import type { StyledComponent } from "styled-components"
@@ -120,16 +120,34 @@ declare module "@bluframe/blublocks" {
     +theme: BaseTheme
   |}
 
-  declare type SelectOption = {|
+  declare type OptionValue = number | string
+
+  declare type Option = {|
     +label: string,
-    +value: number | string
+    +value: OptionValue
+  |}
+
+  declare type RadioGroupProps = {|
+    +label: string,
+    +name: string,
+    +onChange: (value: OptionValue) => void,
+    +options: Option[],
+    +selected: OptionValue | null
+  |}
+
+  declare type RadioProps = {|
+    ...Option,
+    +inputId?: string,
+    +isChecked: boolean,
+    +name: string,
+    +onChange: (value: OptionValue) => void
   |}
 
   declare type SelectProps = {|
     +className?: string,
     +name: string,
     +onSelect: (selected: number | string | null) => void,
-    +options: SelectOption[],
+    +options: Option[],
     +placeholder?: string,
     +selected: number | string | null
   |}
@@ -142,6 +160,8 @@ declare module "@bluframe/blublocks" {
   declare type IconComponent = React$ComponentType<IconProps>
   declare type LoadingComponent = React$ComponentType<LoadingProps>
   declare type ProviderComponent = React$ComponentType<ProviderProps>
+  declare type RadioComponent = React$ComponentType<RadioProps>
+  declare type RadioGroupComponent = React$ComponentType<RadioGroupProps>
   declare type ResetButtonComponent = StyledComponent<
     {},
     mixed,
@@ -165,7 +185,7 @@ declare module "@bluframe/blublocks" {
   declare var Row: StyledComponent<{}, mixed, HTMLDivElement>
   declare var Section: StyledComponent<{}, mixed, HTMLElement>
   declare var colors: any
-  declare var mediaQueries: MediaQueries 
+  declare var mediaQueries: MediaQueries
 }
 
 declare module "@bluframe/blublocks/Animations" {
@@ -263,6 +283,18 @@ declare module "@bluframe/blublocks/Typography/Paragraph" {
   declare export default StyledComponent<{||}, Theme, HTMLParagraphElement>
 }
 
+declare module "@bluframe/blublocks/Radio" {
+  import type { RadioComponent } from "@bluframe/blublocks"
+
+  declare export default RadioComponent
+}
+
+declare module "@bluframe/blublocks/RadioGroup" {
+  import type { RadioGroupComponent } from "@bluframe/blublocks"
+
+  declare export default RadioGroupComponent
+}
+
 declare module "@bluframe/blublocks/Select" {
   import type { SelectComponent } from "@bluframe/blublocks"
 
@@ -299,6 +331,5 @@ declare module "@bluframe/blublocks/ResetButton" {
 declare module "@bluframe/blublocks/mediaQueries" {
   import type { MediaQueries } from "@bluframe/blublocks"
 
-  declare export default MediaQueries 
+  declare export default MediaQueries
 }
-
