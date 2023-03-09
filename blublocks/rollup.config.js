@@ -14,6 +14,8 @@ const input = {
   Hamburger: "src/components/Hamburger/index.js",
   Icon: "src/components/Icon/index.js",
   Loading: "src/components/Loading/index.js",
+  Radio: "src/components/inputs/Radio/index.js",
+  RadioGroup: "src/components/inputs/RadioGroup/index.js",
   ResetButton: "src/components/buttons/Reset.js",
   Select: "src/components/inputs/Select/index.js",
   "Typography/H1": "src/components/Typography/H1.js",

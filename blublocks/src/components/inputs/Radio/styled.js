@@ -7,6 +7,7 @@ import type { Theme } from "@bluframe/blublocks"
 export const Wrapper: StyledComponent<{||}, Theme, HTMLDivElement> = styled.div`
   align-items: center;
   column-gap: 8px;
+  cursor: pointer;
   display: grid;
   grid-template-columns: auto 1fr;
 `

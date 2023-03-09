@@ -17,7 +17,7 @@ declare module "@bluframe/grapple" {
 
   declare type PrepareComponentOptions = {|
     +onlyRenderIf?: (props: any) => boolean,
-    +onlyUpdate?: string[],
+    +onlyUpdate?: string[]
   |}
 
   declare type PrepareComponent = <Props, ComponentProps>(

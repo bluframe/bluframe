@@ -12,7 +12,9 @@ describe("Radio", () => {
     inputId: "apple-radio",
     isChecked: true,
     label: "Apple",
-    name: "Oat Milk"
+    name: "Fruit",
+    onChange: jest.fn(),
+    value: "apple"
   }
 
   it("renders", () => {
