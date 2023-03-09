@@ -1,7 +1,6 @@
 // @flow
 
 import "styles/foundation/css/foundation.css"
-import "styles/bootstrap.css"
 import "styles/font-awesome.min.css"
 import React from "react"
 import ThemeProvider from "styles/theme/Provider"
@@ -18,19 +17,19 @@ export const decorators = [
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   backgrounds: {
-    default: 'lighter',
+    default: "lighter",
     values: [
       {
-        name: 'dark',
-        value: '#333333'
+        name: "dark",
+        value: "#333333"
       },
       {
-        name: 'light',
-        value: '#F8F8F8'
+        name: "light",
+        value: "#F8F8F8"
       },
       {
-        name: 'lighter',
-        value: '#FBFBFB'
+        name: "lighter",
+        value: "#FBFBFB"
       }
     ]
   },
