@@ -128,6 +128,7 @@ declare module "@bluframe/blublocks" {
   |}
 
   declare type RadioGroupProps = {|
+    +className?: string,
     +label: string,
     +name: string,
     +onChange: (value: OptionValue) => void,

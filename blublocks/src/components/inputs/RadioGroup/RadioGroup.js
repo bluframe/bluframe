@@ -6,6 +6,7 @@ import Radio from "components/inputs/Radio"
 import React from "react"
 
 const RadioGroup = ({
+  className,
   groupId,
   label,
   labelId,
@@ -14,7 +15,12 @@ const RadioGroup = ({
   options,
   selected
 }: ComponentProps): React$Node => (
-  <Wrapper aria-labelledby={labelId} id={groupId} role="radiogroup">
+  <Wrapper
+    aria-labelledby={labelId}
+    className={className}
+    id={groupId}
+    role="radiogroup"
+  >
     <Label id={labelId}>{label}</Label>
     <Options>
       {options.map((option) => (
