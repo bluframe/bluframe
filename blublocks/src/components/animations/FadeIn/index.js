@@ -9,9 +9,7 @@ export type Props = {|
 |}
 
 export type ComponentProps = {|
-  +children: React$Node,
-  +fadeIn: "Left" | "Right" | "Up",
-  +isAnimated: boolean
+  ...Props
 |}
 
 export default FadeIn

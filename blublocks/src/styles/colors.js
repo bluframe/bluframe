@@ -1,9 +1,8 @@
 // @flow
 
-const blacksAndGrays = {
+const grays = {
   abbey: "#555757",
   alto: "#DFDFDF",
-  black: "#000000",
   boulder: "#757575",
   capeCod: "#323535",
   codGray: "#121212",
@@ -18,12 +17,13 @@ const blacksAndGrays = {
   shark: "#191A1C",
   silver: "#CCCCCC",
   silverChalice: "#A6A6A6",
-  tundora: "#444444",
-  white: "#FFFFFF"
+  tundora: "#444444"
 }
 
 const colors = {
-  ...blacksAndGrays
+  ...grays,
+  black: "#000000",
+  white: "#FFFFFF"
 }
 
 export default colors
