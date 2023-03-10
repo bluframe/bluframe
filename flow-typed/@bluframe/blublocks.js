@@ -98,14 +98,9 @@ declare module "@bluframe/blublocks" {
 
   declare type IconProps = {|
     +color?: string,
-    +group: IconGroup,
+    +group?: IconGroup,
     +name: string,
     +size?: string
-  |}
-
-  declare type FAIconProps = {|
-    +name: string,
-    +fontSize?: string
   |}
 
   declare type LoadingProps = {|
@@ -123,13 +118,13 @@ declare module "@bluframe/blublocks" {
   declare type OptionValue = number | string
 
   declare type Option = {|
-    +label: string,
+    +label: React$Node,
     +value: OptionValue
   |}
 
   declare type RadioGroupProps = {|
     +className?: string,
-    +label: string,
+    +label: React$Node,
     +name: string,
     +onChange: (value: OptionValue) => void,
     +options: Option[],
@@ -156,7 +151,6 @@ declare module "@bluframe/blublocks" {
   // Components
   declare type ButtonComponent = React$ComponentType<ButtonProps>
   declare type ContentComponent = React$ComponentType<ContentProps>
-  declare type FAIconComponent = React$ComponentType<FAIconProps>
   declare type HamburgerComponent = React$ComponentType<HamburgerProps>
   declare type IconComponent = React$ComponentType<IconProps>
   declare type LoadingComponent = React$ComponentType<LoadingProps>
@@ -177,7 +171,6 @@ declare module "@bluframe/blublocks" {
   declare var Column: StyledComponent<{}, mixed, HTMLDivElement>
   declare var Container: StyledComponent<{}, mixed, HTMLDivElement>
   declare var Content: ContentComponent
-  declare var FAIcon: FAIconComponent
   declare var FadeIn: any
   declare var Flip: any
   declare var Hamburger: HamburgerComponent
@@ -209,12 +202,6 @@ declare module "@bluframe/blublocks/Content" {
   import type { ContentComponent } from "@bluframe/blublocks"
 
   declare export default ContentComponent
-}
-
-declare module "@bluframe/blublocks/FAIcon" {
-  import type { FAIconComponent } from "@bluframe/blublocks"
-
-  declare export default FAIconComponent
 }
 
 declare module "@bluframe/blublocks/Typography/H1" {

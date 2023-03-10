@@ -12,7 +12,7 @@ export type Props = {|
 export type ComponentProps = {|
   ...SelectProps,
   +isOpen: boolean,
-  +label: string,
+  +label: React$Node,
   +onSelect: (value: number | string | null) => () => void,
   +onToggleIsOpen: () => void
 |}

@@ -17,7 +17,7 @@ export type ComponentProps = {|
 
 const usePrepareComponent = ({
   color,
-  group,
+  group = "ion",
   name,
   size
 }: Props): ComponentProps => {
