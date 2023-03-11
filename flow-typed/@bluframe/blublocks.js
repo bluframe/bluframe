@@ -2,9 +2,11 @@
 /* eslint-disable sort-imports, no-duplicate-imports, max-lines */
 
 declare module "@bluframe/blublocks" {
-  import type { StyledComponent } from "styled-components"
+  import type { KeyFrames, StyledComponent } from "styled-components"
 
   declare type IconGroup = "ion"
+
+  declare type AnimationName = "bounceIn" | "bounceOut" | "fadeIn" | "fadeOut"
 
   declare type BaseColorGrades = {|
     +contrast: string,
@@ -18,6 +20,31 @@ declare module "@bluframe/blublocks" {
     +dark: string,
     +light: string,
     +main: string
+  |}
+
+  declare type ColorName =
+    | "abbey"
+    | "alto"
+    | "black"
+    | "boulder"
+    | "capeCod"
+    | "codGray"
+    | "diesel"
+    | "dustyGray"
+    | "gallery"
+    | "gray"
+    | "mercury"
+    | "mineShaft"
+    | "nevada"
+    | "quillGray"
+    | "shark"
+    | "silver"
+    | "silverChalice"
+    | "tundora"
+    | "white"
+
+  declare type Colors = {|
+    +[name: string]: string
   |}
 
   declare type BasePalette = {|
@@ -36,7 +63,7 @@ declare module "@bluframe/blublocks" {
     +text: ColorGrades
   |}
 
-  declare type Colors = {|
+  declare type ThemeColors = {|
     +gray: ColorGrades
   |}
 
@@ -56,7 +83,7 @@ declare module "@bluframe/blublocks" {
 
   declare type Theme = {|
     ...BaseTheme,
-    +colors: Colors,
+    +colors: ThemeColors,
     +palette: Palette
   |}
 
@@ -80,7 +107,7 @@ declare module "@bluframe/blublocks" {
   |}
 
   declare type ContentComponents = {|
-    [tag: string]: (props: any) => any
+    [tag: string]: (props: {| +node: React$Node |}) => React$Element<string>
   |}
 
   declare type ContentProps = {|
@@ -98,14 +125,9 @@ declare module "@bluframe/blublocks" {
 
   declare type IconProps = {|
     +color?: string,
-    +group: IconGroup,
+    +group?: IconGroup,
     +name: string,
     +size?: string
-  |}
-
-  declare type FAIconProps = {|
-    +name: string,
-    +fontSize?: string
   |}
 
   declare type LoadingProps = {|
@@ -123,13 +145,13 @@ declare module "@bluframe/blublocks" {
   declare type OptionValue = number | string
 
   declare type Option = {|
-    +label: string,
+    +label: React$Node,
     +value: OptionValue
   |}
 
   declare type RadioGroupProps = {|
     +className?: string,
-    +label: string,
+    +label: React$Node,
     +name: string,
     +onChange: (value: OptionValue) => void,
     +options: Option[],
@@ -144,6 +166,12 @@ declare module "@bluframe/blublocks" {
     +onChange: (value: OptionValue) => void
   |}
 
+  declare type SelectedIconProps = {|
+    +color?: string,
+    +size?: string,
+    +title?: string
+  |}
+
   declare type SelectProps = {|
     +className?: string,
     +name: string,
@@ -154,43 +182,64 @@ declare module "@bluframe/blublocks" {
   |}
 
   // Components
+  declare type AnimationComponents = {| +[key: AnimationName]: KeyFrames |}
   declare type ButtonComponent = React$ComponentType<ButtonProps>
   declare type ContentComponent = React$ComponentType<ContentProps>
-  declare type FAIconComponent = React$ComponentType<FAIconProps>
   declare type HamburgerComponent = React$ComponentType<HamburgerProps>
+  declare type FadeInComponent = StyledComponent<
+    {| +fadeIn: "Left" | "Right" | "Up", +isAnimated: boolean |},
+    Theme,
+    HTMLDivElement
+  >
+  declare type FlipComponent = StyledComponent<
+    {| +flip: "X" | "Y", +isAnimated: boolean |},
+    Theme,
+    HTMLDivElement
+  >
   declare type IconComponent = React$ComponentType<IconProps>
   declare type LoadingComponent = React$ComponentType<LoadingProps>
   declare type ProviderComponent = React$ComponentType<ProviderProps>
   declare type RadioComponent = React$ComponentType<RadioProps>
   declare type RadioGroupComponent = React$ComponentType<RadioGroupProps>
   declare type ResetButtonComponent = StyledComponent<
-    {},
-    mixed,
+    {||},
+    Theme,
     HTMLButtonElement
   >
   declare type SelectComponent = React$ComponentType<SelectProps>
 
   // Exports
-  declare var Animations: any
+  declare var Animations: AnimationComponents
   declare var BluBlocksProvider: ProviderComponent
   declare var Button: ButtonComponent
-  declare var Column: StyledComponent<{}, mixed, HTMLDivElement>
-  declare var Container: StyledComponent<{}, mixed, HTMLDivElement>
   declare var Content: ContentComponent
-  declare var FAIcon: FAIconComponent
-  declare var FadeIn: any
-  declare var Flip: any
+  declare var FadeIn: FadeInComponent
+  declare var Flip: FlipComponent
+  declare var H1: StyledComponent<{||}, Theme, HTMLHeadingElement>
+  declare var H2: StyledComponent<{||}, Theme, HTMLHeadingElement>
+  declare var H3: StyledComponent<{||}, Theme, HTMLHeadingElement>
+  declare var H4: StyledComponent<{||}, Theme, HTMLHeadingElement>
+  declare var H5: StyledComponent<{||}, Theme, HTMLHeadingElement>
+  declare var H6: StyledComponent<{||}, Theme, HTMLHeadingElement>
   declare var Hamburger: HamburgerComponent
   declare var Icon: IconComponent
+  declare var Loading: LoadingComponent
+  declare var Paragraph: StyledComponent<{||}, Theme, HTMLParagraphElement>
+  declare var Radio: RadioComponent
+  declare var RadioGroup: RadioGroupComponent
   declare var ResetButton: ResetButtonComponent
-  declare var Row: StyledComponent<{}, mixed, HTMLDivElement>
-  declare var Section: StyledComponent<{}, mixed, HTMLElement>
-  declare var colors: any
+  declare var Select: SelectComponent
+  declare var SubtitleH1: StyledComponent<{||}, Theme, HTMLParagraphElement>
+  declare var SubtitleH2: StyledComponent<{||}, Theme, HTMLParagraphElement>
+  declare var SubtitleH3: StyledComponent<{||}, Theme, HTMLParagraphElement>
+  declare var colors: Colors
   declare var mediaQueries: MediaQueries
 }
 
 declare module "@bluframe/blublocks/Animations" {
-  declare export default any
+  import type { AnimationComponents } from "@bluframe/blublocks"
+
+  declare export default AnimationComponents
 }
 
 declare module "@bluframe/blublocks/BluBlocksProvider" {
@@ -211,10 +260,16 @@ declare module "@bluframe/blublocks/Content" {
   declare export default ContentComponent
 }
 
-declare module "@bluframe/blublocks/FAIcon" {
-  import type { FAIconComponent } from "@bluframe/blublocks"
+declare module "@bluframe/blublocks/FadeIn" {
+  import type { FadeInComponent } from "@bluframe/blublocks"
 
-  declare export default FAIconComponent
+  declare export default FadeInComponent
+}
+
+declare module "@bluframe/blublocks/Flip" {
+  import type { FlipComponent } from "@bluframe/blublocks"
+
+  declare export default FlipComponent
 }
 
 declare module "@bluframe/blublocks/Typography/H1" {
@@ -296,6 +351,12 @@ declare module "@bluframe/blublocks/RadioGroup" {
   declare export default RadioGroupComponent
 }
 
+declare module "@bluframe/blublocks/ResetButton" {
+  import type { ResetButtonComponent } from "@bluframe/blublocks"
+
+  declare export default ResetButtonComponent
+}
+
 declare module "@bluframe/blublocks/Select" {
   import type { SelectComponent } from "@bluframe/blublocks"
 
@@ -323,10 +384,10 @@ declare module "@bluframe/blublocks/Typography/SubtitleH3" {
   declare export default StyledComponent<{||}, Theme, HTMLParagraphElement>
 }
 
-declare module "@bluframe/blublocks/ResetButton" {
-  import type { ResetButtonComponent } from "@bluframe/blublocks"
+declare module "@bluframe/blublocks/colors" {
+  import type { Colors } from "@bluframe/blublocks"
 
-  declare export default ResetButtonComponent
+  declare export default Colors
 }
 
 declare module "@bluframe/blublocks/mediaQueries" {

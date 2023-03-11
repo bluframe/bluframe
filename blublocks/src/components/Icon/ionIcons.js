@@ -1,6 +1,8 @@
 // @flow
 
 import { IoAccessibilityOutline } from "@react-icons/all-files/io5/IoAccessibilityOutline"
+import { IoArrowBack } from "@react-icons/all-files/io5/IoArrowBack"
+import { IoArrowForward } from "@react-icons/all-files/io5/IoArrowForward"
 import { IoBulbOutline } from "@react-icons/all-files/io5/IoBulbOutline"
 import { IoChatbubbleOutline } from "@react-icons/all-files/io5/IoChatbubbleOutline"
 import { IoCloudOutline } from "@react-icons/all-files/io5/IoCloudOutline"
@@ -11,15 +13,17 @@ import { IoPaperPlaneOutline } from "@react-icons/all-files/io5/IoPaperPlaneOutl
 import { IoSpeedometerOutline } from "@react-icons/all-files/io5/IoSpeedometerOutline"
 
 const ionIcons = Object.freeze({
-  accessibilityOutline: IoAccessibilityOutline,
-  bulbOutline: IoBulbOutline,
-  chatBubbleOutline: IoChatbubbleOutline,
-  cloudOutline: IoCloudOutline,
-  heartOutline: IoHeartOutline,
-  laptopOutline: IoLaptopOutline,
-  mapOutline: IoMapOutline,
-  paperPlaneOutline: IoPaperPlaneOutline,
-  speedometerOutline: IoSpeedometerOutline
+  IoAccessibilityOutline,
+  IoArrowBack,
+  IoArrowForward,
+  IoBulbOutline,
+  IoChatbubbleOutline,
+  IoCloudOutline,
+  IoHeartOutline,
+  IoLaptopOutline,
+  IoMapOutline,
+  IoPaperPlaneOutline,
+  IoSpeedometerOutline
 })
 
 export default ionIcons

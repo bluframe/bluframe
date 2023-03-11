@@ -47,6 +47,7 @@ export const Wrapper: StyledComponent<
   border: ${getBorder};
   border-radius: 3px;
   color: ${getColor};
+  column-gap: 10px;
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
   display: flex;
   font-family: ${({ theme }) => theme.font.family};
@@ -76,10 +77,10 @@ export const Wrapper: StyledComponent<
   }
 `
 
-export const IconEnd: StyledComponent<{}, Theme, HTMLDivElement> = styled.div`
-  margin-left: 10px;
-`
+export const IconEnd: StyledComponent<{||}, Theme, HTMLElement> = styled.span``
 
-export const IconStart: StyledComponent<{}, Theme, HTMLDivElement> = styled.div`
-  margin-right: 10px;
-`
+export const IconStart: StyledComponent<
+  {||},
+  Theme,
+  HTMLElement
+> = styled.span``

@@ -2,12 +2,13 @@
 /* eslint-disable no-ternary */
 
 import styled, { type StyledComponent } from "styled-components"
+import type { Theme } from "@bluframe/blublocks"
 import flipX from "components/animations/Flip/flipX"
 import flipY from "components/animations/Flip/flipY"
 
 export const Wrapper: StyledComponent<
-  { +flip: "X" | "Y", +isAnimated: boolean },
-  mixed,
+  {| +flip: "X" | "Y", +isAnimated: boolean |},
+  Theme,
   HTMLDivElement
 > = styled.div`
   animation: ${({ flip }) => (flip === "X" ? flipX : flipY)};

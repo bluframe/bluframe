@@ -2,7 +2,7 @@
 
 import Button, { type Props } from "components/buttons/Button"
 import styled, { type StyledComponent } from "styled-components"
-import FAIcon from "components/FAIcon"
+import Icon from "components/Icon"
 import React from "react"
 import type { Theme } from "@bluframe/blublocks"
 import mediaQueries from "styles/mediaQueries"
@@ -69,13 +69,13 @@ Loading.args = {
 
 export const IconEnd: any = Template.bind({})
 IconEnd.args = {
-  iconEnd: <FAIcon name="angle-double-up" />,
+  iconEnd: <Icon name="IoArrowForward" />,
   label: "Button"
 }
 
 export const IconStart: any = Template.bind({})
 IconStart.args = {
-  iconStart: <FAIcon name="angle-double-up" />,
+  iconStart: <Icon name="IoArrowBack" />,
   label: "Button"
 }
 

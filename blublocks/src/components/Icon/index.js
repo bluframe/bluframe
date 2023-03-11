@@ -1,7 +1,7 @@
 // @flow
 
+import type { IconProps, SelectedIconProps } from "@bluframe/blublocks"
 import Icon from "./Icon"
-import type { IconProps } from "@bluframe/blublocks"
 import ionIcons from "./ionIcons"
 import { prepareComponent } from "@bluframe/grapple"
 
@@ -10,14 +10,13 @@ export type Props = {|
 |}
 
 export type ComponentProps = {|
-  +color?: string,
-  +SelectedIcon: React$StatelessFunctionalComponent<*>,
-  +size?: string
+  ...SelectedIconProps,
+  +SelectedIcon: React$ComponentType<SelectedIconProps>
 |}
 
 const usePrepareComponent = ({
   color,
-  group,
+  group = "ion",
   name,
   size
 }: Props): ComponentProps => {
@@ -38,4 +37,4 @@ const usePrepareComponent = ({
 
 export default (prepareComponent<Props, ComponentProps>(usePrepareComponent)(
   Icon
-): React$AbstractComponent<Props, any>)
+): React$ComponentType<Props>)

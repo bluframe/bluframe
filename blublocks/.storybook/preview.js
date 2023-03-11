@@ -1,7 +1,6 @@
 // @flow
 
 import "styles/foundation/css/foundation.css"
-import "styles/font-awesome.min.css"
 import React from "react"
 import ThemeProvider from "styles/theme/Provider"
 import theme from "styles/theme"
