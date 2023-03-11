@@ -72,7 +72,7 @@ jobs:
       - run:
           name: "Publish Grapple"
           command: |
-            yarn workspace @blulframe/grapple publish 
+            yarn workspace @blulframe/grapple publish:ci 
 
   publishblublocks:
     executor: node 
@@ -85,7 +85,7 @@ jobs:
       - run:
           name: "Publish Blu Blocks"
           command: |
-            yarn workspace @blulframe/blublocks publish 
+            yarn workspace @blulframe/blublocks publish:ci 
 
   publishbluframe:
     executor: node 
@@ -98,7 +98,7 @@ jobs:
       - run:
           name: "Publish Blu Frame"
           command: |
-            yarn publish 
+            yarn publish:ci 
 
 workflows:
   version: 2
