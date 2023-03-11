@@ -72,7 +72,7 @@ jobs:
       - run:
           name: "Publish Grapple"
           command: |
-            npm set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+            yarn config set npmAuthToken $NPM_TOKEN
             yarn workspace @blulframe/grapple publish 
 
   publishblublocks:
@@ -86,7 +86,7 @@ jobs:
       - run:
           name: "Publish Blu Blocks"
           command: |
-            npm set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+            yarn config set npmAuthToken $NPM_TOKEN
             yarn workspace @blulframe/blublocks publish 
 
   publishbluframe:
@@ -100,7 +100,7 @@ jobs:
       - run:
           name: "Publish Blu Frame"
           command: |
-            npm set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+            yarn config set npmAuthToken $NPM_TOKEN
             yarn publish 
 
 workflows:
