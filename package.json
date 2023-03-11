@@ -20,6 +20,7 @@
     "logs": "docker compose logs",
     "postinstall": "husky install",
     "prepublish": "yarn lint:ci && yarn flow:ci && yarn test:ci && yarn clean && yarn build:ci",
+    "prepublish": "yarn lint:ci && yarn flow:ci && yarn test:ci && yarn build:ci",
     "publish": "yarn npm publish --access public",
     "restart": "docker compose restart",
     "set:version": "cd scripts && node ./setVersion.js",
