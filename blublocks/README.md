@@ -1,3 +1,4 @@
+
 <p align="center">
   <a href="https://blufra.me">
     <img style="margin: 0 auto" width="200" src="https://snowflakes.blufra.me/sites/blufra.me/img/BluFrameLogo512.png" />
@@ -25,10 +26,31 @@ or
 ## Components
 
 ### Button
-A button component that can be styled to all needs
+A simple button component that can be styled to all needs
 
-### Select
-A lightweight select component
+### Inputs
+* Select
+* Radio
+* RadioGroup
+
+All our inputs support ARIA
+
+### Typography
+* H1
+* H2
+* H3
+* H4
+* H5
+* H6
+* Paragraph
+* SubtitleH1
+* SubtitleH2
+* SubtitleH3
+
+Beautiful and customizable typography
+
+### Loading
+A lightweight 100% CSS Spinner
 
 ### Content
 A component that accepts markdown and beautifully displays it on your page
