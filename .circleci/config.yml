@@ -73,7 +73,7 @@ jobs:
           name: "Publish Grapple"
           command: |
             yarn config set npmAuthToken $NPM_TOKEN
-            yarn workspace @blulframe/grapple publish 
+            yarn workspace @bluframe/grapple publish 
 
   publishblublocks:
     executor: node 
@@ -87,7 +87,7 @@ jobs:
           name: "Publish Blu Blocks"
           command: |
             yarn config set npmAuthToken $NPM_TOKEN
-            yarn workspace @blulframe/blublocks publish 
+            yarn workspace @bluframe/blublocks publish 
 
   publishbluframe:
     executor: node 
