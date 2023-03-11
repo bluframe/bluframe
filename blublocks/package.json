@@ -120,10 +120,8 @@
     "flow:ci": "flow --quiet",
     "lint": "eslint src/",
     "lint:ci": "eslint --quiet src/",
-    "prepublish": "yarn lint:ci && yarn flow:ci && yarn test:ci && yarn clean && yarn build:ci",
-    "prepublish:ci": "yarn lint:ci && yarn flow:ci && yarn test:ci && yarn build:ci",
+    "prepublish": "yarn lint:ci && yarn flow:ci && yarn test:ci && yarn build:ci",
     "publish": "yarn npm publish --access public",
-    "publish:ci": "yarn npm publish --access public",
     "storybook": "start-storybook -p 6006 -s ./public",
     "test": "jest --coverage --verbose",
     "test:ci": "jest --coverage --silent"
