@@ -54,5 +54,6 @@ export const Label: StyledComponent<
   HTMLLabelElement
 > = styled.label`
   color: ${({ theme }) => theme.palette.text.main};
+  cursor: pointer;
   font-size: 16px;
 `

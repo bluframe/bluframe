@@ -3,6 +3,7 @@
 export { default as Animations } from "components/animations"
 export { default as BluBlocksProvider } from "styles/theme/Provider"
 export { default as Button } from "components/buttons/Button"
+export { default as Checkbox } from "components/inputs/Checkbox"
 export { default as Content } from "components/Content"
 export { default as FadeIn } from "components/animations/FadeIn"
 export { default as Flip } from "components/animations/Flip"

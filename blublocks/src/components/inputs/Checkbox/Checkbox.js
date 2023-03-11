@@ -1,11 +1,11 @@
 // @flow
 /* eslint-disable no-ternary */
 
-import { Circle, Input, Label, Wrapper } from "./styled"
+import { Icon, Input, Label, Polyline, StyledCheckbox, Wrapper } from "./styled"
 import type { ComponentProps } from "."
 import React from "react"
 
-const Radio = ({
+const Checkbox = ({
   inputId,
   isChecked,
   label,
@@ -15,18 +15,22 @@ const Radio = ({
   value
 }: ComponentProps): React$Node => (
   <Wrapper onClick={onChange}>
-    <Circle
+    <Input defaultChecked={isChecked} name={name} value={value} />
+
+    <StyledCheckbox
       aria-checked={isChecked}
       aria-labelledby={labelId}
       checked={isChecked}
       id={inputId}
-      role="radio"
-    />
-
-    <Input defaultChecked={isChecked} name={name} value={value} />
+      role="checkbox"
+    >
+      <Icon viewBox="0 0 24 24">
+        <Polyline points="20 6 9 17 4 12" />
+      </Icon>
+    </StyledCheckbox>
 
     <Label id={labelId}>{label}</Label>
   </Wrapper>
 )
 
-export default Radio
+export default Checkbox
