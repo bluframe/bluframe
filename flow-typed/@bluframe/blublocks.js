@@ -106,6 +106,21 @@ declare module "@bluframe/blublocks" {
     +small?: boolean
   |}
 
+  declare type OptionValue = number | string
+
+  declare type Option = {|
+    +label: React$Node,
+    +value: OptionValue
+  |}
+
+  declare type CheckboxProps = {|
+    ...Option,
+    +inputId?: string,
+    +isChecked: boolean,
+    +name: string,
+    +onChange: (value: OptionValue) => void
+  |}
+
   declare type ContentComponents = {|
     [tag: string]: (props: {| +node: React$Node |}) => React$Element<string>
   |}
@@ -140,13 +155,6 @@ declare module "@bluframe/blublocks" {
   declare type ProviderProps = {|
     +children: React$Node,
     +theme: BaseTheme
-  |}
-
-  declare type OptionValue = number | string
-
-  declare type Option = {|
-    +label: React$Node,
-    +value: OptionValue
   |}
 
   declare type RadioGroupProps = {|
@@ -184,6 +192,7 @@ declare module "@bluframe/blublocks" {
   // Components
   declare type AnimationComponents = {| +[key: AnimationName]: KeyFrames |}
   declare type ButtonComponent = React$ComponentType<ButtonProps>
+  declare type CheckboxComponent = React$ComponentType<CheckboxProps>
   declare type ContentComponent = React$ComponentType<ContentProps>
   declare type HamburgerComponent = React$ComponentType<HamburgerProps>
   declare type FadeInComponent = StyledComponent<
@@ -212,6 +221,7 @@ declare module "@bluframe/blublocks" {
   declare var Animations: AnimationComponents
   declare var BluBlocksProvider: ProviderComponent
   declare var Button: ButtonComponent
+  declare var Checkbox: CheckboxComponent
   declare var Content: ContentComponent
   declare var FadeIn: FadeInComponent
   declare var Flip: FlipComponent
@@ -246,6 +256,12 @@ declare module "@bluframe/blublocks/BluBlocksProvider" {
   import type { ProviderComponent } from "@bluframe/blublocks"
 
   declare export default ProviderComponent
+}
+
+declare module "@bluframe/blublocks/Checkbox" {
+  import type { CheckboxComponent } from "@bluframe/blublocks"
+
+  declare export default CheckboxComponent
 }
 
 declare module "@bluframe/blublocks/Button" {

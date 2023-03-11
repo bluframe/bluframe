@@ -9,6 +9,7 @@ const input = {
   Animations: "src/components/animations/index.js",
   BluBlocksProvider: "src/styles/theme/Provider.js",
   Button: "src/components/buttons/Button/index.js",
+  Checkbox: "src/components/inputs/Checkbox/index.js",
   Content: "src/components/Content/index.js",
   Hamburger: "src/components/Hamburger/index.js",
   Icon: "src/components/Icon/index.js",

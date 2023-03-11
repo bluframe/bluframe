@@ -26,6 +26,10 @@
       "import": "./lib/esm/Button.js",
       "require": "./lib/cjs/Button.js"
     },
+    "./Checkbox": {
+      "import": "./lib/esm/Checkbox.js",
+      "require": "./lib/cjs/Checkbox.js"
+    },
     "./Content": {
       "import": "./lib/esm/Content.js",
       "require": "./lib/cjs/Content.js"

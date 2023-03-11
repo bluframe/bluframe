@@ -18,8 +18,7 @@ exports[`Radio renders 1`] = `
     value="apple"
   />
   <label
-    class="styled__Label-sc-xszf5l-3 fpblxE"
-    id="apple-radio-label"
+    class="styled__Label-sc-xszf5l-3 dIxCiQ"
   >
     Apple
   </label>
