@@ -23,7 +23,7 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
-            - grapple/lib/build/**
+            - grapple/lib/**
 
   lint:
     executor: node
