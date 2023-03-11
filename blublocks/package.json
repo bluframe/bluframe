@@ -112,7 +112,7 @@
     "lib"
   ],
   "scripts": {
-    "build": "NODE_ENV=production rollup -c",
+    "build": "rollup -c",
     "build:ci": "NODE_ENV=production rollup -c",
     "build-storybook": "build-storybook",
     "clean": "rm -fr lib/*",

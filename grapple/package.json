@@ -39,7 +39,7 @@
     "lib"
   ],
   "scripts": {
-    "build": "NODE_ENV=production rollup -c",
+    "build": "rollup -c",
     "build:ci": "NODE_ENV=production rollup -c",
     "clean": "rm -fr lib/*",
     "flow": "flow",

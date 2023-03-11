@@ -1,0 +1,176 @@
+version: 2.1
+
+orbs:
+  git-shallow-clone: guitarrapc/git-shallow-clone@2.0.3
+
+executors:
+  node:
+    docker:
+      - image: cimg/node:16.15.0
+  python:
+    docker:
+      - image: cimg/python:3.10
+
+jobs:
+  install:
+    executor: node
+    steps:
+      - git-shallow-clone/checkout
+
+      # Build UIs and Tools
+      - run:
+          name: Build Grapple 
+          command: yarn workspace @bluframe/grapple build:ci
+
+      # Persist UIs and Tools
+      - persist_to_workspace:
+          root: .
+          paths:
+            - grapple/lib/build/**
+
+  lint:
+    executor: node
+    steps:
+      - git-shallow-clone/checkout
+
+      - attach_workspace: &attach-all
+          at: ./
+
+      - run:
+          name: Run Lint
+          command: yarn lint:ci
+
+  flow:
+    executor: node
+    resource_class: xlarge
+    steps:
+      - git-shallow-clone/checkout
+
+      - attach_workspace:
+          <<: *attach-all
+
+      - run:
+          name: Run Flow
+          command: yarn flow:ci
+
+  test:
+    executor: node
+    resource_class: xlarge
+    environment:
+      NODE_OPTIONS: --max_old_space_size=16384
+    steps:
+      - git-shallow-clone/checkout
+
+      - attach_workspace:
+          <<: *attach-all
+
+      - run:
+          name: Run Tests
+          command: yarn test:ci
+
+  publishgrapple:
+    executor: node 
+    steps:
+      - git-shallow-clone/checkout
+
+      - attach_workspace:
+          <<: *attach-all
+
+      - run:
+          name: "Publish Grapple"
+          command: |
+            yarn workspace @blulframe/grapple publish 
+
+  publishblublocks:
+    executor: node 
+    steps:
+      - git-shallow-clone/checkout
+
+      - attach_workspace:
+          <<: *attach-all
+
+      - run:
+          name: "Publish Blu Blocks"
+          command: |
+            yarn workspace @blulframe/blublocks publish 
+
+  publishbluframe:
+    executor: node 
+    steps:
+      - git-shallow-clone/checkout
+
+      - attach_workspace:
+          <<: *attach-all
+
+      - run:
+          name: "Publish Blu Frame"
+          command: |
+            yarn publish 
+
+workflows:
+  version: 2
+  builddeploy:
+    jobs:
+      - install:
+          name: Install Packages
+          filters: &filter-all-tags
+            tags:
+              only: /.*/
+
+      - lint:
+          name: Run Lint
+          filters:
+            <<: *filter-all-tags
+          requires:
+            - Install Packages
+
+      - flow:
+          name: Run Flow
+          filters:
+            <<: *filter-all-tags
+          requires:
+            - Install Packages
+
+      - test:
+          context: SonarCloud
+          name: Run Tests
+          filters:
+            <<: *filter-all-tags
+          requires:
+            - Install Packages
+
+      - publishgrapple:
+          name: Publish Grapple 
+          filters:
+            tags:
+              only: /@bluframe\/grapple.*/
+            branches: &ignore-all-branches
+              ignore: /.*/
+          requires:
+            - Run Lint
+            - Run Flow
+            - Run Tests
+
+      - publishblublocks:
+          name: Publish Blu Blocks 
+          filters:
+            tags:
+              only: /@bluframe\/blublocks.*/
+            branches:
+              <<: *ignore-all-branches
+          requires:
+            - Run Lint
+            - Run Flow
+            - Run Tests
+
+      - publishbluframe:
+          name: Publish Blu Frame 
+          filters:
+            tags:
+              only: /@bluframe\/bluframe.*/
+            branches:
+              <<: *ignore-all-branches
+          requires:
+            - Run Lint
+            - Run Flow
+            - Run Tests
