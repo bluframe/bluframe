@@ -166,6 +166,12 @@ declare module "@bluframe/blublocks" {
     +onChange: (value: OptionValue) => void
   |}
 
+  declare type SelectedIconProps = {|
+    +color?: string,
+    +size?: string,
+    +title?: string
+  |}
+
   declare type SelectProps = {|
     +className?: string,
     +name: string,

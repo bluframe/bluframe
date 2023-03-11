@@ -3705,9 +3705,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/preset-react", "virtual:93ef12246509ba0b707e065534d02926d6fe29f36caaa057ec9ce4fd1ee7a4ff5fd648427c99a32569d529f5f6b03835bb6a72804a51a70c635f0976f8f280cc#npm:7.17.12"],\
             ["@babel/runtime", "npm:7.18.3"],\
             ["@bluframe/grapple", "workspace:grapple"],\
-            ["@fortawesome/fontawesome-svg-core", "npm:1.3.0"],\
-            ["@fortawesome/free-brands-svg-icons", "npm:5.15.4"],\
-            ["@fortawesome/react-fontawesome", "virtual:a49150a01cb6db64e50bc40bd79ae225f619f6fbe048b86b18c6cf5a9c3e202c5b1c3bcdc2558e2bca133ef0f4485cb44c674e48c02f1c35b3eb5e9c7c917cd1#npm:0.1.18"],\
             ["@react-icons/all-files", "virtual:a49150a01cb6db64e50bc40bd79ae225f619f6fbe048b86b18c6cf5a9c3e202c5b1c3bcdc2558e2bca133ef0f4485cb44c674e48c02f1c35b3eb5e9c7c917cd1#npm:4.1.0"],\
             ["@rollup/plugin-babel", "virtual:9af9261af706496ee0a09bc98e93165500dc9b207bf95ff878652dca293fa2260b4843b283e90ee1b7334a81dddfb2d86ee297e3eb3b408acd32960a23639579#npm:5.3.1"],\
             ["@rollup/plugin-image", "virtual:a49150a01cb6db64e50bc40bd79ae225f619f6fbe048b86b18c6cf5a9c3e202c5b1c3bcdc2558e2bca133ef0f4485cb44c674e48c02f1c35b3eb5e9c7c917cd1#npm:2.1.1"],\
@@ -3722,7 +3719,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/react", "virtual:a49150a01cb6db64e50bc40bd79ae225f619f6fbe048b86b18c6cf5a9c3e202c5b1c3bcdc2558e2bca133ef0f4485cb44c674e48c02f1c35b3eb5e9c7c917cd1#npm:12.1.5"],\
             ["@types/react", "npm:17.0.45"],\
             ["babel-jest", "virtual:661359d51e517382aad0d39d1dddfb1ec4c4b33f46d40cd3979b2ee509b3d2a51774f98b22d4771b242ea13e665e899b237635898267cfd5150342480067e862#npm:27.5.1"],\
-            ["babel-loader", "virtual:a49150a01cb6db64e50bc40bd79ae225f619f6fbe048b86b18c6cf5a9c3e202c5b1c3bcdc2558e2bca133ef0f4485cb44c674e48c02f1c35b3eb5e9c7c917cd1#npm:8.2.5"],\
+            ["babel-loader", "virtual:a49150a01cb6db64e50bc40bd79ae225f619f6fbe048b86b18c6cf5a9c3e202c5b1c3bcdc2558e2bca133ef0f4485cb44c674e48c02f1c35b3eb5e9c7c917cd1#npm:8.3.0"],\
             ["babel-plugin-named-asset-import", "virtual:a49150a01cb6db64e50bc40bd79ae225f619f6fbe048b86b18c6cf5a9c3e202c5b1c3bcdc2558e2bca133ef0f4485cb44c674e48c02f1c35b3eb5e9c7c917cd1#npm:0.3.8"],\
             ["babel-plugin-styled-components", "virtual:a49150a01cb6db64e50bc40bd79ae225f619f6fbe048b86b18c6cf5a9c3e202c5b1c3bcdc2558e2bca133ef0f4485cb44c674e48c02f1c35b3eb5e9c7c917cd1#npm:2.0.7"],\
             ["camelcase", "npm:6.3.0"],\
@@ -3921,69 +3918,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["js-yaml", "npm:3.14.1"],\
             ["minimatch", "npm:3.1.2"],\
             ["strip-json-comments", "npm:3.1.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@fortawesome/fontawesome-common-types", [\
-        ["npm:0.2.36", {\
-          "packageLocation": "./.yarn/unplugged/@fortawesome-fontawesome-common-types-npm-0.2.36-4ead73741a/node_modules/@fortawesome/fontawesome-common-types/",\
-          "packageDependencies": [\
-            ["@fortawesome/fontawesome-common-types", "npm:0.2.36"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["npm:0.3.0", {\
-          "packageLocation": "./.yarn/unplugged/@fortawesome-fontawesome-common-types-npm-0.3.0-6e529e8bc7/node_modules/@fortawesome/fontawesome-common-types/",\
-          "packageDependencies": [\
-            ["@fortawesome/fontawesome-common-types", "npm:0.3.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@fortawesome/fontawesome-svg-core", [\
-        ["npm:1.3.0", {\
-          "packageLocation": "./.yarn/unplugged/@fortawesome-fontawesome-svg-core-npm-1.3.0-579cce7bf9/node_modules/@fortawesome/fontawesome-svg-core/",\
-          "packageDependencies": [\
-            ["@fortawesome/fontawesome-svg-core", "npm:1.3.0"],\
-            ["@fortawesome/fontawesome-common-types", "npm:0.3.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@fortawesome/free-brands-svg-icons", [\
-        ["npm:5.15.4", {\
-          "packageLocation": "./.yarn/unplugged/@fortawesome-free-brands-svg-icons-npm-5.15.4-59d1d43e20/node_modules/@fortawesome/free-brands-svg-icons/",\
-          "packageDependencies": [\
-            ["@fortawesome/free-brands-svg-icons", "npm:5.15.4"],\
-            ["@fortawesome/fontawesome-common-types", "npm:0.2.36"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@fortawesome/react-fontawesome", [\
-        ["npm:0.1.18", {\
-          "packageLocation": "./.yarn/cache/@fortawesome-react-fontawesome-npm-0.1.18-106800ea16-eba7112345.zip/node_modules/@fortawesome/react-fontawesome/",\
-          "packageDependencies": [\
-            ["@fortawesome/react-fontawesome", "npm:0.1.18"]\
-          ],\
-          "linkType": "SOFT"\
-        }],\
-        ["virtual:a49150a01cb6db64e50bc40bd79ae225f619f6fbe048b86b18c6cf5a9c3e202c5b1c3bcdc2558e2bca133ef0f4485cb44c674e48c02f1c35b3eb5e9c7c917cd1#npm:0.1.18", {\
-          "packageLocation": "./.yarn/__virtual__/@fortawesome-react-fontawesome-virtual-fab956c6b8/0/cache/@fortawesome-react-fontawesome-npm-0.1.18-106800ea16-eba7112345.zip/node_modules/@fortawesome/react-fontawesome/",\
-          "packageDependencies": [\
-            ["@fortawesome/react-fontawesome", "virtual:a49150a01cb6db64e50bc40bd79ae225f619f6fbe048b86b18c6cf5a9c3e202c5b1c3bcdc2558e2bca133ef0f4485cb44c674e48c02f1c35b3eb5e9c7c917cd1#npm:0.1.18"],\
-            ["@fortawesome/fontawesome-svg-core", "npm:1.3.0"],\
-            ["@types/fortawesome__fontawesome-svg-core", null],\
-            ["@types/react", "npm:17.0.45"],\
-            ["prop-types", "npm:15.8.1"],\
-            ["react", "npm:17.0.2"]\
-          ],\
-          "packagePeers": [\
-            "@fortawesome/fontawesome-svg-core",\
-            "@types/fortawesome__fontawesome-svg-core",\
-            "@types/react",\
-            "react"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5840,7 +5774,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", null],\
             ["@types/react-dom", null],\
             ["@types/typescript", null],\
-            ["babel-loader", "virtual:a49150a01cb6db64e50bc40bd79ae225f619f6fbe048b86b18c6cf5a9c3e202c5b1c3bcdc2558e2bca133ef0f4485cb44c674e48c02f1c35b3eb5e9c7c917cd1#npm:8.2.5"],\
+            ["babel-loader", "virtual:737c1686986e4c33d6ff100ab15c01656991c984cd15c0a5567cf67e0b25fa59385f588c81c9eb06cb27e038fa491ccda5f99a6a46d0e3d89dda48451a288cec#npm:8.2.5"],\
             ["babel-plugin-macros", "npm:3.1.0"],\
             ["babel-plugin-polyfill-corejs3", "virtual:737c1686986e4c33d6ff100ab15c01656991c984cd15c0a5567cf67e0b25fa59385f588c81c9eb06cb27e038fa491ccda5f99a6a46d0e3d89dda48451a288cec#npm:0.1.7"],\
             ["chalk", "npm:4.1.2"],\
@@ -5911,7 +5845,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:17.0.45"],\
             ["@types/react-dom", null],\
             ["@types/typescript", null],\
-            ["babel-loader", "virtual:a49150a01cb6db64e50bc40bd79ae225f619f6fbe048b86b18c6cf5a9c3e202c5b1c3bcdc2558e2bca133ef0f4485cb44c674e48c02f1c35b3eb5e9c7c917cd1#npm:8.2.5"],\
+            ["babel-loader", "virtual:737c1686986e4c33d6ff100ab15c01656991c984cd15c0a5567cf67e0b25fa59385f588c81c9eb06cb27e038fa491ccda5f99a6a46d0e3d89dda48451a288cec#npm:8.2.5"],\
             ["babel-plugin-macros", "npm:3.1.0"],\
             ["babel-plugin-polyfill-corejs3", "virtual:737c1686986e4c33d6ff100ab15c01656991c984cd15c0a5567cf67e0b25fa59385f588c81c9eb06cb27e038fa491ccda5f99a6a46d0e3d89dda48451a288cec#npm:0.1.7"],\
             ["chalk", "npm:4.1.2"],\
@@ -8749,7 +8683,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["autoprefixer", "npm:9.8.8"],\
             ["browserslist", "npm:4.20.3"],\
-            ["caniuse-lite", "npm:1.0.30001346"],\
+            ["caniuse-lite", "npm:1.0.30001464"],\
             ["normalize-range", "npm:0.1.2"],\
             ["num2fraction", "npm:1.2.2"],\
             ["picocolors", "npm:0.2.1"],\
@@ -8813,6 +8747,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
+        ["npm:8.3.0", {\
+          "packageLocation": "./.yarn/cache/babel-loader-npm-8.3.0-a5239d7ed2-d48bcf9e03.zip/node_modules/babel-loader/",\
+          "packageDependencies": [\
+            ["babel-loader", "npm:8.3.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
         ["virtual:61acb284f93b5a41fa20ef787bb05eff73a1df6edeadf7bb837c269fec8d88f158b82d311a84ada5097af1b8b89c7dc97cdd4c7b6d263e0479ab3f67ebfd10ad#npm:8.2.5", {\
           "packageLocation": "./.yarn/__virtual__/babel-loader-virtual-693bff7efa/0/cache/babel-loader-npm-8.2.5-e749e26bb5-a660555788.zip/node_modules/babel-loader/",\
           "packageDependencies": [\
@@ -8833,10 +8774,31 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["virtual:a49150a01cb6db64e50bc40bd79ae225f619f6fbe048b86b18c6cf5a9c3e202c5b1c3bcdc2558e2bca133ef0f4485cb44c674e48c02f1c35b3eb5e9c7c917cd1#npm:8.2.5", {\
-          "packageLocation": "./.yarn/__virtual__/babel-loader-virtual-df926a4e90/0/cache/babel-loader-npm-8.2.5-e749e26bb5-a660555788.zip/node_modules/babel-loader/",\
+        ["virtual:737c1686986e4c33d6ff100ab15c01656991c984cd15c0a5567cf67e0b25fa59385f588c81c9eb06cb27e038fa491ccda5f99a6a46d0e3d89dda48451a288cec#npm:8.2.5", {\
+          "packageLocation": "./.yarn/__virtual__/babel-loader-virtual-807aed8038/0/cache/babel-loader-npm-8.2.5-e749e26bb5-a660555788.zip/node_modules/babel-loader/",\
           "packageDependencies": [\
-            ["babel-loader", "virtual:a49150a01cb6db64e50bc40bd79ae225f619f6fbe048b86b18c6cf5a9c3e202c5b1c3bcdc2558e2bca133ef0f4485cb44c674e48c02f1c35b3eb5e9c7c917cd1#npm:8.2.5"],\
+            ["babel-loader", "virtual:737c1686986e4c33d6ff100ab15c01656991c984cd15c0a5567cf67e0b25fa59385f588c81c9eb06cb27e038fa491ccda5f99a6a46d0e3d89dda48451a288cec#npm:8.2.5"],\
+            ["@babel/core", "npm:7.18.2"],\
+            ["@types/babel__core", null],\
+            ["@types/webpack", null],\
+            ["find-cache-dir", "npm:3.3.2"],\
+            ["loader-utils", "npm:2.0.2"],\
+            ["make-dir", "npm:3.1.0"],\
+            ["schema-utils", "npm:2.7.1"],\
+            ["webpack", "virtual:a49150a01cb6db64e50bc40bd79ae225f619f6fbe048b86b18c6cf5a9c3e202c5b1c3bcdc2558e2bca133ef0f4485cb44c674e48c02f1c35b3eb5e9c7c917cd1#npm:4.46.0"]\
+          ],\
+          "packagePeers": [\
+            "@babel/core",\
+            "@types/babel__core",\
+            "@types/webpack",\
+            "webpack"\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["virtual:a49150a01cb6db64e50bc40bd79ae225f619f6fbe048b86b18c6cf5a9c3e202c5b1c3bcdc2558e2bca133ef0f4485cb44c674e48c02f1c35b3eb5e9c7c917cd1#npm:8.3.0", {\
+          "packageLocation": "./.yarn/__virtual__/babel-loader-virtual-c3b2269da4/0/cache/babel-loader-npm-8.3.0-a5239d7ed2-d48bcf9e03.zip/node_modules/babel-loader/",\
+          "packageDependencies": [\
+            ["babel-loader", "virtual:a49150a01cb6db64e50bc40bd79ae225f619f6fbe048b86b18c6cf5a9c3e202c5b1c3bcdc2558e2bca133ef0f4485cb44c674e48c02f1c35b3eb5e9c7c917cd1#npm:8.3.0"],\
             ["@babel/core", "npm:7.18.2"],\
             ["@types/babel__core", null],\
             ["@types/webpack", null],\
@@ -9595,7 +9557,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/browserslist-npm-4.14.2-7fd5fe4d30-44b5d7a444.zip/node_modules/browserslist/",\
           "packageDependencies": [\
             ["browserslist", "npm:4.14.2"],\
-            ["caniuse-lite", "npm:1.0.30001346"],\
+            ["caniuse-lite", "npm:1.0.30001464"],\
             ["electron-to-chromium", "npm:1.4.146"],\
             ["escalade", "npm:3.1.1"],\
             ["node-releases", "npm:1.1.77"]\
@@ -9606,7 +9568,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/browserslist-npm-4.20.3-d7ff9d00b4-1e4b719ac2.zip/node_modules/browserslist/",\
           "packageDependencies": [\
             ["browserslist", "npm:4.20.3"],\
-            ["caniuse-lite", "npm:1.0.30001346"],\
+            ["caniuse-lite", "npm:1.0.30001464"],\
             ["electron-to-chromium", "npm:1.4.146"],\
             ["escalade", "npm:3.1.1"],\
             ["node-releases", "npm:2.0.5"],\
@@ -9900,7 +9862,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["caniuse-api", "npm:3.0.0"],\
             ["browserslist", "npm:4.20.3"],\
-            ["caniuse-lite", "npm:1.0.30001346"],\
+            ["caniuse-lite", "npm:1.0.30001464"],\
             ["lodash.memoize", "npm:4.1.2"],\
             ["lodash.uniq", "npm:4.5.0"]\
           ],\
@@ -9908,10 +9870,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["caniuse-lite", [\
-        ["npm:1.0.30001346", {\
-          "packageLocation": "./.yarn/cache/caniuse-lite-npm-1.0.30001346-98d2118f71-951590454f.zip/node_modules/caniuse-lite/",\
+        ["npm:1.0.30001464", {\
+          "packageLocation": "./.yarn/cache/caniuse-lite-npm-1.0.30001464-b87014de43-67cdee102c.zip/node_modules/caniuse-lite/",\
           "packageDependencies": [\
-            ["caniuse-lite", "npm:1.0.30001346"]\
+            ["caniuse-lite", "npm:1.0.30001464"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -17220,7 +17182,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:17.0.45"],\
             ["@types/react-dom", null],\
             ["@types/sass", null],\
-            ["caniuse-lite", "npm:1.0.30001346"],\
+            ["caniuse-lite", "npm:1.0.30001464"],\
             ["fibers", null],\
             ["node-sass", null],\
             ["postcss", "npm:8.4.5"],\

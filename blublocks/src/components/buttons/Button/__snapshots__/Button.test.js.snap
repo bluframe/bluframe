@@ -2,7 +2,7 @@
 
 exports[`Button renders 1`] = `
 <button
-  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb iTCDIa"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb fnYKKn"
   type="button"
 >
   Button
@@ -11,7 +11,7 @@ exports[`Button renders 1`] = `
 
 exports[`Button renders bold 1`] = `
 <button
-  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb gyUeZG"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb hIHjsH"
   type="button"
 >
   Button
@@ -20,7 +20,7 @@ exports[`Button renders bold 1`] = `
 
 exports[`Button renders padded 1`] = `
 <button
-  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb cXXzJT"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb kIBhZW"
   type="button"
 >
   Button
@@ -29,7 +29,7 @@ exports[`Button renders padded 1`] = `
 
 exports[`Button renders small 1`] = `
 <button
-  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb grNRGC"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb bxTKRn"
   type="button"
 >
   Button

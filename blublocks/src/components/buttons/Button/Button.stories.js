@@ -69,13 +69,13 @@ Loading.args = {
 
 export const IconEnd: any = Template.bind({})
 IconEnd.args = {
-  iconEnd: <Icon name="cloudOutline" />,
+  iconEnd: <Icon name="IoArrowForward" />,
   label: "Button"
 }
 
 export const IconStart: any = Template.bind({})
 IconStart.args = {
-  iconStart: <Icon name="cloudOutline" />,
+  iconStart: <Icon name="IoArrowBack" />,
   label: "Button"
 }
 
