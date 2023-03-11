@@ -39,7 +39,6 @@ jobs:
 
   flow:
     executor: node
-    resource_class: xlarge
     steps:
       - git-shallow-clone/checkout
 
@@ -52,9 +51,6 @@ jobs:
 
   test:
     executor: node
-    resource_class: xlarge
-    environment:
-      NODE_OPTIONS: --max_old_space_size=16384
     steps:
       - git-shallow-clone/checkout
 
