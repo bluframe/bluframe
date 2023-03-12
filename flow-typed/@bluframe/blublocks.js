@@ -4,7 +4,7 @@
 declare module "@bluframe/blublocks" {
   import type { KeyFrames, StyledComponent } from "styled-components"
 
-  declare type IconGroup = "io5"
+  declare type IconGroupName = "io5"
 
   declare type AnimationName = "bounceIn" | "bounceOut" | "fadeIn" | "fadeOut"
 
@@ -141,7 +141,7 @@ declare module "@bluframe/blublocks" {
 
   declare type IconProps = {|
     +color?: string,
-    +group?: IconGroup,
+    +group?: IconGroupName,
     +name: string,
     +size?: string
   |}

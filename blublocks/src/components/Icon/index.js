@@ -20,7 +20,7 @@ const usePrepareComponent = ({
   name,
   size
 }: Props): ComponentProps => {
-  if (group === "ion" && ionIcons[name]) {
+  if (group === "io5" && ionIcons[name]) {
     return {
       SelectedIcon: ionIcons[name],
       color,
