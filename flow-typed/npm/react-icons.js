@@ -18,6 +18,9 @@ declare module "@react-icons/all-files/io5/IoArrowForward" {
 declare module "@react-icons/all-files/io5/IoBulbOutline" {
   declare export var IoBulbOutline: React$ComponentType<IconProps>
 }
+declare module "@react-icons/all-files/io5/IoCaretUp" {
+  declare export var IoCaretUp: React$ComponentType<IconProps>
+}
 declare module "@react-icons/all-files/io5/IoChatbubbleOutline" {
   declare export var IoChatbubbleOutline: React$ComponentType<IconProps>
 }
@@ -29,6 +32,12 @@ declare module "@react-icons/all-files/io5/IoHeartOutline" {
 }
 declare module "@react-icons/all-files/io5/IoLaptopOutline" {
   declare export var IoLaptopOutline: React$ComponentType<IconProps>
+}
+declare module "@react-icons/all-files/io5/IoLogoFacebook" {
+  declare export var IoLogoFacebook: React$ComponentType<IconProps>
+}
+declare module "@react-icons/all-files/io5/IoLogoTwitter" {
+  declare export var IoLogoTwitter: React$ComponentType<IconProps>
 }
 declare module "@react-icons/all-files/io5/IoMapOutline" {
   declare export var IoMapOutline: React$ComponentType<IconProps>
