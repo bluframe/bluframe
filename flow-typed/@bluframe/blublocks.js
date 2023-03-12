@@ -4,7 +4,7 @@
 declare module "@bluframe/blublocks" {
   import type { KeyFrames, StyledComponent } from "styled-components"
 
-  declare type IconGroup = "ion"
+  declare type IconGroup = "io5"
 
   declare type AnimationName = "bounceIn" | "bounceOut" | "fadeIn" | "fadeOut"
 
@@ -121,8 +121,9 @@ declare module "@bluframe/blublocks" {
     +onChange: (value: OptionValue) => void
   |}
 
+  // Find a better solution other than any
   declare type ContentComponents = {|
-    [tag: string]: (props: {| +node: React$Node |}) => React$Element<string>
+    [tag: string]: (props: any) => any
   |}
 
   declare type ContentProps = {|
