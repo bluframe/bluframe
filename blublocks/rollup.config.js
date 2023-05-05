@@ -13,6 +13,7 @@ const input = {
   Content: "src/components/Content/index.js",
   Hamburger: "src/components/Hamburger/index.js",
   Icon: "src/components/Icon/index.js",
+  InputText: "src/components/inputs/InputText/index.js",
   Loading: "src/components/Loading/index.js",
   Radio: "src/components/inputs/Radio/index.js",
   RadioGroup: "src/components/inputs/RadioGroup/index.js",

@@ -10,9 +10,13 @@ jest.mock(".", () => ({}))
 describe("InputText", () => {
   const props: ComponentProps = {
     inputId: "name-input",
+    isFocused: false,
     label: "Name",
+    labelId: "name-label",
     name: "name",
+    onBlur: jest.fn(),
     onChange: jest.fn(),
+    onFocus: jest.fn(),
     value: ""
   }
 

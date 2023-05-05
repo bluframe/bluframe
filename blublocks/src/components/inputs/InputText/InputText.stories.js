@@ -23,4 +23,10 @@ const args = {
 export const Default: Story<Props> = Template.bind({})
 Default.args = args
 
+export const Value: Story<Props> = Template.bind({})
+Value.args = {
+  ...args,
+  value: "Edoardo"
+}
+
 export default stories

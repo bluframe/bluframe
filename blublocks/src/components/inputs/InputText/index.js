@@ -3,6 +3,7 @@
 import InputText from "./InputText"
 import type { InputTextProps } from "@bluframe/blublocks"
 import { prepareComponent } from "@bluframe/grapple"
+import { useState } from "react"
 
 export type Props = {|
   ...InputTextProps
@@ -10,15 +11,36 @@ export type Props = {|
 
 export type ComponentProps = {|
   ...Props,
-  +labelId?: string
+  +isFocused: boolean,
+  +labelId?: string,
+  +onBlur: () => void,
+  +onChange: (event: SyntheticKeyboardEvent<HTMLInputElement>) => void,
+  +onFocus: () => void
 |}
 
 const usePrepareComponent = (props: Props): ComponentProps => {
+  const [isFocused, setIsFocused] = useState(false)
   const labelId = props.inputId && `${props.inputId}-label`
+
+  const onFocus = () => {
+    setIsFocused(true)
+  }
+
+  const onBlur = () => {
+    setIsFocused(false)
+  }
+
+  const onChange = (event) => {
+    props.onChange(event.currentTarget.value)
+  }
 
   return {
     ...props,
-    labelId
+    isFocused,
+    labelId,
+    onBlur,
+    onChange,
+    onFocus
   }
 }
 

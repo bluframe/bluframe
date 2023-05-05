@@ -16,16 +16,24 @@ export const Input: StyledComponent<
   Theme,
   HTMLInputElement
 > = styled.input.attrs({ type: "text" })`
-  border: 1px solid ${({ theme }) => theme.palette.primary.main};
+  border: 1px solid ${({ theme }) => theme.colors.gray.light};
   border-radius: 4px;
+  box-shadow: none;
+  color: ${({ theme }) => theme.palette.text.main};
   font-size: 16px;
-  padding: 12px 8px;
+  padding: 8px 16px;
   width: 100%;
 
+  &:focus {
+    border: 1px solid ${({ theme }) => theme.colors.gray.light};
+    box-shadow: none;
+  }
+
   &:focus + label {
-    color: ${({ theme }) => theme.palette.primary.main};
+    color: ${({ theme }) => theme.palette.text.light};
     font-size: 12px;
-    top: 4px;
+    left: 16px;
+    top: -24px;
   }
 
   ${({ isFocused, value }) =>
@@ -33,7 +41,8 @@ export const Input: StyledComponent<
     `
     & + label {
       font-size: 12px;
-      top: 4px;
+      left: 16px;
+      top: -24px;
     }
   `}
 `
@@ -43,11 +52,11 @@ export const Label: StyledComponent<
   Theme,
   HTMLLabelElement
 > = styled.label`
-  color: ${({ theme }) => theme.palette.text.main};
+  color: ${({ theme }) => theme.palette.text.light};
   font-size: 16px;
-  left: 8px;
+  left: 16px;
   pointer-events: none;
   position: absolute;
-  top: 12px;
+  top: 6px;
   transition: all 200ms;
 `
