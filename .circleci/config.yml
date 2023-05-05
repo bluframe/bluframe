@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  git-shallow-clone: guitarrapc/git-shallow-clone@2.0.3
+  git-shallow-clone: guitarrapc/git-shallow-clone@2.5.0
 
 executors:
   node:

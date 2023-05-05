@@ -62,6 +62,10 @@
       "import": "./lib/esm/Hamburger.js",
       "require": "./lib/cjs/Hamburger.js"
     },
+    "./InputText": {
+      "import": "./lib/esm/InputText.js",
+      "require": "./lib/cjs/InputText.js"
+    },
     "./Icon": {
       "import": "./lib/esm/Icon.js",
       "require": "./lib/cjs/Icon.js"
