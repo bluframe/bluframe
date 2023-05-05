@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputText renders 1`] = `
+<div
+  class="styled__Wrapper-sc-1svvkyj-0 eHUKlz"
+>
+  <label
+    class="styled__Label-sc-1svvkyj-2 kfTdUg"
+    for="name-input"
+  >
+    Name
+  </label>
+  <input
+    class="styled__Input-sc-1svvkyj-1 hBPipW"
+    id="name-input"
+    name="name"
+    type="text"
+    value=""
+  />
+</div>
+`;

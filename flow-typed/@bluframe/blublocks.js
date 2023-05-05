@@ -146,6 +146,14 @@ declare module "@bluframe/blublocks" {
     +size?: string
   |}
 
+  declare type InputTextProps = {|
+    +inputId?: string,
+    +label: string,
+    +name: string,
+    +onChange: (value: string) => void,
+    +value: string
+  |}
+
   declare type LoadingProps = {|
     +contrast?: boolean,
     +disabled?: boolean,
@@ -207,6 +215,7 @@ declare module "@bluframe/blublocks" {
     HTMLDivElement
   >
   declare type IconComponent = React$ComponentType<IconProps>
+  declare type InputTextComponent = React$ComponentType<InputTextProps>
   declare type LoadingComponent = React$ComponentType<LoadingProps>
   declare type ProviderComponent = React$ComponentType<ProviderProps>
   declare type RadioComponent = React$ComponentType<RadioProps>
@@ -234,6 +243,7 @@ declare module "@bluframe/blublocks" {
   declare var H6: StyledComponent<{||}, Theme, HTMLHeadingElement>
   declare var Hamburger: HamburgerComponent
   declare var Icon: IconComponent
+  declare var InputText: InputTextComponent
   declare var Loading: LoadingComponent
   declare var Paragraph: StyledComponent<{||}, Theme, HTMLParagraphElement>
   declare var Radio: RadioComponent
@@ -341,6 +351,12 @@ declare module "@bluframe/blublocks/Icon" {
   import type { IconComponent } from "@bluframe/blublocks"
 
   declare export default IconComponent
+}
+
+declare module "@bluframe/blublocks/InputText" {
+  import type { InputTextComponent } from "@bluframe/blublocks"
+
+  declare export default InputTextComponent
 }
 
 declare module "@bluframe/blublocks/Loading" {
