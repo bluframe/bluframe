@@ -136,6 +136,8 @@ declare module "@bluframe/blublocks" {
   |}
 
   declare type HamburgerProps = {|
+    isMenuExpanded?: boolean,
+    menuId?: string,
     +onClick?: () => void
   |}
 

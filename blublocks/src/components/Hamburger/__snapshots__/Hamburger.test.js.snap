@@ -2,7 +2,11 @@
 
 exports[`Hamburger renders 1`] = `
 <button
+  aria-controls="main-navigation"
+  aria-expanded="false"
+  aria-label="Toggle navigation"
   class="styled__Button-sc-45lonn-1 kASBxd"
+  role="menu"
   type="button"
 >
   <span

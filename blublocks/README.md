@@ -373,11 +373,38 @@ A lightweight, 100% CSS spinner component.
 A versatile component that accepts markdown and beautifully displays it on your page.
   
 
+
 ### Hamburger
 
-  
-
 A classic Hamburger component made with 100% CSS.
+
+#### Props
+
+- `isMenuExpanded`: (optional) boolean - Determines whether the menu is expanded or not. Defaults to `false`.
+- `menuId`: (optional) string - The id attribute for the menu that the Hamburger controls.
+- `onClick`: (optional) function - The callback that is fired when the Hamburger is clicked.
+
+#### Usage
+
+```js
+import Hamburger from "@bluframe/blublocks/Hamburger";
+
+function App() {
+  const [isMenuExpanded, setIsMenuExpanded] = useState(false);
+
+  const handleHamburgerClick = () => {
+    setIsMenuExpanded(!isMenuExpanded);
+  };
+
+  return (
+    <Hamburger
+      isMenuExpanded={isMenuExpanded}
+      menuId="main-navigation"
+      onClick={handleHamburgerClick}
+    />
+  );
+}
+```
 
   
 
