@@ -45,6 +45,7 @@ const options = [
 ]
 
 const args = {
+  label: "Fruit",
   name: "fruit",
   options,
   selected: null

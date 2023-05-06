@@ -3,6 +3,7 @@
 
 import {
   Control,
+  DisplayValue,
   Input,
   Label,
   Option,
@@ -15,20 +16,22 @@ import React from "react"
 
 const Select = ({
   className,
+  displayValue,
+  isLabelShrunk,
   isOpen,
   label,
   name,
   onSelect,
   onToggleIsOpen,
   options,
-  placeholder,
   selected
 }: ComponentProps): React$Node => (
   <Wrapper className={className}>
     <Control onClick={onToggleIsOpen}>
-      <Label id={`${name}-label`} isSelected={Boolean(selected)}>
-        {label || placeholder}
+      <Label id={`${name}-label`} isShrunk={isLabelShrunk}>
+        {label}
       </Label>
+      <DisplayValue isSelected={Boolean(selected)}>{displayValue}</DisplayValue>
       <Triangle isOpen={isOpen} />
     </Control>
     {isOpen ? (

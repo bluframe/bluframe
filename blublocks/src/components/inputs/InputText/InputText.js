@@ -1,5 +1,4 @@
 // @flow
-/* eslint-disable no-ternary */
 
 import { Input, Label, Wrapper } from "./styled"
 import type { ComponentProps } from "."

@@ -11,8 +11,9 @@ export type Props = {|
 
 export type ComponentProps = {|
   ...SelectProps,
+  +displayValue: string | React$Node,
+  +isLabelShrunk: boolean,
   +isOpen: boolean,
-  +label: React$Node,
   +onSelect: (value: number | string | null) => () => void,
   +onToggleIsOpen: () => void
 |}
@@ -22,21 +23,26 @@ const DEFAULT_IS_OPEN = false
 const usePrepareComponent = (props: Props): ComponentProps => {
   const [isOpen, toggleIsOpen] = useToggle(DEFAULT_IS_OPEN)
 
-  // Get label
-  const label = useMemo(() => {
+  // Get displayValue and isLabelShrunk
+  const [displayValue, isLabelShrunk] = useMemo(() => {
     // Get selected option
     const selectedOption = props.options.find(
       (option) => option.value === props.selected
     )
 
-    // Return label from selected option
+    // If selected option exists, return its label and shrink the label
     if (selectedOption) {
-      return selectedOption.label
+      return [selectedOption.label, true]
     }
 
-    // Return empty label
-    return ""
-  }, [props.options, props.selected])
+    // If no selected option and placeholder exists, return placeholder and shrink the label
+    if (props.placeholder) {
+      return [props.placeholder, true]
+    }
+
+    // Otherwise, return the label and shrink it when options are open
+    return ["", isOpen]
+  }, [props.options, props.selected, props.placeholder, isOpen])
 
   const onToggleIsOpen = () => {
     // Toggle options dropdown
@@ -55,8 +61,9 @@ const usePrepareComponent = (props: Props): ComponentProps => {
 
   return {
     ...props,
+    displayValue,
+    isLabelShrunk,
     isOpen,
-    label,
     onSelect,
     onToggleIsOpen
   }

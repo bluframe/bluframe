@@ -29,6 +29,7 @@ or
 A simple button component that can be styled to all needs
 
 ### Inputs
+* InputText
 * Select
 * Radio
 * RadioGroup

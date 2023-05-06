@@ -18,20 +18,42 @@ export const Control: StyledComponent<{||}, Theme, HTMLDivElement> = styled.div`
   cursor: pointer;
   display: grid;
   grid-template-columns: auto 20px;
-  padding: 5px 10px;
+  padding: 5px 10px 5px 16px;
   height: 44px;
 `
 
-export const Label: StyledComponent<
+export const DisplayValue: StyledComponent<
   {| +isSelected: boolean |},
   Theme,
   HTMLLabelElement
 > = styled.label`
   color: ${({ isSelected, theme }) =>
     isSelected ? theme.palette.text.main : theme.palette.text.light};
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   margin: 0;
+`
+
+export const Label: StyledComponent<
+  {| +isShrunk: boolean |},
+  Theme,
+  HTMLLabelElement
+> = styled.label`
+  color: ${({ theme }) => theme.palette.text.light};
+  font-size: 16px;
+  left: 16px;
+  pointer-events: none;
+  position: absolute;
+  top: 8px;
+  transition: all 200ms;
+
+  ${({ isShrunk }) =>
+    isShrunk &&
+    `
+    font-size: 12px;
+    left: 16px;
+    top: -24px;
+  `}
 `
 
 export const Triangle: StyledComponent<
