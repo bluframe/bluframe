@@ -1,10 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Content renders 1`] = `
+exports[`Content renders and uses custom components and plugins 1`] = `
 <span
   class="styled__Wrapper-sc-1oa8elu-0 eObMjy"
 >
   <div>
+    <code>
+      Custom code
+    </code>
+    <em>
+      Custom em
+    </em>
     
         ## Markdown Content
 

@@ -1,8 +1,9 @@
 // @flow
 
 import styled, { type StyledComponent } from "styled-components"
+import type { Theme } from "@bluframe/blublocks"
 
-export const Bar: StyledComponent<any, mixed, HTMLSpanElement> = styled.span`
+export const Bar: StyledComponent<{||}, Theme, HTMLSpanElement> = styled.span`
   background: ${({ theme }) => theme.palette.secondary.main};
   display: block;
   width: 24px;
@@ -15,8 +16,8 @@ export const Bar: StyledComponent<any, mixed, HTMLSpanElement> = styled.span`
 `
 
 export const Button: StyledComponent<
-  any,
-  mixed,
+  {||},
+  Theme,
   HTMLButtonElement
 > = styled.button`
   position: relative;

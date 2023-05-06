@@ -1,5 +1,4 @@
 // @flow
-/* eslint-disable no-ternary */
 
 import styled, { type StyledComponent } from "styled-components"
 import type { Theme } from "@bluframe/blublocks"

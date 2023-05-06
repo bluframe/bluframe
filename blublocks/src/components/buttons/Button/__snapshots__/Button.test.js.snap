@@ -18,9 +18,37 @@ exports[`Button renders bold 1`] = `
 </button>
 `;
 
+exports[`Button renders disabled 1`] = `
+<button
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb ibyxDU"
+  disabled=""
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`Button renders outlined 1`] = `
+<button
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb dNGKMI"
+  type="button"
+>
+  Button
+</button>
+`;
+
 exports[`Button renders padded 1`] = `
 <button
   class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb kIBhZW"
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`Button renders secondary 1`] = `
+<button
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb ztbDP"
   type="button"
 >
   Button
@@ -33,5 +61,28 @@ exports[`Button renders small 1`] = `
   type="button"
 >
   Button
+</button>
+`;
+
+exports[`Button renders with iconStart and iconEnd 1`] = `
+<button
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb fnYKKn"
+  type="button"
+>
+  <span
+    class="styled__IconStart-sc-pzlzbh-2"
+  >
+    <div>
+      Icon Start
+    </div>
+  </span>
+  Button
+  <span
+    class="styled__IconEnd-sc-pzlzbh-1"
+  >
+    <div>
+      Icon End
+    </div>
+  </span>
 </button>
 `;

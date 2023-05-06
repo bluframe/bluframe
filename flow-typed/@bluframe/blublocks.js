@@ -136,6 +136,8 @@ declare module "@bluframe/blublocks" {
   |}
 
   declare type HamburgerProps = {|
+    isMenuExpanded?: boolean,
+    menuId?: string,
     +onClick?: () => void
   |}
 
@@ -191,6 +193,7 @@ declare module "@bluframe/blublocks" {
 
   declare type SelectProps = {|
     +className?: string,
+    +label: React$Node,
     +name: string,
     +onSelect: (selected: number | string | null) => void,
     +options: Option[],

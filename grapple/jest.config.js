@@ -8,6 +8,7 @@ const moduleDirectories = ["node_modules", "src"]
 const moduleFileExtensions = ["js"]
 const reporters = ["default"]
 const roots = ["<rootDir>/src"]
+const setupFiles = ["<rootDir>/src/setupTests.js"]
 const testEnvironment = "jsdom"
 const testMatch = ["<rootDir>/src/**/*.test.js"]
 const testPathIgnorePatterns = [
@@ -34,6 +35,7 @@ module.exports = {
   moduleFileExtensions,
   reporters,
   roots,
+  setupFiles,
   testEnvironment,
   testMatch,
   testPathIgnorePatterns,

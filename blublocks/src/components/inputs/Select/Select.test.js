@@ -9,6 +9,8 @@ jest.mock(".", () => ({}))
 
 describe("Select", () => {
   const props: ComponentProps = {
+    displayValue: "",
+    isLabelShrunk: false,
     isOpen: false,
     label: "",
     name: "fruit",
