@@ -358,11 +358,37 @@ Beautiful and customizable typography components.
 
   
 
+
+Here's the Loading section for the README:
+
 ### Loading
 
-  
-
 A lightweight, 100% CSS spinner component.
+
+#### Props
+
+- `contrast`: (optional) boolean - If `true`, the spinner will be displayed with a contrast color. Defaults to `false`.
+- `disabled`: (optional) boolean - If `true`, the spinner will be displayed in a disabled state. Defaults to `false`.
+- `secondary`: (optional) boolean - If `true`, the spinner will be displayed with a secondary color. Defaults to `false`.
+- `size`: (optional) number - The size of the spinner in pixels. Defaults to `16`.
+
+#### Usage
+
+```js
+import Loading from "@bluframe/blublocks/Loading";
+
+function App() {
+  return (
+    <Loading
+      contrast={false}
+      disabled={false}
+      secondary={false}
+      size={24}
+    />
+  );
+}
+```
+
 
   
 
