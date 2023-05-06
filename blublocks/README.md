@@ -78,11 +78,59 @@ import { Button, InputText } from  "@bluframe/blublocks";
 
   
 
+
 ### Button
 
-  
+A simple button component that can be styled to all needs.
 
-A simple button component that can be styled to all needs
+#### Props
+
+- `bold`: (optional) boolean - If `true`, the button label will be displayed in bold. Defaults to `false`.
+- `buttonType`: (optional) string - The type attribute for the button element. Defaults to `"button"`.
+- `className`: (optional) string - The class name for the button wrapper.
+- `disabled`: (optional) boolean - If `true`, the button will be displayed in a disabled state. Defaults to `false`.
+- `expanded`: (optional) boolean - If `true`, the button will expand to fill its container's width. Defaults to `false`.
+- `iconEnd`: (optional) React$Node - The icon to display at the end of the button label.
+- `iconStart`: (optional) React$Node - The icon to display at the beginning of the button label.
+- `label`: string - The label for the button.
+- `loading`: (optional) boolean - If `true`, a loading spinner will be displayed at the end of the button. Defaults to `false`.
+- `noHoverHighlight`: (optional) boolean - If `true`, the button will not have a hover effect. Defaults to `false`.
+- `onClick`: (optional) function - The callback that is fired when the button is clicked.
+- `outlined`: (optional) boolean - If `true`, the button will be displayed with an outlined style. Defaults to `false`.
+- `padded`: (optional) boolean - If `true`, the button will have extra padding. Defaults to `false`.
+- `secondary`: (optional) boolean - If `true`, the button will be displayed with a secondary color. Defaults to `false`.
+- `small`: (optional) boolean - If `true`, the button will be displayed in a smaller size. Defaults to `false`.
+
+#### Usage
+
+```js
+import Button from "@bluframe/blublocks/Button";
+
+function App() {
+  const handleClick = () => {
+    console.log("Button clicked");
+  };
+
+  return (
+    <Button
+      bold={true}
+      buttonType="button"
+      disabled={false}
+      expanded={false}
+      iconEnd={<Icon name="IoArrowForward" />}
+      iconStart={<Icon name="IoArrowBack" />}
+      label="Click me"
+      loading={false}
+      noHoverHighlight={false}
+      onClick={handleClick}
+      outlined={false}
+      padded={true}
+      secondary={false}
+      small={false}
+    />
+  );
+}
+```
   
 
 ### Inputs
