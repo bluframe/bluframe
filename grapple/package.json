@@ -48,8 +48,13 @@
     "lint:ci": "eslint --quiet src/",
     "prepublish": "yarn lint:ci && yarn flow:ci && yarn test:ci && yarn build:ci",
     "publish": "yarn npm publish --access public",
-    "test": "echo Blu Frame Grapple Tests",
-    "test:ci": "echo Blu Frame Grapple Tests"
+    "test": "jest --coverage --verbose",
+    "test:ci": "jest --coverage --silent"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-is": "^17.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.18.2",
@@ -62,6 +67,8 @@
     "@babel/preset-react": "^7.17.12",
     "@babel/runtime": "^7.18.3",
     "@rollup/plugin-babel": "^5.3.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^12.1.5",
     "babel-jest": "^27.4.6",
     "babel-plugin-module-resolver": "^4.1.0",
     "eslint": "^7.32.0",

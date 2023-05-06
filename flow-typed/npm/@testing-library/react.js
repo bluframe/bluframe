@@ -3,4 +3,6 @@
 declare module "@testing-library/react" {
   declare export var fireEvent: any
   declare export var render: any
+  declare export var screen: any
+  declare export var waitFor: any
 }

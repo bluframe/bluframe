@@ -1761,6 +1761,8 @@ __metadata:
     "@babel/preset-react": ^7.17.12
     "@babel/runtime": ^7.18.3
     "@rollup/plugin-babel": ^5.3.0
+    "@testing-library/jest-dom": ^5.16.4
+    "@testing-library/react": ^12.1.5
     babel-jest: ^27.4.6
     babel-plugin-module-resolver: ^4.1.0
     eslint: ^7.32.0
@@ -1776,6 +1778,9 @@ __metadata:
     jest-resolve: ^27.4.6
     jest-watch-typeahead: ^0.6.5
     prettier: ^2.5.1
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    react-is: ^17.0.2
     resolve: ^1.22.0
     rollup: ^2.66.1
     rollup-plugin-includepaths: ^0.2.4
