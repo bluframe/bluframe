@@ -378,36 +378,71 @@ function App() {
 
 ### Typography
 
-  
-
-- H1
-
-- H2
-
-- H3
-
-- H4
-
-- H5
-
-- H6
-
-- Paragraph
-
-- SubtitleH1
-
-- SubtitleH2
-
-- SubtitleH3
-
-  
-
 Beautiful and customizable typography components.
 
+#### Components
+
+- H1
+- H2
+- H3
+- H4
+- H5
+- H6
+- Paragraph
+- SubtitleH1
+- SubtitleH2
+- SubtitleH3
+
+#### Usage
+
+```js
+import H1 from "@bluframe/blublocks/Typography/H1";
+import SubtitleH1 from "@bluframe/blublocks/Typography/SubtitleH1";
+
+function App() {
+  return (
+    <>
+      <H1>This is a Heading</H1>
+      <SubtitleH1>This is a Subtitle</SubtitleH1>
+    </>
+  );
+}
+```
+
+#### Customization
+
+BluFrame UI Building Blocks makes it easy to customize the styling of the typography components according to your needs. You can override the default styles using styled-components and theming.
+
+Here's an example of how to create a custom H1 component with your own styles:
+
+```js
+// CustomH1.js
+import styled from "styled-components";
+import H1 from "@bluframe/blublocks/Typography/H1";
+
+const CustomH1 = styled(H1)`
+  color: #ff0000;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-weight: 400;
+`;
+
+export default CustomH1;
+```
+
+And then you can use your custom H1 component in your app:
+
+```js
+import CustomH1 from "./CustomH1";
+
+function App() {
+  return <CustomH1>This is a custom Heading</CustomH1>;
+}
+```
+
+
+
   
 
-
-Here's the Loading section for the README:
 
 ### Loading
 
