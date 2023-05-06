@@ -440,13 +440,46 @@ function App() {
 
   
 
+
 ### Content
 
-  
-
 A versatile component that accepts markdown and beautifully displays it on your page.
-  
 
+#### Props
+
+- `className`: (optional) string - The class name for the content wrapper.
+- `components`: (optional) ContentComponents - Custom components to override default markdown components.
+- `content`: string - The markdown content to be displayed.
+- `max`: (optional) number - The maximum number of characters to display from the content. Defaults to `Infinity`.
+- `paragraphAs`: (optional) string - The HTML tag to use for rendering paragraphs. Defaults to `"p"`.
+- `stripMarkdown`: (optional) boolean - If `true`, all markdown formatting will be stripped from the content. Defaults to `false`.
+
+#### Usage
+
+```js
+import Content from "@bluframe/blublocks/Content";
+
+function App() {
+  const markdownContent = `
+    # This is a heading
+
+    This is a paragraph with **bold** and *italic* text.
+
+    - This is a list item
+    - Another list item
+  `;
+
+  return (
+    <Content
+      className="custom-class"
+      content={markdownContent}
+      max={100}
+      paragraphAs="div"
+      stripMarkdown={false}
+    />
+  );
+}
+```
 
 ### Hamburger
 
