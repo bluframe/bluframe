@@ -1,7 +1,7 @@
 {
   "name": "@bluframe/blublocks",
   "version": "0.14.0",
-  "description": "Blu Frame Blu Blocks",
+  "description": "Blu Frame UI Components Library (Blu Blocks)",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
   "author": "Edoardo L'Astorina",
@@ -214,13 +214,26 @@
     "not op_mini all"
   ],
   "keywords": [
+    "bluframe",
+    "blublocks",
     "react",
-    "react-component",
-    "ui",
-    "design",
-    "framework",
-    "frontend",
-    "component",
-    "components"
+    "react-components",
+    "ui-components",
+    "frontend-framework",
+    "design-system",
+    "web-development",
+    "javascript",
+    "styled-components",
+    "typography",
+    "input-fields",
+    "buttons",
+    "loading-spinner",
+    "hamburger-menu",
+    "content-markdown",
+    "radio-group",
+    "checkbox",
+    "icon",
+    "reset-button",
+    "select"
   ]
 }

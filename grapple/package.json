@@ -1,7 +1,7 @@
 {
   "name": "@bluframe/grapple",
   "version": "0.5.3",
-  "description": "Blu Frame Grapple",
+  "description": "Blu Frame Collection of Useful React Hooks (Grapple)",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
   "author": "Edoardo L'Astorina <edoardo@blufra.me>",
@@ -82,10 +82,22 @@
     "rollup-plugin-includepaths": "^0.2.4"
   },
   "keywords": [
+    "bluframe",
+    "grapple",
     "react",
-    "react hooks",
+    "react-hooks",
     "frontend",
-    "hooks"
+    "web-development",
+    "javascript",
+    "usePrevious",
+    "useOnScreen",
+    "useToggle",
+    "useTrimText",
+    "intersection-observer",
+    "state-management",
+    "custom-hooks",
+    "text-trimming",
+    "toggle-state"
   ],
   "moduleRoots": [
     "src"

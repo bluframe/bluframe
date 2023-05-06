@@ -63,14 +63,25 @@
     }
   },
   "keywords": [
-    "component",
-    "components",
-    "design",
-    "framework",
-    "frontend",
-    "hooks",
+    "bluframe",
+    "blublocks",
+    "grapple",
     "react",
-    "react-component",
-    "ui"
+    "react-components",
+    "react-hooks",
+    "ui-components",
+    "frontend-framework",
+    "design-system",
+    "web-development",
+    "javascript",
+    "styled-components",
+    "typography",
+    "input-fields",
+    "buttons",
+    "loading-spinner",
+    "hamburger-menu",
+    "intersection-observer",
+    "toggle",
+    "text-trimming"
   ]
 }
