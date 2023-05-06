@@ -1,8 +1,7 @@
 {
   "name": "@bluframe/bluframe",
   "version": "0.16.0",
-  "description": "Blu Frame Open Source!",
-  "main": "index.js",
+  "description": "A collection of React UI Components and Hooks by Blu Frame",
   "repository": "git@github.com:bluframe/bluframe.git",
   "author": "Edoardo L'Astorina <edoardo@blufra.me>",
   "license": "MIT",
@@ -64,14 +63,14 @@
     }
   },
   "keywords": [
-    "react",
-    "react-component",
-    "ui",
+    "component",
+    "components",
     "design",
     "framework",
     "frontend",
-    "component",
-    "components",
-    "hooks"
+    "hooks",
+    "react",
+    "react-component",
+    "ui"
   ]
 }
