@@ -16,12 +16,17 @@ const args = {
   inputId: "name-input",
   label: "Name",
   name: "name",
-  onChange: action("onChange"),
-  value: ""
+  onChange: action("onChange")
 }
 
 export const Default: Story<Props> = Template.bind({})
 Default.args = args
+
+export const DefaultValue: Story<Props> = Template.bind({})
+DefaultValue.args = {
+  ...args,
+  defaultValue: "Edoardo"
+}
 
 export const Value: Story<Props> = Template.bind({})
 Value.args = {

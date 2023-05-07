@@ -10,11 +10,12 @@ jest.mock(".", () => ({}))
 describe("Select", () => {
   const props: ComponentProps = {
     displayValue: "",
+    isControlled: false,
     isLabelShrunk: false,
     isOpen: false,
     label: "",
     name: "fruit",
-    onSelect: jest.fn(),
+    onChange: jest.fn(),
     onToggleIsOpen: jest.fn(),
     options: [
       {
@@ -25,13 +26,22 @@ describe("Select", () => {
         label: "Orange",
         value: "orange"
       }
-    ],
-    selected: null
+    ]
   }
 
-  it("renders", () => {
-    const { container } = render(<Select {...props} />)
+  it("renders with defaultValue", () => {
+    const { getByText } = render(
+      <Select {...props} defaultValue="orange" displayValue="Orange" />
+    )
+    const displayValue = getByText("Orange")
+    expect(displayValue).toBeInTheDocument()
+  })
 
-    expect(container.firstChild).toMatchSnapshot()
+  it("renders with value", () => {
+    const { getByText } = render(
+      <Select {...props} displayValue="Apple" isControlled value="apple" />
+    )
+    const displayValue = getByText("Apple")
+    expect(displayValue).toBeInTheDocument()
   })
 })

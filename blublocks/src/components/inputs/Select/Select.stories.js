@@ -2,10 +2,12 @@
 
 import Select, { type Props } from "components/inputs/Select"
 import React from "react"
+import type { Story } from "@storybook/react"
+import { action } from "@storybook/addon-actions"
 
 const stories = {
   argTypes: {
-    onSelect: { action: "onSelect" }
+    onChange: { action: "onChange" }
   },
   component: Select,
   title: "Inputs/Select"
@@ -47,24 +49,31 @@ const options = [
 const args = {
   label: "Fruit",
   name: "fruit",
-  options,
-  selected: null
+  onChange: action("onChange"),
+  options
 }
 
-export const Default: any = Template.bind({})
+export const Default: Story<Props> = Template.bind({})
 Default.args = args
 
-export const Placeholder: any = Template.bind({})
+export const Placeholder: Story<Props> = Template.bind({})
 Placeholder.args = {
   ...args,
   placeholder: "Select a fruit"
 }
 
-export const Selected: any = Template.bind({})
-Selected.args = {
+export const DefaultValue: Story<Props> = Template.bind({})
+DefaultValue.args = {
+  ...args,
+  defaultValue: "orange",
+  placeholder: "Select a fruit"
+}
+
+export const Value: Story<Props> = Template.bind({})
+Value.args = {
   ...args,
   placeholder: "Select a fruit",
-  selected: "orange"
+  value: "orange"
 }
 
 export default stories
