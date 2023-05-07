@@ -6,9 +6,6 @@ import type { Story } from "@storybook/react"
 import { action } from "@storybook/addon-actions"
 
 const stories = {
-  argTypes: {
-    onChange: { action: "onChange" }
-  },
   component: Select,
   title: "Inputs/Select"
 }
@@ -49,6 +46,7 @@ const options = [
 const args = {
   label: "Fruit",
   name: "fruit",
+  onBlur: action("onBlur"),
   onChange: action("onChange"),
   options
 }

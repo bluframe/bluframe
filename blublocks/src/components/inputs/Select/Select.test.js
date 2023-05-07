@@ -26,7 +26,10 @@ describe("Select", () => {
         label: "Orange",
         value: "orange"
       }
-    ]
+    ],
+    wrapperRef: {
+      current: null
+    }
   }
 
   it("renders with defaultValue", () => {

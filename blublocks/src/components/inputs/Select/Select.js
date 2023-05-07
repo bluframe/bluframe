@@ -25,14 +25,21 @@ const Select: React$AbstractComponent<ComponentProps, React$Node> = forwardRef(
       isOpen,
       label,
       name,
+      onBlur,
       onChange,
       onToggleIsOpen,
       options,
-      value
+      value,
+      wrapperRef
     }: ComponentProps,
     ref: ElementRef<HTMLSelectElement | null>
   ): React$Node => (
-    <Wrapper className={className}>
+    <Wrapper
+      className={className}
+      onBlur={onBlur}
+      ref={wrapperRef}
+      tabIndex={-1}
+    >
       <Control onClick={onToggleIsOpen}>
         <Label id={`${name}-label`} isShrunk={isLabelShrunk}>
           {label}

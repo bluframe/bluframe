@@ -8,7 +8,6 @@ import React from "react"
 
 const Button = ({
   bold,
-  buttonType = "button",
   className,
   disabled,
   expanded,
@@ -21,7 +20,8 @@ const Button = ({
   outlined,
   padded,
   secondary,
-  small
+  small,
+  type = "button"
 }: ComponentProps): React$Node => (
   <Wrapper
     bold={bold}
@@ -34,7 +34,7 @@ const Button = ({
     padded={padded}
     secondary={secondary}
     small={small}
-    type={buttonType}
+    type={type}
   >
     {iconStart ? <IconStart>{iconStart}</IconStart> : null}
     {label}
