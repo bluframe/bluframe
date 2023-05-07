@@ -86,7 +86,6 @@ A simple button component that can be styled to all needs.
 #### Props
 
 - `bold`: (optional) boolean - If `true`, the button label will be displayed in bold. Defaults to `false`.
-- `buttonType`: (optional) string - The type attribute for the button element. Defaults to `"button"`.
 - `className`: (optional) string - The class name for the button wrapper.
 - `disabled`: (optional) boolean - If `true`, the button will be displayed in a disabled state. Defaults to `false`.
 - `expanded`: (optional) boolean - If `true`, the button will expand to fill its container's width. Defaults to `false`.
@@ -100,6 +99,7 @@ A simple button component that can be styled to all needs.
 - `padded`: (optional) boolean - If `true`, the button will have extra padding. Defaults to `false`.
 - `secondary`: (optional) boolean - If `true`, the button will be displayed with a secondary color. Defaults to `false`.
 - `small`: (optional) boolean - If `true`, the button will be displayed in a smaller size. Defaults to `false`.
+- `type`: (optional) string - The type attribute for the button element. Defaults to `"button"`.
 
 #### Usage
 
@@ -160,6 +160,7 @@ A customizable input text component that supports ARIA attributes.
 - `inputId`: (optional) string - The id attribute for the input element.
 - `label`: string - The label for the input text.
 - `name`: string - The name attribute for the input element.
+- `onBlur`: (optional) function - The callback that is fired when the input text loses focus.
 - `onChange`: function - The callback that is fired when the input text value changes.
 - `value`: string - The value of the input text.
 
@@ -171,8 +172,12 @@ import InputText from "@bluframe/blublocks/InputText";
 function App() {
   const [value, setValue] = useState("");
 
-  const handleChange = (newValue) => {
-    setValue(newValue);
+  const handleBlur = () => {
+    console.log("Input text lost focus");
+  };
+
+  const handleChange = (event) => {
+    setValue(event.target.value);
   };
 
   return (
@@ -180,6 +185,7 @@ function App() {
       inputId="name-input"
       label="Name"
       name="name"
+      onBlur={handleBlur}
       onChange={handleChange}
       value={value}
     />
@@ -194,12 +200,14 @@ A customizable select component that supports ARIA attributes, automatically sel
 #### Props
 
 - `className`: (optional) string - The class name for the select wrapper.
+- `defaultValue`: (optional) string - The default value of the select component.
 - `label`: React$Node - The label for the select.
 - `name`: string - The name attribute for the input element.
-- `onSelect`: function - The callback that is fired when an option is selected.
+- `onBlur`: (optional) function - The callback that is fired when the select loses focus.
+- `onChange`: function - The callback that is fired when an option is selected.
 - `options`: Option[] - An array of options for the select. Each option should have a `label` and a `value`.
 - `placeholder`: (optional) string - The placeholder text to display when no option is selected.
-- `selected`: (optional) number | string | null - The currently selected value in the select. If not provided, the first option will be selected by default.
+- `value`: (optional) string - The currently selected value in the select. If not provided, the first option will be selected by default.
 
 #### Usage
 
@@ -221,7 +229,11 @@ function App() {
     // ... more options
   ];
 
-  const handleSelect = (newValue) => {
+  const handleBlur = () => {
+    console.log("Select lost focus");
+  };
+
+  const handleChange = (newValue) => {
     setSelectedValue(newValue);
   };
 
@@ -229,10 +241,11 @@ function App() {
     <Select
       label="Fruit"
       name="fruit"
-      onSelect={handleSelect}
+      onBlur={handleBlur}
+      onChange={handleChange}
       options={options}
       placeholder="Select a fruit"
-      selected={selectedValue}
+      value={selectedValue}
     />
   );
 }
