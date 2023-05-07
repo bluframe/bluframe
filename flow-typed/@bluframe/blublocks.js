@@ -2,6 +2,7 @@
 /* eslint-disable sort-imports, no-duplicate-imports, max-lines */
 
 declare module "@bluframe/blublocks" {
+  import type { ElementRef } from "react"
   import type { KeyFrames, StyledComponent } from "styled-components"
 
   declare type IconGroupName = "io5"
@@ -149,11 +150,15 @@ declare module "@bluframe/blublocks" {
   |}
 
   declare type InputTextProps = {|
+    +className?: string,
+    +defaultValue?: string,
     +inputId?: string,
     +label: string,
+    +onBlur?: () => void,
+    +onChange?: (event: SyntheticInputEvent<HTMLInputElement>) => void,
     +name: string,
-    +onChange: (value: string) => void,
-    +value: string
+    +ref?: ElementRef<*>,
+    +value?: string
   |}
 
   declare type LoadingProps = {|
@@ -192,13 +197,16 @@ declare module "@bluframe/blublocks" {
   |}
 
   declare type SelectProps = {|
+    +defaultValue?: string,
     +className?: string,
     +label: React$Node,
     +name: string,
-    +onSelect: (selected: number | string | null) => void,
+    +onBlur?: () => void,
+    +onChange: (value: OptionValue | null) => void,
     +options: Option[],
     +placeholder?: string,
-    +selected: number | string | null
+    +ref?: ElementRef<*>,
+    +value?: OptionValue | null
   |}
 
   // Components

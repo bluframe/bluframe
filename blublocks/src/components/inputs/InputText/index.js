@@ -14,7 +14,6 @@ export type ComponentProps = {|
   +isFocused: boolean,
   +labelId?: string,
   +onBlur: () => void,
-  +onChange: (event: SyntheticKeyboardEvent<HTMLInputElement>) => void,
   +onFocus: () => void
 |}
 
@@ -28,10 +27,16 @@ const usePrepareComponent = (props: Props): ComponentProps => {
 
   const onBlur = () => {
     setIsFocused(false)
+
+    if (props.onBlur) {
+      props.onBlur()
+    }
   }
 
   const onChange = (event) => {
-    props.onChange(event.currentTarget.value)
+    if (props.onChange) {
+      props.onChange(event)
+    }
   }
 
   return {

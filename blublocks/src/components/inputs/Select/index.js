@@ -1,8 +1,9 @@
 // @flow
+/* eslint-disable max-lines-per-function */
 
+import type { OptionValue, SelectProps } from "@bluframe/blublocks"
 import { prepareComponent, useToggle } from "@bluframe/grapple"
 import Select from "./Select"
-import type { SelectProps } from "@bluframe/blublocks"
 import { useMemo } from "react"
 
 export type Props = {|
@@ -12,9 +13,10 @@ export type Props = {|
 export type ComponentProps = {|
   ...SelectProps,
   +displayValue: string | React$Node,
+  +isControlled: boolean,
   +isLabelShrunk: boolean,
   +isOpen: boolean,
-  +onSelect: (value: number | string | null) => () => void,
+  +onChange: (value: OptionValue | null) => () => void,
   +onToggleIsOpen: () => void
 |}
 
@@ -23,11 +25,16 @@ const DEFAULT_IS_OPEN = false
 const usePrepareComponent = (props: Props): ComponentProps => {
   const [isOpen, toggleIsOpen] = useToggle(DEFAULT_IS_OPEN)
 
+  // Determine if the component is controlled
+  const isControlled = props.value !== undefined
+
   // Get displayValue and isLabelShrunk
   const [displayValue, isLabelShrunk] = useMemo(() => {
     // Get selected option
     const selectedOption = props.options.find(
-      (option) => option.value === props.selected
+      (option) =>
+        (!isControlled && option.value === props.defaultValue) ||
+        option.value === props.value
     )
 
     // If selected option exists, return its label and shrink the label
@@ -42,16 +49,27 @@ const usePrepareComponent = (props: Props): ComponentProps => {
 
     // Otherwise, return the label and shrink it when options are open
     return ["", isOpen]
-  }, [props.options, props.selected, props.placeholder, isOpen])
+  }, [
+    props.defaultValue,
+    props.options,
+    props.value,
+    props.placeholder,
+    isControlled,
+    isOpen
+  ])
 
   const onToggleIsOpen = () => {
     // Toggle options dropdown
     toggleIsOpen()
   }
 
-  const onSelect = (value: number | string | null) => () => {
+  const onChange = (value: OptionValue | null) => () => {
     // Select via onSelect from props
-    props.onSelect(value)
+    props.onChange(value)
+
+    if (props.onBlur) {
+      props.onBlur()
+    }
 
     // If open close options dropdown
     if (isOpen) {
@@ -62,9 +80,10 @@ const usePrepareComponent = (props: Props): ComponentProps => {
   return {
     ...props,
     displayValue,
+    isControlled,
     isLabelShrunk,
     isOpen,
-    onSelect,
+    onChange,
     onToggleIsOpen
   }
 }

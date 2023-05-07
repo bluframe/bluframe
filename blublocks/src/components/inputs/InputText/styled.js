@@ -20,6 +20,7 @@ export const Input: StyledComponent<
   box-shadow: none;
   color: ${({ theme }) => theme.palette.text.main};
   font-size: 16px;
+  height: 44px;
   padding: 8px 16px;
   width: 100%;
 
@@ -35,8 +36,8 @@ export const Input: StyledComponent<
     top: -24px;
   }
 
-  ${({ isFocused, value }) =>
-    (isFocused || value) &&
+  ${({ defaultValue, isFocused, value }) =>
+    (isFocused || defaultValue || value) &&
     `
     & + label {
       font-size: 12px;
@@ -56,6 +57,6 @@ export const Label: StyledComponent<
   left: 16px;
   pointer-events: none;
   position: absolute;
-  top: 6px;
+  top: 8px;
   transition: all 200ms;
 `
