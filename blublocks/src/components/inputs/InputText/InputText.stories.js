@@ -16,6 +16,7 @@ const args = {
   inputId: "name-input",
   label: "Name",
   name: "name",
+  onBlur: action("onBlur"),
   onChange: action("onChange")
 }
 

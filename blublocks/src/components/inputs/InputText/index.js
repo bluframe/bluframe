@@ -13,7 +13,7 @@ export type ComponentProps = {|
   ...Props,
   +isFocused: boolean,
   +labelId?: string,
-  +onBlur: () => void,
+  +onBlur: (event: SyntheticEvent<*>) => void,
   +onFocus: () => void
 |}
 
@@ -25,11 +25,11 @@ const usePrepareComponent = (props: Props): ComponentProps => {
     setIsFocused(true)
   }
 
-  const onBlur = () => {
+  const onBlur = (event: SyntheticEvent<*>) => {
     setIsFocused(false)
 
     if (props.onBlur) {
-      props.onBlur()
+      props.onBlur(event)
     }
   }
 

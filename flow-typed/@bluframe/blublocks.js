@@ -91,7 +91,6 @@ declare module "@bluframe/blublocks" {
   // Props
   declare type ButtonProps = {|
     +bold?: boolean,
-    +buttonType?: string,
     +className?: string,
     +disabled?: boolean,
     +expanded?: boolean,
@@ -104,7 +103,8 @@ declare module "@bluframe/blublocks" {
     +outlined?: boolean,
     +padded?: boolean,
     +secondary?: boolean,
-    +small?: boolean
+    +small?: boolean,
+    +type?: string
   |}
 
   declare type OptionValue = number | string
@@ -154,7 +154,7 @@ declare module "@bluframe/blublocks" {
     +defaultValue?: string,
     +inputId?: string,
     +label: string,
-    +onBlur?: () => void,
+    +onBlur?: (event: SyntheticEvent<*>) => void,
     +onChange?: (event: SyntheticInputEvent<HTMLInputElement>) => void,
     +name: string,
     +ref?: ElementRef<*>,
@@ -201,7 +201,7 @@ declare module "@bluframe/blublocks" {
     +className?: string,
     +label: React$Node,
     +name: string,
-    +onBlur?: () => void,
+    +onBlur?: (event: SyntheticEvent<*>) => void,
     +onChange: (value: OptionValue | null) => void,
     +options: Option[],
     +placeholder?: string,

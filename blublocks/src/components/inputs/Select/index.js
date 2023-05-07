@@ -3,8 +3,8 @@
 
 import type { OptionValue, SelectProps } from "@bluframe/blublocks"
 import { prepareComponent, useToggle } from "@bluframe/grapple"
+import { useMemo, useRef } from "react"
 import Select from "./Select"
-import { useMemo } from "react"
 
 export type Props = {|
   ...SelectProps
@@ -17,7 +17,8 @@ export type ComponentProps = {|
   +isLabelShrunk: boolean,
   +isOpen: boolean,
   +onChange: (value: OptionValue | null) => () => void,
-  +onToggleIsOpen: () => void
+  +onToggleIsOpen: () => void,
+  +wrapperRef: { current: null | HTMLDivElement }
 |}
 
 const DEFAULT_IS_OPEN = false
@@ -27,6 +28,8 @@ const usePrepareComponent = (props: Props): ComponentProps => {
 
   // Determine if the component is controlled
   const isControlled = props.value !== undefined
+
+  const wrapperRef = useRef(null)
 
   // Get displayValue and isLabelShrunk
   const [displayValue, isLabelShrunk] = useMemo(() => {
@@ -58,7 +61,20 @@ const usePrepareComponent = (props: Props): ComponentProps => {
     isOpen
   ])
 
+  const onBlur = (event: SyntheticEvent<*>) => {
+    if (props.onBlur) {
+      props.onBlur(event)
+    }
+  }
+
   const onToggleIsOpen = () => {
+    // If the dropdown is currently open and is being closed by a click, trigger onBlur
+    if (isOpen) {
+      if (wrapperRef.current) {
+        wrapperRef.current.blur()
+      }
+    }
+
     // Toggle options dropdown
     toggleIsOpen()
   }
@@ -67,13 +83,9 @@ const usePrepareComponent = (props: Props): ComponentProps => {
     // Select via onSelect from props
     props.onChange(value)
 
-    if (props.onBlur) {
-      props.onBlur()
-    }
-
     // If open close options dropdown
     if (isOpen) {
-      toggleIsOpen()
+      onToggleIsOpen()
     }
   }
 
@@ -83,8 +95,10 @@ const usePrepareComponent = (props: Props): ComponentProps => {
     isControlled,
     isLabelShrunk,
     isOpen,
+    onBlur,
     onChange,
-    onToggleIsOpen
+    onToggleIsOpen,
+    wrapperRef
   }
 }
 
