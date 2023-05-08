@@ -49,4 +49,30 @@ describe("prepareComponent", () => {
     rerender(<TestComponent text="world" />)
     expect(screen.getByText("WORLD")).toBeInTheDocument()
   })
+
+  it("renders without options provided", () => {
+    const NoOptionsPreparedComponent =
+      prepareComponent(usePrepareComponent)(ExampleComponent)
+    const NoOptionsTestComponent = ({ text }) => {
+      return <NoOptionsPreparedComponent text={text} />
+    }
+
+    render(<NoOptionsTestComponent text="hello" />)
+    expect(screen.getByText("HELLO")).toBeInTheDocument()
+  })
+
+  it("doesn't update the component if onlyUpdate prop doesn't change", () => {
+    const TestComponentWithExtraProp = ({ text, extraProp }) => {
+      return <PreparedExampleComponent extraProp={extraProp} text={text} />
+    }
+
+    const { rerender } = render(
+      <TestComponentWithExtraProp extraProp={1} text="hello" />
+    )
+    expect(screen.getByText("HELLO")).toBeInTheDocument()
+
+    rerender(<TestComponentWithExtraProp extraProp={2} text="hello" />)
+    // Expect the component to not update and the old text to still be present
+    expect(screen.getByText("HELLO")).toBeInTheDocument()
+  })
 })
