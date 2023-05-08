@@ -1,6 +1,6 @@
 {
   "name": "@bluframe/grapple",
-  "version": "0.5.4",
+  "version": "0.6.0",
   "description": "Blu Frame Collection of Useful React Hooks (Grapple)",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
