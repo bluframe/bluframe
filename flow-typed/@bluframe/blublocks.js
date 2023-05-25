@@ -164,6 +164,7 @@ declare module "@bluframe/blublocks" {
     +onChange?: (event: SyntheticInputEvent<HTMLInputElement>) => void,
     +name: string,
     +ref?: ElementRef<*>,
+    +required?: boolean,
     +value?: string
   |}
 

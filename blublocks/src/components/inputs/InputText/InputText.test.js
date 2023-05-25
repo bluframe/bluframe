@@ -62,4 +62,10 @@ describe("InputText", () => {
     // Check if the helper text is displayed in the error color
     expect(getByText(helperText)).toHaveStyle("color: #F44336")
   })
+
+  it("renders with required attribute", () => {
+    const { getByLabelText } = render(<InputText {...props} required />)
+    const input = getByLabelText("Name")
+    expect(input.required).toBe(true)
+  })
 })

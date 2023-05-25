@@ -164,6 +164,7 @@ A customizable input text component that supports ARIA attributes.
 - `name`: string - The name attribute for the input element.
 - `onBlur`: (optional) function - The callback that is fired when the input text loses focus.
 - `onChange`: function - The callback that is fired when the input text value changes.
+- `required`: (optional) boolean - If `true`, the input will have the "required" attribute. Defaults to `false`.
 - `value`: string - The value of the input text.
 
 #### Usage
@@ -194,12 +195,14 @@ function App() {
       inputId="name-input"
       label="Name"
       name="name"
+      required
       onBlur={handleBlur}
       onChange={handleChange}
       value={value}
     />
   );
 }
+
 ```
 
 ### Select

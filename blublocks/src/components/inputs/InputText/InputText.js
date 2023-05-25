@@ -20,6 +20,7 @@ const InputText: React$AbstractComponent<ComponentProps, React$Node> =
         name,
         onBlur,
         onChange,
+        required,
         value
       }: ComponentProps,
       ref: ElementRef<HTMLInputElement | null>
@@ -34,6 +35,7 @@ const InputText: React$AbstractComponent<ComponentProps, React$Node> =
           onBlur={onBlur}
           onChange={onChange}
           ref={ref}
+          required={required}
           value={value}
         />
         <Label htmlFor={inputId} id={labelId} isFullBorder={isFullBorder}>
