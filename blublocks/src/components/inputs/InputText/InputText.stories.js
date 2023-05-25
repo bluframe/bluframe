@@ -41,4 +41,19 @@ FullBorder.args = {
   isFullBorder: true
 }
 
+export const Error: Story<Props> = Template.bind({})
+Error.args = {
+  ...args,
+  error: true,
+  helperText: "This field is required"
+}
+
+export const ErrorFullBorder: Story<Props> = Template.bind({})
+ErrorFullBorder.args = {
+  ...args,
+  error: true,
+  helperText: "This field is required",
+  isFullBorder: true
+}
+
 export default stories

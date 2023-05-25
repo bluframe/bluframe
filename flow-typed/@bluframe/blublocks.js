@@ -37,6 +37,7 @@ declare module "@bluframe/blublocks" {
     | "mercury"
     | "mineShaft"
     | "nevada"
+    | "pomegranate"
     | "quillGray"
     | "shark"
     | "silver"
@@ -50,6 +51,7 @@ declare module "@bluframe/blublocks" {
 
   declare type BasePalette = {|
     +disabled: BaseColorGrades,
+    +error: BaseColorGrades,
     +primary: BaseColorGrades,
     +secondary: BaseColorGrades,
     +subtitle: BaseColorGrades,
@@ -58,6 +60,7 @@ declare module "@bluframe/blublocks" {
 
   declare type Palette = {|
     +disabled: ColorGrades,
+    +error: ColorGrades,
     +primary: ColorGrades,
     +secondary: ColorGrades,
     +subtitle: ColorGrades,
@@ -152,6 +155,8 @@ declare module "@bluframe/blublocks" {
   declare type InputTextProps = {|
     +className?: string,
     +defaultValue?: string,
+    +error?: boolean,
+    +helperText?: string,
     +inputId?: string,
     +isFullBorder?: boolean,
     +label: string,

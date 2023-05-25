@@ -12,6 +12,10 @@ const baseTheme: BaseTheme = {
       contrast: colors.white,
       main: colors.alto
     },
+    error: {
+      contrast: colors.white,
+      main: colors.pomegranate
+    },
     primary: {
       contrast: colors.white,
       main: colors.boulder

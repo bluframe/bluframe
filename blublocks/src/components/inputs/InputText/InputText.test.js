@@ -47,4 +47,19 @@ describe("InputText", () => {
     fireEvent.change(input, { target: { value: "John" } })
     expect(props.onChange).toHaveBeenCalled()
   })
+
+  it("displays error state and helper text", () => {
+    const helperText = "This field is required"
+
+    const { getByLabelText, getByText } = render(
+      <InputText {...props} error helperText={helperText} />
+    )
+
+    const input = getByLabelText("Name")
+    // Check if the input element has the error styles applied
+    expect(input).toHaveStyle("border-bottom: 1px solid #F44336")
+
+    // Check if the helper text is displayed in the error color
+    expect(getByText(helperText)).toHaveStyle("color: #F44336")
+  })
 })

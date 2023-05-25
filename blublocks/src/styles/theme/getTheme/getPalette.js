@@ -20,6 +20,11 @@ const getPalette = (theme: BaseTheme): Palette => {
       dark: getDark(basePalette.disabled),
       light: getLight(basePalette.disabled)
     },
+    error: {
+      ...basePalette.error,
+      dark: getDark(basePalette.error),
+      light: getLight(basePalette.error)
+    },
     primary: {
       ...basePalette.primary,
       dark: getDark(basePalette.primary),

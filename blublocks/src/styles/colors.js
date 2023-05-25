@@ -23,6 +23,7 @@ const grays = {
 const colors = {
   ...grays,
   black: "#000000",
+  pomegranate: "#F44336",
   white: "#FFFFFF"
 }
 

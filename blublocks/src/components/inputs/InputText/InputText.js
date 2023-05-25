@@ -1,6 +1,7 @@
 // @flow
+/* eslint-disable no-ternary */
 
-import { Input, Label, Wrapper } from "./styled"
+import { HelperText, Input, Label, Wrapper } from "./styled"
 import React, { type ElementRef, forwardRef } from "react"
 import type { ComponentProps } from "."
 
@@ -10,6 +11,8 @@ const InputText: React$AbstractComponent<ComponentProps, React$Node> =
       {
         className,
         defaultValue,
+        error,
+        helperText,
         inputId,
         isFullBorder,
         label,
@@ -24,6 +27,7 @@ const InputText: React$AbstractComponent<ComponentProps, React$Node> =
       <Wrapper className={className}>
         <Input
           defaultValue={defaultValue}
+          error={error}
           id={inputId}
           isFullBorder={isFullBorder}
           name={name}
@@ -35,6 +39,7 @@ const InputText: React$AbstractComponent<ComponentProps, React$Node> =
         <Label htmlFor={inputId} id={labelId} isFullBorder={isFullBorder}>
           {label}
         </Label>
+        {error ? <HelperText>{helperText}</HelperText> : null}
       </Wrapper>
     )
   )
