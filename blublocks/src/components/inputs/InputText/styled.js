@@ -5,9 +5,9 @@ import styled, { type StyledComponent } from "styled-components"
 import type { Theme } from "@bluframe/blublocks"
 
 export const Wrapper: StyledComponent<{||}, Theme, HTMLDivElement> = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: grid;
   position: relative;
+  row-gap: 4px;
   width: 100%;
 `
 
@@ -16,12 +16,16 @@ export const Input: StyledComponent<
   Theme,
   HTMLInputElement
 > = styled.input.attrs({ placeholder: " ", type: "text" })`
-  ${({ isFullBorder, theme }) =>
+  ${({ error, isFullBorder, theme }) =>
     isFullBorder
-      ? `border: 1px solid ${theme.colors.gray.light}`
+      ? `border: 1px solid ${
+          error ? theme.palette.error.main : theme.colors.gray.light
+        }`
       : `
   border: none;
-border-bottom: 1px solid ${theme.colors.gray.light};
+border-bottom: 1px solid ${
+          error ? theme.palette.error.main : theme.colors.gray.light
+        };
   `};
   border-radius: 4px;
   box-shadow: none;
@@ -63,4 +67,13 @@ export const Label: StyledComponent<
   position: absolute;
   top: ${({ isFullBorder }) => (isFullBorder ? "8px" : "12px")};
   transition: all 200ms;
+`
+
+export const HelperText: StyledComponent<
+  {||},
+  Theme,
+  HTMLDivElement
+> = styled.div`
+  color: ${({ theme }) => theme.palette.error.main};
+  font-size: 1rpx;
 `

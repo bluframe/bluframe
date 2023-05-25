@@ -157,11 +157,14 @@ A customizable input text component that supports ARIA attributes.
 
 #### Props
 
+- `error`: (optional) boolean - If `true`, the input text field will be displayed in an error state. Defaults to `false`.
+- `helperText`: (optional) string - The helper text to display below the input text field. If the 'error' prop is `true`, this text will be displayed in the error color.
 - `inputId`: (optional) string - The id attribute for the input element.
 - `label`: string - The label for the input text.
 - `name`: string - The name attribute for the input element.
 - `onBlur`: (optional) function - The callback that is fired when the input text loses focus.
 - `onChange`: function - The callback that is fired when the input text value changes.
+- `required`: (optional) boolean - If `true`, the input will have the "required" attribute. Defaults to `false`.
 - `value`: string - The value of the input text.
 
 #### Usage
@@ -171,9 +174,14 @@ import InputText from "@bluframe/blublocks/InputText";
 
 function App() {
   const [value, setValue] = useState("");
+  const [error, setError] = useState(false);
 
-  const handleBlur = () => {
-    console.log("Input text lost focus");
+  const handleBlur = (event) => {
+    if (event.target.value === "") {
+      setError(true);
+    } else {
+      setError(false);
+    }
   };
 
   const handleChange = (event) => {
@@ -182,15 +190,19 @@ function App() {
 
   return (
     <InputText
+      error={error}
+      helperText={error ? "This field is required" : ""}
       inputId="name-input"
       label="Name"
       name="name"
+      required
       onBlur={handleBlur}
       onChange={handleChange}
       value={value}
     />
   );
 }
+
 ```
 
 ### Select
