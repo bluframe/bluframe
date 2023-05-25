@@ -35,4 +35,10 @@ Value.args = {
   value: "Edoardo"
 }
 
+export const FullBorder: Story<Props> = Template.bind({})
+FullBorder.args = {
+  ...args,
+  isFullBorder: true
+}
+
 export default stories

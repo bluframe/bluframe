@@ -3,7 +3,6 @@
 import InputText from "./InputText"
 import type { InputTextProps } from "@bluframe/blublocks"
 import { prepareComponent } from "@bluframe/grapple"
-import { useState } from "react"
 
 export type Props = {|
   ...InputTextProps
@@ -11,23 +10,14 @@ export type Props = {|
 
 export type ComponentProps = {|
   ...Props,
-  +isFocused: boolean,
   +labelId?: string,
-  +onBlur: (event: SyntheticEvent<*>) => void,
-  +onFocus: () => void
+  +onBlur: (event: SyntheticEvent<*>) => void
 |}
 
 const usePrepareComponent = (props: Props): ComponentProps => {
-  const [isFocused, setIsFocused] = useState(false)
   const labelId = props.inputId && `${props.inputId}-label`
 
-  const onFocus = () => {
-    setIsFocused(true)
-  }
-
   const onBlur = (event: SyntheticEvent<*>) => {
-    setIsFocused(false)
-
     if (props.onBlur) {
       props.onBlur(event)
     }
@@ -41,11 +31,9 @@ const usePrepareComponent = (props: Props): ComponentProps => {
 
   return {
     ...props,
-    isFocused,
     labelId,
     onBlur,
-    onChange,
-    onFocus
+    onChange
   }
 }
 

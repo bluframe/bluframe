@@ -11,13 +11,12 @@ const InputText: React$AbstractComponent<ComponentProps, React$Node> =
         className,
         defaultValue,
         inputId,
-        isFocused,
+        isFullBorder,
         label,
         labelId,
         name,
         onBlur,
         onChange,
-        onFocus,
         value
       }: ComponentProps,
       ref: ElementRef<HTMLInputElement | null>
@@ -26,15 +25,14 @@ const InputText: React$AbstractComponent<ComponentProps, React$Node> =
         <Input
           defaultValue={defaultValue}
           id={inputId}
-          isFocused={isFocused}
+          isFullBorder={isFullBorder}
           name={name}
           onBlur={onBlur}
           onChange={onChange}
-          onFocus={onFocus}
           ref={ref}
           value={value}
         />
-        <Label htmlFor={inputId} id={labelId} isFocused={isFocused}>
+        <Label htmlFor={inputId} id={labelId}>
           {label}
         </Label>
       </Wrapper>

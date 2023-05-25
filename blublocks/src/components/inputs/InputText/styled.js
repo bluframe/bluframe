@@ -1,4 +1,5 @@
 // @flow
+/* eslint-disable no-ternary */
 
 import styled, { type StyledComponent } from "styled-components"
 import type { Theme } from "@bluframe/blublocks"
@@ -11,44 +12,47 @@ export const Wrapper: StyledComponent<{||}, Theme, HTMLDivElement> = styled.div`
 `
 
 export const Input: StyledComponent<
-  {| +isFocused: boolean |},
+  {| +isFullBorder?: boolean |},
   Theme,
   HTMLInputElement
-> = styled.input.attrs({ type: "text" })`
-  border: 1px solid ${({ theme }) => theme.colors.gray.light};
+> = styled.input.attrs({ placeholder: " ", type: "text" })`
+  ${({ isFullBorder, theme }) =>
+    isFullBorder
+      ? `border: 1px solid ${theme.colors.gray.light}`
+      : `
+  border: none;
+border-bottom: 1px solid ${theme.colors.gray.light};
+  `};
   border-radius: 4px;
   box-shadow: none;
   color: ${({ theme }) => theme.palette.text.main};
   font-size: 16px;
   height: 44px;
+  margin: 0;
   padding: 8px 16px;
   width: 100%;
 
   &:focus {
-    border: 1px solid ${({ theme }) => theme.colors.gray.light};
+    ${({ isFullBorder, theme }) =>
+      isFullBorder
+        ? `border: 1px solid ${theme.colors.gray.light}`
+        : `
+  border: none;
+border-bottom: 1px solid ${theme.colors.gray.light};
+  `};
     box-shadow: none;
   }
 
+  :not(:placeholder-shown) + label,
   &:focus + label {
-    color: ${({ theme }) => theme.palette.text.light};
     font-size: 12px;
     left: 16px;
     top: -24px;
   }
-
-  ${({ defaultValue, isFocused, value }) =>
-    (isFocused || defaultValue || value) &&
-    `
-    & + label {
-      font-size: 12px;
-      left: 16px;
-      top: -24px;
-    }
-  `}
 `
 
 export const Label: StyledComponent<
-  {| +isFocused: boolean |},
+  {||},
   Theme,
   HTMLLabelElement
 > = styled.label`
