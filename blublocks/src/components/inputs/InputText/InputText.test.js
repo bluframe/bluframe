@@ -11,13 +11,11 @@ jest.mock(".", () => ({}))
 describe("InputText", () => {
   const props: ComponentProps = {
     inputId: "name-input",
-    isFocused: false,
     label: "Name",
     labelId: "name-label",
     name: "name",
     onBlur: jest.fn(),
-    onChange: jest.fn(),
-    onFocus: jest.fn()
+    onChange: jest.fn()
   }
 
   it("renders with defaultValue", () => {
@@ -34,12 +32,9 @@ describe("InputText", () => {
     expect(input.value).toBe("John")
   })
 
-  it("triggers onFocus and onBlur", () => {
+  it("triggers onBlur", () => {
     const { getByLabelText } = render(<InputText {...props} />)
     const input = getByLabelText("Name")
-
-    fireEvent.focus(input)
-    expect(props.onFocus).toHaveBeenCalled()
 
     fireEvent.blur(input)
     expect(props.onBlur).toHaveBeenCalled()

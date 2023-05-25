@@ -153,6 +153,7 @@ declare module "@bluframe/blublocks" {
     +className?: string,
     +defaultValue?: string,
     +inputId?: string,
+    +isFullBorder?: boolean,
     +label: string,
     +onBlur?: (event: SyntheticEvent<*>) => void,
     +onChange?: (event: SyntheticInputEvent<HTMLInputElement>) => void,
