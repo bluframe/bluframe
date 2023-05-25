@@ -32,7 +32,7 @@ const InputText: React$AbstractComponent<ComponentProps, React$Node> =
           ref={ref}
           value={value}
         />
-        <Label htmlFor={inputId} id={labelId}>
+        <Label htmlFor={inputId} id={labelId} isFullBorder={isFullBorder}>
           {label}
         </Label>
       </Wrapper>

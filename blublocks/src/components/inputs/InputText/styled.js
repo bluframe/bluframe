@@ -27,9 +27,9 @@ border-bottom: 1px solid ${theme.colors.gray.light};
   box-shadow: none;
   color: ${({ theme }) => theme.palette.text.main};
   font-size: 16px;
-  height: 44px;
+  height: ${({ isFullBorder }) => (isFullBorder ? "44px" : "50px")};
   margin: 0;
-  padding: 8px 16px;
+  padding: ${({ isFullBorder }) => (isFullBorder ? "8px 16px" : "16px 16px 0")};
   width: 100%;
 
   &:focus {
@@ -47,12 +47,12 @@ border-bottom: 1px solid ${theme.colors.gray.light};
   &:focus + label {
     font-size: 12px;
     left: 16px;
-    top: -24px;
+    top: ${({ isFullBorder }) => (isFullBorder ? "-24px" : "0")};
   }
 `
 
 export const Label: StyledComponent<
-  {||},
+  {| +isFullBorder?: boolean |},
   Theme,
   HTMLLabelElement
 > = styled.label`
@@ -61,6 +61,6 @@ export const Label: StyledComponent<
   left: 16px;
   pointer-events: none;
   position: absolute;
-  top: 8px;
+  top: ${({ isFullBorder }) => (isFullBorder ? "8px" : "12px")};
   transition: all 200ms;
 `
