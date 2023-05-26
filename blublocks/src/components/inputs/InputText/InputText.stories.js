@@ -62,4 +62,10 @@ Required.args = {
   required: true
 }
 
+export const NumberType: Story<Props> = Template.bind({})
+NumberType.args = {
+  ...args,
+  type: "number"
+}
+
 export default stories

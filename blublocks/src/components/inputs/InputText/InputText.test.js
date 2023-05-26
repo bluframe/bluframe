@@ -68,4 +68,10 @@ describe("InputText", () => {
     const input = getByLabelText("Name")
     expect(input.required).toBe(true)
   })
+
+  it("renders with type 'number'", () => {
+    const { getByLabelText } = render(<InputText {...props} type="number" />)
+    const input = getByLabelText("Name")
+    expect(input.type).toBe("number")
+  })
 })

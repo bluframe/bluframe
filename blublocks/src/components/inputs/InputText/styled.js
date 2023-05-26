@@ -15,7 +15,7 @@ export const Input: StyledComponent<
   {| +isFullBorder?: boolean |},
   Theme,
   HTMLInputElement
-> = styled.input.attrs({ placeholder: " ", type: "text" })`
+> = styled.input.attrs({ placeholder: " " })`
   ${({ error, isFullBorder, theme }) =>
     isFullBorder
       ? `border: 1px solid ${

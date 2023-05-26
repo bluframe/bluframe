@@ -2,6 +2,7 @@
 
 exports[`Button renders 1`] = `
 <button
+  aria-disabled="false"
   class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb fnYKKn"
   type="button"
 >
@@ -11,6 +12,7 @@ exports[`Button renders 1`] = `
 
 exports[`Button renders bold 1`] = `
 <button
+  aria-disabled="false"
   class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb hIHjsH"
   type="button"
 >
@@ -20,6 +22,7 @@ exports[`Button renders bold 1`] = `
 
 exports[`Button renders disabled 1`] = `
 <button
+  aria-disabled="true"
   class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb ibyxDU"
   disabled=""
   type="button"
@@ -30,6 +33,7 @@ exports[`Button renders disabled 1`] = `
 
 exports[`Button renders outlined 1`] = `
 <button
+  aria-disabled="false"
   class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb dNGKMI"
   type="button"
 >
@@ -39,6 +43,7 @@ exports[`Button renders outlined 1`] = `
 
 exports[`Button renders padded 1`] = `
 <button
+  aria-disabled="false"
   class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb kIBhZW"
   type="button"
 >
@@ -48,6 +53,7 @@ exports[`Button renders padded 1`] = `
 
 exports[`Button renders secondary 1`] = `
 <button
+  aria-disabled="false"
   class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb ztbDP"
   type="button"
 >
@@ -57,6 +63,7 @@ exports[`Button renders secondary 1`] = `
 
 exports[`Button renders small 1`] = `
 <button
+  aria-disabled="false"
   class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb bxTKRn"
   type="button"
 >
@@ -66,6 +73,7 @@ exports[`Button renders small 1`] = `
 
 exports[`Button renders with iconStart and iconEnd 1`] = `
 <button
+  aria-disabled="false"
   class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb fnYKKn"
   type="button"
 >

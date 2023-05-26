@@ -24,6 +24,7 @@ const Button = ({
   type = "button"
 }: ComponentProps): React$Node => (
   <Wrapper
+    aria-disabled={disabled ? "true" : "false"}
     bold={bold}
     className={className}
     disabled={disabled}

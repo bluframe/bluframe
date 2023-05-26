@@ -21,12 +21,14 @@ const InputText: React$AbstractComponent<ComponentProps, React$Node> =
         onBlur,
         onChange,
         required,
+        type = "text",
         value
       }: ComponentProps,
       ref: ElementRef<HTMLInputElement | null>
     ): React$Node => (
       <Wrapper className={className}>
         <Input
+          aria-invalid={error ? "true" : "false"}
           defaultValue={defaultValue}
           error={error}
           id={inputId}
@@ -36,12 +38,13 @@ const InputText: React$AbstractComponent<ComponentProps, React$Node> =
           onChange={onChange}
           ref={ref}
           required={required}
+          type={type}
           value={value}
         />
         <Label htmlFor={inputId} id={labelId} isFullBorder={isFullBorder}>
           {label}
         </Label>
-        {error ? <HelperText>{helperText}</HelperText> : null}
+        {error ? <HelperText role="alert">{helperText}</HelperText> : null}
       </Wrapper>
     )
   )
