@@ -4,6 +4,7 @@ const collectCoverageFrom = ["src/**/*.js"]
 const coverageDirectory = "coverage"
 const coveragePathIgnorePatterns = [
   "serviceWorker.js",
+  "src/components/Typography/.*",
   "src/config",
   "src/styles",
   "src/index.js",

@@ -165,6 +165,7 @@ declare module "@bluframe/blublocks" {
     +name: string,
     +ref?: ElementRef<*>,
     +required?: boolean,
+    +step?: string,
     +type?: string,
     +value?: string
   |}
