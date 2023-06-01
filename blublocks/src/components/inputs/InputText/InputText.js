@@ -21,6 +21,7 @@ const InputText: React$AbstractComponent<ComponentProps, React$Node> =
         onBlur,
         onChange,
         required,
+        step,
         type = "text",
         value
       }: ComponentProps,
@@ -38,6 +39,7 @@ const InputText: React$AbstractComponent<ComponentProps, React$Node> =
           onChange={onChange}
           ref={ref}
           required={required}
+          step={step}
           type={type}
           value={value}
         />
