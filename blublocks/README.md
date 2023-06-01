@@ -10,74 +10,39 @@
 
   
 
-# BluFrame UI Building Blocks
+# Blu Frame UI Building Blocks 🚀
 
-  
+Blu Frame UI Building Blocks provides a collection of customizable React components to speed up your web development process. 🎨
 
-BluFrame UI Building Blocks provides a collection of customizable React components to speed up your web development process.
-
-  
-
-## How to Install
-
-  
+## How to Install 📦
 
 If you are using `yarn`:
 
-  
-
 ```sh
-
 yarn add @bluframe/blublocks
-
 ```
-
-  
 
 And if you are using `npm`:
 
-  
-
 ```sh
-
 npm i @bluframe/blublocks
-
 ```
 
-  
-
-## How to import
-
-  
+## How to import 🧬
 
 You can import the components individually:
 
-  
-
 ```js
-
 import  Button  from  "@bluframe/blublocks/Button";
-
 ```
-
-  
 
 Or import multiple components at once:
 
-  
-
 ```js
-
 import { Button, InputText } from  "@bluframe/blublocks";
-
 ```
 
-  
-
-## Components
-
-  
-
+## Components 🧩
 
 ### Button
 
@@ -89,12 +54,12 @@ A simple button component that can be styled to all needs.
 - `className`: (optional) string - The class name for the button wrapper.
 - `disabled`: (optional) boolean - If `true`, the button will be displayed in a disabled state. Defaults to `false`.
 - `expanded`: (optional) boolean - If `true`, the button will expand to fill its container's width. Defaults to `false`.
-- `iconEnd`: (optional) React$Node - The icon to display at the end of the button label.
-- `iconStart`: (optional) React$Node - The icon to display at the beginning of the button label.
-- `label`: string - The label for the button.
+- `iconEnd`: (optional) React$Node - The icon to display at the end of the button label. 🔚
+- `iconStart`: (optional) React$Node - The icon to display at the beginning of the button label. 🔜
+- `label`: string - The label for the button. 🏷️
 - `loading`: (optional) boolean - If `true`, a loading spinner will be displayed at the end of the button. Defaults to `false`.
 - `noHoverHighlight`: (optional) boolean - If `true`, the button will not have a hover effect. Defaults to `false`.
-- `onClick`: (optional) function - The callback that is fired when the button is clicked.
+- `onClick`: (optional) function - The callback that is fired when the button is clicked. 🖱️
 - `outlined`: (optional) boolean - If `true`, the button will be displayed with an outlined style. Defaults to `false`.
 - `padded`: (optional) boolean - If `true`, the button will have extra padding. Defaults to `false`.
 - `secondary`: (optional) boolean - If `true`, the button will be displayed with a secondary color. Defaults to `false`.
@@ -131,25 +96,16 @@ function App() {
   );
 }
 ```
-  
 
 ### Inputs
 
-  
-
 - InputText
-
 - Select
-
 - Radio
-
 - RadioGroup
-
 - Checkbox
 
-  
-
-All our input components support ARIA attributes.
+All our input components support ARIA attributes. 💯
 
 ### InputText
 
@@ -157,14 +113,19 @@ A customizable input text component that supports ARIA attributes.
 
 #### Props
 
-- `error`: (optional) boolean - If `true`, the input text field will be displayed in an error state. Defaults to `false`.
-- `helperText`: (optional) string - The helper text to display below the input text field. If the 'error' prop is `true`, this text will be displayed in the error color.
-- `inputId`: (optional) string - The id attribute for the input element.
-- `label`: string - The label for the input text.
+- `className`: (optional) string - The class name for the input text wrapper.
+- `defaultValue`: (optional) string - The default value attribute for the input element. 📝
+- `error`: (optional) boolean - If `true`, the input text field will be displayed in an error state. Defaults to `false`. ⚠️
+- `helperText`: (optional) string - The helper text to display below the input text field. If the 'error' prop is `true`, this text will be displayed in the error color. 🆘
+- `inputId`: (optional) string - The id attribute for the input element. 🆔
+- `isFullBorder`: (optional) boolean - If `true`, the input text field will have a full border instead of just a bottom border. Defaults to `false`.
+- `label`: string - The label for the input text. 🏷️
 - `name`: string - The name attribute for the input element.
-- `onBlur`: (optional) function - The callback that is fired when the input text loses focus.
-- `onChange`: function - The callback that is fired when the input text value changes.
+- `onBlur`: (optional) function - The callback that is fired when the input text loses focus. 💨
+- `onChange`: function - The callback that is fired when the input text value changes. 🔀
 - `required`: (optional) boolean - If `true`, the input will have the "required" attribute. Defaults to `false`.
+- `step`: (optional) string - The step attribute for the input element. This is applicable when the input type is `number`. 📊
+- `type`: (optional) string - The type attribute for the input element. Defaults to `text`.
 - `value`: string - The value of the input text.
 
 #### Usage
@@ -202,7 +163,6 @@ function App() {
     />
   );
 }
-
 ```
 
 ### Select
@@ -212,13 +172,13 @@ A customizable select component that supports ARIA attributes, automatically sel
 #### Props
 
 - `className`: (optional) string - The class name for the select wrapper.
-- `defaultValue`: (optional) string - The default value of the select component.
-- `label`: React$Node - The label for the select.
+- `defaultValue`: (optional) string - The default value of the select component. 📝
+- `label`: React$Node - The label for the select. 🏷️
 - `name`: string - The name attribute for the input element.
-- `onBlur`: (optional) function - The callback that is fired when the select loses focus.
+- `onBlur`: (optional) function - The callback that is fired when the select loses focus. 💨
 - `onChange`: function - The callback that is fired when an option is selected.
 - `options`: Option[] - An array of options for the select. Each option should have a `label` and a `value`.
-- `placeholder`: (optional) string - The placeholder text to display when no option is selected.
+- `placeholder`: (optional) string - The placeholder text to display when no option is selected. 💭
 - `value`: (optional) string - The currently selected value in the select. If not provided, the first option will be selected by default.
 
 #### Usage
@@ -263,18 +223,17 @@ function App() {
 }
 ```
 
-
 ### Radio
 
-A customizable radio component that supports ARIA attributes.
+A customizable radio component that supports ARIA attributes. 📻
 
 #### Props
 
-- `inputId`: (optional) string - The id attribute for the input element.
-- `isChecked`: boolean - Determines whether the radio is checked or not.
-- `label`: React$Node - The label for the radio.
+- `inputId`: (optional) string - The id attribute for the input element. 🆔
+- `isChecked`: boolean - Determines whether the radio is checked or not. ✅
+- `label`: React$Node - The label for the radio. 🏷️
 - `name`: string - The name attribute for the input element.
-- `onChange`: function - The callback that is fired when the radio is clicked.
+- `onChange`: function - The callback that is fired when the radio is clicked. 🖱️
 - `value`: OptionValue - The value of the radio.
 
 #### Usage
@@ -314,14 +273,14 @@ function App() {
 
 ### RadioGroup
 
-A customizable radio group component that supports ARIA attributes and automatically selects the first option if no selected option is provided.
+A customizable radio group component that supports ARIA attributes and automatically selects the first option if no selected option is provided. 🎛️
 
 #### Props
 
 - `className`: (optional) string - The class name for the radio group wrapper.
-- `label`: React$Node - The label for the radio group.
+- `label`: React$Node - The label for the radio group. 🏷️
 - `name`: string - The name attribute for the input elements.
-- `onChange`: function - The callback that is fired when a radio within the group is clicked.
+- `onChange`: function - The callback that is fired when a radio within the group is clicked. 🖱️
 - `options`: Option[] - An array of options for the radio group. Each option should have a `label` and a `value`.
 - `selected`: (optional) OptionValue | null - The currently selected value in the radio group. If not provided, the first option will be selected by default.
 
@@ -360,20 +319,18 @@ function App() {
 }
 ```
 
-
-
 ### Checkbox
 
-A customizable checkbox component that supports ARIA attributes.
+A customizable checkbox component that supports ARIA attributes. ☑️
 
 #### Props
 
-- `inputId`: (optional) string - The id attribute for the input element.
-- `isChecked`: boolean - Determines whether the checkbox is checked or not.
-- `label`: React$Node - The label for the checkbox.
+- `inputId`: (optional) string - The id attribute for the input element. 🆔
+- `isChecked`: boolean - Determines whether the checkbox is checked or not. ✅
+- `label`: React$Node - The label for the checkbox. 🏷️
 - `name`: string - The name attribute for the input element.
 - `value`: OptionValue - The value of the checkbox.
-- `onChange`: function - The callback that is fired when the checkbox is clicked.
+- `onChange`: function - The callback that is fired when the checkbox is clicked. 🖱️
 
 #### Usage
 
@@ -399,11 +356,10 @@ function App() {
   );
 }
 ```
-  
 
 ### Typography
 
-Beautiful and customizable typography components.
+Beautiful and customizable typography components. ✍️
 
 #### Components
 
@@ -436,7 +392,7 @@ function App() {
 
 #### Customization
 
-BluFrame UI Building Blocks makes it easy to customize the styling of the typography components according to your needs. You can override the default styles using styled-components and theming.
+BluFrame UI Building Blocks makes it easy to customize the styling of the typography components according to your needs. You can override the default styles using styled-components and theming. 🎨
 
 Here's an example of how to create a custom H1 component with your own styles:
 
@@ -464,53 +420,16 @@ function App() {
 }
 ```
 
-
-
-  
-
-
-### Loading
-
-A lightweight, 100% CSS spinner component.
-
-#### Props
-
-- `contrast`: (optional) boolean - If `true`, the spinner will be displayed with a contrast color. Defaults to `false`.
-- `disabled`: (optional) boolean - If `true`, the spinner will be displayed in a disabled state. Defaults to `false`.
-- `secondary`: (optional) boolean - If `true`, the spinner will be displayed with a secondary color. Defaults to `false`.
-- `size`: (optional) number - The size of the spinner in pixels. Defaults to `16`.
-
-#### Usage
-
-```js
-import Loading from "@bluframe/blublocks/Loading";
-
-function App() {
-  return (
-    <Loading
-      contrast={false}
-      disabled={false}
-      secondary={false}
-      size={24}
-    />
-  );
-}
-```
-
-
-  
-
-
 ### Content
 
-A versatile component that accepts markdown and beautifully displays it on your page.
+A versatile component that accepts markdown and beautifully displays it on your page. 📄
 
 #### Props
 
 - `className`: (optional) string - The class name for the content wrapper.
 - `components`: (optional) ContentComponents - Custom components to override default markdown components.
 - `content`: string - The markdown content to be displayed.
-- `max`: (optional) number - The maximum number of characters to display from the content. Defaults to `Infinity`.
+- `max`: (optional) number - The maximum number of characters to display from the content. Defaults to `Infinity`. 📏
 - `paragraphAs`: (optional) string - The HTML tag to use for rendering paragraphs. Defaults to `"p"`.
 - `stripMarkdown`: (optional) boolean - If `true`, all markdown formatting will be stripped from the content. Defaults to `false`.
 
@@ -543,13 +462,13 @@ function App() {
 
 ### Hamburger
 
-A classic Hamburger component made with 100% CSS.
+A classic Hamburger component made with 100% CSS. 🍔
 
 #### Props
 
 - `isMenuExpanded`: (optional) boolean - Determines whether the menu is expanded or not. Defaults to `false`.
-- `menuId`: (optional) string - The id attribute for the menu that the Hamburger controls.
-- `onClick`: (optional) function - The callback that is fired when the Hamburger is clicked.
+- `menuId`: (optional) string - The id attribute for the menu that the Hamburger controls. 🆔
+- `onClick`: (optional) function - The callback that is fired when the Hamburger is clicked. 🖱️
 
 #### Usage
 
@@ -573,33 +492,17 @@ function App() {
 }
 ```
 
-  
-
 ## Contributing
 
+We welcome contributions to improve Blu Frame UI Building Blocks! If you'd like to contribute, please follow these steps: 🤝
+
+1. Fork the repository. 🍴
+2. Create a new branch for your feature or bugfix. 🌿
+3. Make your changes and commit them to your branch. 📝
+4. Submit a pull request with a detailed description of your changes. 📬
   
-
-We welcome contributions to improve BluFrame UI Building Blocks! If you'd like to contribute, please follow these steps:
-
-  
-
-1. Fork the repository.
-
-2. Create a new branch for your feature or bugfix.
-
-3. Make your changes and commit them to your branch.
-
-4. Submit a pull request with a detailed description of your changes.
-
-  
-
-Please ensure that your code follows our coding style and passes all tests.
-
-  
+Please ensure that your code follows our coding style and passes all tests. 🔎
 
 ## License
 
-  
-
-BluFrame UI Building Blocks is [MIT licensed](LICENSE).
-
+Blu Frame UI Building Blocks is [MIT licensed](LICENSE).
