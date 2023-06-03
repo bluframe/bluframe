@@ -11,6 +11,8 @@ const stories = {
         options: [
           "IoAccessibilityOutline",
           "IoAdd",
+          "IoAddCircle",
+          "IoAlertCircleOutline",
           "IoArrowBack",
           "IoArrowForward",
           "IoBagOutline",

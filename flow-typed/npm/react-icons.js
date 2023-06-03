@@ -12,6 +12,12 @@ declare module "@react-icons/all-files/io5/IoAccessibilityOutline" {
 declare module "@react-icons/all-files/io5/IoAdd" {
   declare export var IoAdd: React$ComponentType<IconProps>
 }
+declare module "@react-icons/all-files/io5/IoAddCircle" {
+  declare export var IoAddCircle: React$ComponentType<IconProps>
+}
+declare module "@react-icons/all-files/io5/IoAlertCircleOutline" {
+  declare export var IoAlertCircleOutline: React$ComponentType<IconProps>
+}
 declare module "@react-icons/all-files/io5/IoArrowBack" {
   declare export var IoArrowBack: React$ComponentType<IconProps>
 }
