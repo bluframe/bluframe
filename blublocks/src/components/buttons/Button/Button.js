@@ -1,7 +1,7 @@
 // @flow
 /* eslint-disable no-ternary */
 
-import { IconEnd, IconStart, Wrapper } from "./styled"
+import { Icon, IconEnd, IconStart, Wrapper } from "./styled"
 import type { ComponentProps } from "."
 import Loading from "components/Loading"
 import React from "react"
@@ -11,6 +11,8 @@ const Button = ({
   className,
   disabled,
   expanded,
+  iconOnly,
+  icon,
   iconEnd,
   iconStart,
   label,
@@ -21,10 +23,12 @@ const Button = ({
   padded,
   secondary,
   small,
+  transparent,
   type = "button"
 }: ComponentProps): React$Node => (
   <Wrapper
     aria-disabled={disabled ? "true" : "false"}
+    aria-label={iconOnly ? label : undefined}
     bold={bold}
     className={className}
     disabled={disabled}
@@ -35,11 +39,13 @@ const Button = ({
     padded={padded}
     secondary={secondary}
     small={small}
+    transparent={transparent}
     type={type}
   >
-    {iconStart ? <IconStart>{iconStart}</IconStart> : null}
-    {label}
-    {iconEnd ? <IconEnd>{iconEnd}</IconEnd> : null}
+    {iconOnly ? <Icon>{icon}</Icon> : null}
+    {!iconOnly && iconStart ? <IconStart>{iconStart}</IconStart> : null}
+    {iconOnly ? null : label}
+    {!iconOnly && iconEnd ? <IconEnd>{iconEnd}</IconEnd> : null}
     {loading ? (
       <IconEnd>
         <Loading contrast={!outlined} />

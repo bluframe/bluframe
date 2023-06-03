@@ -31,6 +31,41 @@ exports[`Button renders disabled 1`] = `
 </button>
 `;
 
+exports[`Button renders iconOnly button 1`] = `
+<button
+  aria-disabled="false"
+  aria-label="Button"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb fnYKKn"
+  type="button"
+>
+  <span
+    class="styled__Icon-sc-pzlzbh-1"
+  >
+    <span
+      class="styled__Icon-sc-ztr6p6-0 kwuIiV"
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        stroke-width="0"
+        viewBox="0 0 512 512"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M244 400L100 256l144-144M120 256h292"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="48"
+        />
+      </svg>
+    </span>
+  </span>
+</button>
+`;
+
 exports[`Button renders outlined 1`] = `
 <button
   aria-disabled="false"
@@ -71,6 +106,41 @@ exports[`Button renders small 1`] = `
 </button>
 `;
 
+exports[`Button renders transparent iconOnly button 1`] = `
+<button
+  aria-disabled="false"
+  aria-label="Button"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb jkrxpI"
+  type="button"
+>
+  <span
+    class="styled__Icon-sc-pzlzbh-1"
+  >
+    <span
+      class="styled__Icon-sc-ztr6p6-0 kwuIiV"
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        stroke-width="0"
+        viewBox="0 0 512 512"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M244 400L100 256l144-144M120 256h292"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="48"
+        />
+      </svg>
+    </span>
+  </span>
+</button>
+`;
+
 exports[`Button renders with iconStart and iconEnd 1`] = `
 <button
   aria-disabled="false"
@@ -78,7 +148,7 @@ exports[`Button renders with iconStart and iconEnd 1`] = `
   type="button"
 >
   <span
-    class="styled__IconStart-sc-pzlzbh-2"
+    class="styled__IconStart-sc-pzlzbh-3"
   >
     <div>
       Icon Start
@@ -86,7 +156,7 @@ exports[`Button renders with iconStart and iconEnd 1`] = `
   </span>
   Button
   <span
-    class="styled__IconEnd-sc-pzlzbh-1"
+    class="styled__IconEnd-sc-pzlzbh-2"
   >
     <div>
       Icon End

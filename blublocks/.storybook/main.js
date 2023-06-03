@@ -1,7 +1,11 @@
 const path = require("path")
 
 module.exports = {
-  addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
+  addons: [
+    "@storybook/addon-links",
+    "@storybook/addon-docs",
+    "@storybook/addon-essentials"
+  ],
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   features: {
     babelModeV7: true

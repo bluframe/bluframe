@@ -97,7 +97,9 @@ declare module "@bluframe/blublocks" {
     +className?: string,
     +disabled?: boolean,
     +expanded?: boolean,
+    +icon?: React$Node,
     +iconEnd?: React$Node,
+    +iconOnly?: boolean,
     +iconStart?: React$Node,
     +label: string,
     +loading?: boolean,
@@ -107,6 +109,7 @@ declare module "@bluframe/blublocks" {
     +padded?: boolean,
     +secondary?: boolean,
     +small?: boolean,
+    +transparent?: boolean,
     +type?: string
   |}
 

@@ -4,6 +4,7 @@
 import { fireEvent, render } from "tests"
 import Button from "./Button"
 import { type ComponentProps } from "."
+import Icon from "components/Icon"
 import React from "react"
 
 jest.mock(".", () => ({}))
@@ -81,5 +82,26 @@ describe("Button", () => {
 
     fireEvent.click(getByText(props.label))
     expect(props.onClick).not.toHaveBeenCalled()
+  })
+
+  it("renders iconOnly button", () => {
+    const { container } = render(
+      <Button {...props} icon={<Icon name="IoArrowBack" />} iconOnly />
+    )
+
+    expect(container.firstChild).toMatchSnapshot()
+  })
+
+  it("renders transparent iconOnly button", () => {
+    const { container } = render(
+      <Button
+        {...props}
+        icon={<Icon name="IoArrowBack" />}
+        iconOnly
+        transparent
+      />
+    )
+
+    expect(container.firstChild).toMatchSnapshot()
   })
 })
