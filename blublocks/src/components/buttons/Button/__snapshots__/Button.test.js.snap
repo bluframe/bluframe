@@ -141,6 +141,16 @@ exports[`Button renders transparent iconOnly button 1`] = `
 </button>
 `;
 
+exports[`Button renders with expanded and outlined 1`] = `
+<button
+  aria-disabled="false"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb Mxfpj"
+  type="button"
+>
+  Button
+</button>
+`;
+
 exports[`Button renders with iconStart and iconEnd 1`] = `
 <button
   aria-disabled="false"
@@ -162,5 +172,15 @@ exports[`Button renders with iconStart and iconEnd 1`] = `
       Icon End
     </div>
   </span>
+</button>
+`;
+
+exports[`Button renders with secondary, rounded, and raised 1`] = `
+<button
+  aria-disabled="false"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb leFBBt"
+  type="button"
+>
+  Button
 </button>
 `;

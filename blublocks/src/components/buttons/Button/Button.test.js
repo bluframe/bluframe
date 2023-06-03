@@ -104,4 +104,16 @@ describe("Button", () => {
 
     expect(container.firstChild).toMatchSnapshot()
   })
+
+  it("renders with expanded and outlined", () => {
+    const { container } = render(<Button {...props} expanded outlined />)
+
+    expect(container.firstChild).toMatchSnapshot()
+  })
+
+  it("renders with secondary, rounded, and raised", () => {
+    const { container } = render(<Button {...props} raised rounded secondary />)
+
+    expect(container.firstChild).toMatchSnapshot()
+  })
 })
