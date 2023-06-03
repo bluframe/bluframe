@@ -56,6 +56,8 @@ A simple button component that can be styled to all needs.
 - `expanded`: (optional) boolean - If `true`, the button will expand to fill its container's width. Defaults to `false`.
 - `iconEnd`: (optional) React$Node - The icon to display at the end of the button label. 🔚
 - `iconStart`: (optional) React$Node - The icon to display at the beginning of the button label. 🔜
+- `icon`: (optional) React$Node - The icon to display when `iconOnly` is `true`. 🎯
+- `iconOnly`: (optional) boolean - If `true`, the button will only display an icon. Defaults to `false`.
 - `label`: string - The label for the button. 🏷️
 - `loading`: (optional) boolean - If `true`, a loading spinner will be displayed at the end of the button. Defaults to `false`.
 - `noHoverHighlight`: (optional) boolean - If `true`, the button will not have a hover effect. Defaults to `false`.
@@ -64,6 +66,7 @@ A simple button component that can be styled to all needs.
 - `padded`: (optional) boolean - If `true`, the button will have extra padding. Defaults to `false`.
 - `secondary`: (optional) boolean - If `true`, the button will be displayed with a secondary color. Defaults to `false`.
 - `small`: (optional) boolean - If `true`, the button will be displayed in a smaller size. Defaults to `false`.
+- `transparent`: (optional) boolean - If `true`, the button will be displayed with a transparent background. Defaults to `false`.
 - `type`: (optional) string - The type attribute for the button element. Defaults to `"button"`.
 
 #### Usage
