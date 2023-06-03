@@ -10,22 +10,32 @@ import { rgba } from "polished"
 type Props = {|
   +bold?: boolean,
   +disabled?: boolean,
+  +iconOnly?: boolean,
   +noHoverHighlight?: boolean,
   +outlined?: boolean,
   +padded?: boolean,
   +secondary?: boolean,
-  +small?: boolean
+  +small?: boolean,
+  +transparent?: boolean
 |}
 
 const BACKGROUND_ALPHA = 0.7
 
 const getBackground = (props: {| ...Props, +theme: Theme |}) => {
+  if (props.transparent) {
+    return "transparent"
+  }
+
   const colorGrades = getColorGrades(props)
 
   return props.outlined ? colorGrades.contrast : colorGrades.main
 }
 
 const getBorder = (props: {| ...Props, +theme: Theme |}) => {
+  if (props.transparent) {
+    return "1px solid transparent"
+  }
+
   const colorGrades = getColorGrades(props)
 
   return `1px solid ${colorGrades.main}`
@@ -34,13 +44,15 @@ const getBorder = (props: {| ...Props, +theme: Theme |}) => {
 const getColor = (props: {| ...Props, +theme: Theme |}) => {
   const colorGrades = getColorGrades(props)
 
-  return props.outlined ? colorGrades.main : colorGrades.contrast
+  return props.outlined || props.transparent
+    ? colorGrades.main
+    : colorGrades.contrast
 }
 
 export const Wrapper: StyledComponent<
   Props,
   Theme,
-  React$ComponentType<Props>
+  StyledComponent<{||}, Theme, HTMLButtonElement>
 > = styled(Reset)`
   align-items: center;
   background: ${getBackground};
@@ -55,8 +67,14 @@ export const Wrapper: StyledComponent<
   font-weight: ${({ bold }) => (bold ? "700" : "300")};
   justify-content: center;
   line-height: 1.33;
-  padding: ${({ padded, small }) =>
-    small ? "6px 12px" : padded ? "15px 42px" : "10px 20px"};
+  padding: ${({ padded, small, iconOnly }) =>
+    small
+      ? "6px 12px"
+      : iconOnly
+      ? "10px"
+      : padded
+      ? "15px 42px"
+      : "10px 20px"};
   transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition-property: background-color, color, opacity;
   width: ${({ expanded }) => (expanded ? "100%" : "auto")};
@@ -66,7 +84,7 @@ export const Wrapper: StyledComponent<
       !props.noHoverHighlight &&
       `background:
       ${
-        props.disabled
+        props.disabled || props.transparent
           ? getBackground(props)
           : rgba(getBackground(props), BACKGROUND_ALPHA)
       };}`}
@@ -76,6 +94,8 @@ export const Wrapper: StyledComponent<
     color: ${getColor};
   }
 `
+
+export const Icon: StyledComponent<{||}, Theme, HTMLElement> = styled.span``
 
 export const IconEnd: StyledComponent<{||}, Theme, HTMLElement> = styled.span``
 

@@ -1,8 +1,9 @@
 // @flow
 
 import styled, { type StyledComponent } from "styled-components"
+import type { Theme } from "@bluframe/blublocks"
 
-const Button: StyledComponent<any, mixed, HTMLButtonElement> = styled.button`
+const Button: StyledComponent<{||}, Theme, HTMLButtonElement> = styled.button`
   border: none;
   margin: 0;
   padding: 0;
