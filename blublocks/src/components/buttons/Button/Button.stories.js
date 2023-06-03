@@ -81,6 +81,15 @@ IconOnly.args = {
   label: "Go back"
 }
 
+export const IconOnlyRaisedAndRounded: Story<Props> = Template.bind({})
+IconOnlyRaisedAndRounded.args = {
+  icon: <Icon name="IoArrowBack" size="24px" />,
+  iconOnly: true,
+  label: "Go back",
+  raised: true,
+  rounded: true
+}
+
 export const IconOnlyRounded: Story<Props> = Template.bind({})
 IconOnlyRounded.args = {
   icon: <Icon name="IoArrowBack" size="24px" />,

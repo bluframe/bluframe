@@ -1,5 +1,5 @@
 // @flow
-/* eslint-disable no-ternary */
+/* eslint-disable no-ternary, max-lines-per-function */
 
 import { Icon, IconEnd, IconStart, Wrapper } from "./styled"
 import type { ComponentProps } from "."
@@ -21,6 +21,7 @@ const Button = ({
   onClick,
   outlined,
   padded,
+  raised,
   rounded,
   secondary,
   small,
@@ -39,6 +40,7 @@ const Button = ({
     onClick={onClick}
     outlined={outlined}
     padded={padded}
+    raised={raised}
     rounded={rounded}
     secondary={secondary}
     small={small}
