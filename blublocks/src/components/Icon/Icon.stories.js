@@ -10,19 +10,36 @@ const stories = {
       control: {
         options: [
           "IoAccessibilityOutline",
+          "IoAdd",
           "IoArrowBack",
           "IoArrowForward",
+          "IoBagOutline",
+          "IoBookmarkOutline",
           "IoBulbOutline",
           "IoCaretUp",
           "IoChatbubbleOutline",
+          "IoCheckmark",
+          "IoClose",
           "IoCloudOutline",
+          "IoEaselOutline",
           "IoHeartOutline",
+          "IoHelpOutline",
+          "IoHomeOutline",
           "IoLaptopOutline",
           "IoLogoFacebook",
           "IoLogoTwitter",
           "IoMapOutline",
           "IoPaperPlaneOutline",
-          "IoSpeedometerOutline"
+          "IoPencilOutline",
+          "IoPeopleOutline",
+          "IoPhonePortraitOutline",
+          "IoSearch",
+          "IoSettingsOutline",
+          "IoShareSocialOutline",
+          "IoSpeedometerOutline",
+          "IoTrendingDownOutline",
+          "IoTrendingUpOutline",
+          "IoWarningOutline"
         ],
         type: "select"
       }
