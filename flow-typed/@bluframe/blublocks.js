@@ -107,6 +107,7 @@ declare module "@bluframe/blublocks" {
     +onClick?: () => void,
     +outlined?: boolean,
     +padded?: boolean,
+    +rounded?: boolean,
     +secondary?: boolean,
     +small?: boolean,
     +transparent?: boolean,

@@ -14,6 +14,7 @@ type Props = {|
   +noHoverHighlight?: boolean,
   +outlined?: boolean,
   +padded?: boolean,
+  +rounded?: boolean,
   +secondary?: boolean,
   +small?: boolean,
   +transparent?: boolean
@@ -57,7 +58,7 @@ export const Wrapper: StyledComponent<
   align-items: center;
   background: ${getBackground};
   border: ${getBorder};
-  border-radius: 3px;
+  border-radius: ${({ rounded }) => (rounded ? "50%" : "3px")};
   color: ${getColor};
   column-gap: 10px;
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
@@ -67,10 +68,10 @@ export const Wrapper: StyledComponent<
   font-weight: ${({ bold }) => (bold ? "700" : "300")};
   justify-content: center;
   line-height: 1.33;
-  padding: ${({ padded, small, iconOnly }) =>
+  padding: ${({ padded, rounded, small, iconOnly }) =>
     small
       ? "6px 12px"
-      : iconOnly
+      : iconOnly || rounded
       ? "10px"
       : padded
       ? "15px 42px"

@@ -21,6 +21,7 @@ const Button = ({
   onClick,
   outlined,
   padded,
+  rounded,
   secondary,
   small,
   transparent,
@@ -33,10 +34,12 @@ const Button = ({
     className={className}
     disabled={disabled}
     expanded={expanded}
+    iconOnly={iconOnly}
     noHoverHighlight={noHoverHighlight}
     onClick={onClick}
     outlined={outlined}
     padded={padded}
+    rounded={rounded}
     secondary={secondary}
     small={small}
     transparent={transparent}
