@@ -2,6 +2,8 @@
 
 import { IoAccessibilityOutline } from "@react-icons/all-files/io5/IoAccessibilityOutline"
 import { IoAdd } from "@react-icons/all-files/io5/IoAdd"
+import { IoAddCircle } from "@react-icons/all-files/io5/IoAddCircle"
+import { IoAlertCircleOutline } from "@react-icons/all-files/io5/IoAlertCircleOutline"
 import { IoArrowBack } from "@react-icons/all-files/io5/IoArrowBack"
 import { IoArrowForward } from "@react-icons/all-files/io5/IoArrowForward"
 import { IoBagOutline } from "@react-icons/all-files/io5/IoBagOutline"
@@ -35,6 +37,8 @@ import { IoWarningOutline } from "@react-icons/all-files/io5/IoWarningOutline"
 const ionIcons = Object.freeze({
   IoAccessibilityOutline,
   IoAdd,
+  IoAddCircle,
+  IoAlertCircleOutline,
   IoArrowBack,
   IoArrowForward,
   IoBagOutline,

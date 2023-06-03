@@ -3,7 +3,7 @@
 exports[`Button renders 1`] = `
 <button
   aria-disabled="false"
-  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb fnYKKn"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb jmfcCj"
   type="button"
 >
   Button
@@ -13,7 +13,7 @@ exports[`Button renders 1`] = `
 exports[`Button renders bold 1`] = `
 <button
   aria-disabled="false"
-  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb hIHjsH"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb flNLwv"
   type="button"
 >
   Button
@@ -23,7 +23,7 @@ exports[`Button renders bold 1`] = `
 exports[`Button renders disabled 1`] = `
 <button
   aria-disabled="true"
-  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb ibyxDU"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb iwdSqg"
   disabled=""
   type="button"
 >
@@ -35,14 +35,14 @@ exports[`Button renders iconOnly button 1`] = `
 <button
   aria-disabled="false"
   aria-label="Button"
-  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb fnYKKn"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb ktCvPV"
   type="button"
 >
   <span
     class="styled__Icon-sc-pzlzbh-1"
   >
     <span
-      class="styled__Icon-sc-ztr6p6-0 kwuIiV"
+      class="styled__Icon-sc-ztr6p6-0 gSA-dqd"
     >
       <svg
         fill="currentColor"
@@ -69,7 +69,7 @@ exports[`Button renders iconOnly button 1`] = `
 exports[`Button renders outlined 1`] = `
 <button
   aria-disabled="false"
-  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb dNGKMI"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb hgIteE"
   type="button"
 >
   Button
@@ -79,7 +79,7 @@ exports[`Button renders outlined 1`] = `
 exports[`Button renders padded 1`] = `
 <button
   aria-disabled="false"
-  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb kIBhZW"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb evbCcq"
   type="button"
 >
   Button
@@ -89,7 +89,7 @@ exports[`Button renders padded 1`] = `
 exports[`Button renders secondary 1`] = `
 <button
   aria-disabled="false"
-  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb ztbDP"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb jYPexT"
   type="button"
 >
   Button
@@ -99,7 +99,7 @@ exports[`Button renders secondary 1`] = `
 exports[`Button renders small 1`] = `
 <button
   aria-disabled="false"
-  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb bxTKRn"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb cMPaWn"
   type="button"
 >
   Button
@@ -110,14 +110,14 @@ exports[`Button renders transparent iconOnly button 1`] = `
 <button
   aria-disabled="false"
   aria-label="Button"
-  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb jkrxpI"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb iGSjSq"
   type="button"
 >
   <span
     class="styled__Icon-sc-pzlzbh-1"
   >
     <span
-      class="styled__Icon-sc-ztr6p6-0 kwuIiV"
+      class="styled__Icon-sc-ztr6p6-0 gSA-dqd"
     >
       <svg
         fill="currentColor"
@@ -141,10 +141,20 @@ exports[`Button renders transparent iconOnly button 1`] = `
 </button>
 `;
 
+exports[`Button renders with expanded and outlined 1`] = `
+<button
+  aria-disabled="false"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb Mxfpj"
+  type="button"
+>
+  Button
+</button>
+`;
+
 exports[`Button renders with iconStart and iconEnd 1`] = `
 <button
   aria-disabled="false"
-  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb fnYKKn"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb jmfcCj"
   type="button"
 >
   <span
@@ -162,5 +172,15 @@ exports[`Button renders with iconStart and iconEnd 1`] = `
       Icon End
     </div>
   </span>
+</button>
+`;
+
+exports[`Button renders with secondary, rounded, and raised 1`] = `
+<button
+  aria-disabled="false"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb leFBBt"
+  type="button"
+>
+  Button
 </button>
 `;

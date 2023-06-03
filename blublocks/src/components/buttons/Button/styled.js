@@ -4,6 +4,7 @@
 import styled, { type StyledComponent } from "styled-components"
 import Reset from "components/buttons/Reset"
 import type { Theme } from "@bluframe/blublocks"
+import colors from "styles/colors"
 import getColorGrades from "helpers/getColorGrades"
 import { rgba } from "polished"
 
@@ -14,12 +15,17 @@ type Props = {|
   +noHoverHighlight?: boolean,
   +outlined?: boolean,
   +padded?: boolean,
+  +raised?: boolean,
+  +rounded?: boolean,
   +secondary?: boolean,
   +small?: boolean,
   +transparent?: boolean
 |}
 
 const BACKGROUND_ALPHA = 0.7
+const BOX_SHADOW_ALPHA_ONE = 0.2
+const BOX_SHADOW_ALPHA_TWO = 0.14
+const BOX_SHADOW_ALPHA_THREE = 0.12
 
 const getBackground = (props: {| ...Props, +theme: Theme |}) => {
   if (props.transparent) {
@@ -57,7 +63,16 @@ export const Wrapper: StyledComponent<
   align-items: center;
   background: ${getBackground};
   border: ${getBorder};
-  border-radius: 3px;
+  border-radius: ${({ rounded }) => (rounded ? "50%" : "3px")};
+  ${({ raised }) =>
+    raised &&
+    `box-shadow: 0px 3px 1px -2px ${rgba(
+      colors.black,
+      BOX_SHADOW_ALPHA_ONE
+    )}, 0px 2px 2px 0px ${rgba(
+      colors.black,
+      BOX_SHADOW_ALPHA_TWO
+    )}, 0px 1px 5px 0px ${rgba(colors.black, BOX_SHADOW_ALPHA_THREE)};`}
   color: ${getColor};
   column-gap: 10px;
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
@@ -67,10 +82,10 @@ export const Wrapper: StyledComponent<
   font-weight: ${({ bold }) => (bold ? "700" : "300")};
   justify-content: center;
   line-height: 1.33;
-  padding: ${({ padded, small, iconOnly }) =>
+  padding: ${({ padded, rounded, small, iconOnly }) =>
     small
       ? "6px 12px"
-      : iconOnly
+      : iconOnly || rounded
       ? "10px"
       : padded
       ? "15px 42px"
