@@ -18,6 +18,10 @@
       "import": "./lib/esm/Animations.js",
       "require": "./lib/cjs/Animations.js"
     },
+    "./Badge": {
+      "import": "./lib/esm/Badge.js",
+      "require": "./lib/cjs/Badge.js"
+    },
     "./BluBlocksProvider": {
       "import": "./lib/esm/BluBlocksProvider.js",
       "require": "./lib/cjs/BluBlocksProvider.js"

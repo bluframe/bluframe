@@ -92,6 +92,12 @@ declare module "@bluframe/blublocks" {
   |}
 
   // Props
+  declare type BadgeProps = {|
+    +className?: string,
+    +color?: $Keys<Palette>,
+    +label: string
+  |}
+
   declare type ButtonProps = {|
     +bold?: boolean,
     +className?: string,
@@ -225,6 +231,7 @@ declare module "@bluframe/blublocks" {
 
   // Components
   declare type AnimationComponents = {| +[key: AnimationName]: KeyFrames |}
+  declare type BadgeComponent = React$ComponentType<BadgeProps>
   declare type ButtonComponent = React$ComponentType<ButtonProps>
   declare type CheckboxComponent = React$ComponentType<CheckboxProps>
   declare type ContentComponent = React$ComponentType<ContentProps>
@@ -254,6 +261,7 @@ declare module "@bluframe/blublocks" {
 
   // Exports
   declare var Animations: AnimationComponents
+  declare var Badge: BadgeComponent
   declare var BluBlocksProvider: ProviderComponent
   declare var Button: ButtonComponent
   declare var Checkbox: CheckboxComponent
@@ -294,16 +302,22 @@ declare module "@bluframe/blublocks/BluBlocksProvider" {
   declare export default ProviderComponent
 }
 
-declare module "@bluframe/blublocks/Checkbox" {
-  import type { CheckboxComponent } from "@bluframe/blublocks"
+declare module "@bluframe/blublocks/Badge" {
+  import type { BadgeComponent } from "@bluframe/blublocks"
 
-  declare export default CheckboxComponent
+  declare export default BadgeComponent
 }
 
 declare module "@bluframe/blublocks/Button" {
   import type { ButtonComponent } from "@bluframe/blublocks"
 
   declare export default ButtonComponent
+}
+
+declare module "@bluframe/blublocks/Checkbox" {
+  import type { CheckboxComponent } from "@bluframe/blublocks"
+
+  declare export default CheckboxComponent
 }
 
 declare module "@bluframe/blublocks/Content" {

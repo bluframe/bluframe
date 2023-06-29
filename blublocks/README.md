@@ -44,6 +44,32 @@ import { Button, InputText } from  "@bluframe/blublocks";
 
 ## Components 🧩
 
+### Badge
+
+This is a Badge component, often used to highlight a certain feature or aspect of a product or a piece of information.
+
+#### Props
+
+- `className`: (optional) string - The class name for the badge wrapper.
+- `color`: (optional) $Keys<Palette> - Defaults to `"primary"`. The color of the badge. Colors are defined in our Palette type.
+- `label`: string - The text to display on the badge.
+
+#### Usage
+
+```js
+  import Badge from "./Badge"
+  
+  function App() {
+    return (
+      <Badge 
+        className="custom-class"
+        color="secondary"
+        label="Apples"
+      />
+    )
+  }
+```
+
 ### Button
 
 A simple button component that can be styled to all needs.
