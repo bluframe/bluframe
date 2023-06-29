@@ -92,6 +92,12 @@ declare module "@bluframe/blublocks" {
   |}
 
   // Props
+  declare type BadgeProps = {|
+    +className?: string,
+    +color?: $Keys<Palette>,
+    +label: string
+  |}
+
   declare type ButtonProps = {|
     +bold?: boolean,
     +className?: string,
