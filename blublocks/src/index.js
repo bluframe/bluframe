@@ -1,6 +1,7 @@
 // @flow
 
 export { default as Animations } from "components/animations"
+export { default as Badge } from "components/Badge"
 export { default as BluBlocksProvider } from "styles/theme/Provider"
 export { default as Button } from "components/buttons/Button"
 export { default as Checkbox } from "components/inputs/Checkbox"
