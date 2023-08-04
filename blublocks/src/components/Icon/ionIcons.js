@@ -30,6 +30,7 @@ import { IoSearch } from "@react-icons/all-files/io5/IoSearch"
 import { IoSettingsOutline } from "@react-icons/all-files/io5/IoSettingsOutline"
 import { IoShareSocialOutline } from "@react-icons/all-files/io5/IoShareSocialOutline"
 import { IoSpeedometerOutline } from "@react-icons/all-files/io5/IoSpeedometerOutline"
+import { IoTrashOutline } from "@react-icons/all-files/io5/IoTrashOutline"
 import { IoTrendingDownOutline } from "@react-icons/all-files/io5/IoTrendingDownOutline"
 import { IoTrendingUpOutline } from "@react-icons/all-files/io5/IoTrendingUpOutline"
 import { IoWarningOutline } from "@react-icons/all-files/io5/IoWarningOutline"
@@ -65,6 +66,7 @@ const ionIcons = Object.freeze({
   IoSettingsOutline,
   IoShareSocialOutline,
   IoSpeedometerOutline,
+  IoTrashOutline,
   IoTrendingDownOutline,
   IoTrendingUpOutline,
   IoWarningOutline

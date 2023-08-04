@@ -14,4 +14,26 @@ describe("Icon", () => {
 
     expect(container.firstChild).toMatchSnapshot()
   })
+
+  it("renders size", () => {
+    const props = {
+      SelectedIcon: () => "SelectedIcon",
+      size: "32px"
+    }
+
+    const { container } = render(<Icon {...props} />)
+
+    expect(container.firstChild).toMatchSnapshot()
+  })
+
+  it("renders color", () => {
+    const props = {
+      SelectedIcon: () => "SelectedIcon",
+      color: "blue"
+    }
+
+    const { container } = render(<Icon {...props} />)
+
+    expect(container.firstChild).toMatchSnapshot()
+  })
 })

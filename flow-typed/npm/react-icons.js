@@ -96,6 +96,9 @@ declare module "@react-icons/all-files/io5/IoShareSocialOutline" {
 declare module "@react-icons/all-files/io5/IoSpeedometerOutline" {
   declare export var IoSpeedometerOutline: React$ComponentType<IconProps>
 }
+declare module "@react-icons/all-files/io5/IoTrashOutline" {
+  declare export var IoTrashOutline: React$ComponentType<IconProps>
+}
 declare module "@react-icons/all-files/io5/IoTrendingDownOutline" {
   declare export var IoTrendingDownOutline: React$ComponentType<IconProps>
 }

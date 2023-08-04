@@ -39,6 +39,7 @@ const stories = {
           "IoSettingsOutline",
           "IoShareSocialOutline",
           "IoSpeedometerOutline",
+          "IoTrashOutline",
           "IoTrendingDownOutline",
           "IoTrendingUpOutline",
           "IoWarningOutline"
