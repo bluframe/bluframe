@@ -489,6 +489,37 @@ function App() {
 }
 ```
 
+### Modal
+
+A modal component to manage and display overlay content.
+
+#### Props
+
+- `children`: React$Node - The content to display inside the modal.
+- `isOpen`: boolean - Determines whether the modal is open or not.
+- `onClose`: function - The callback that is fired when the modal is closed.
+  
+#### Usage
+
+```js
+import Modal from "@bluframe/blublocks/Modal";
+
+function App() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpen = () => setIsOpen(true);
+  const handleClose = () => setIsOpen(false);
+
+  return (
+    <div>
+      <button onClick={handleOpen}>Open Modal</button>
+      <Modal isOpen={isOpen} onClose={handleClose}>
+        <p>Modal Content!</p>
+      </Modal>
+    </div>
+  );
+}
+
 ### Hamburger
 
 A classic Hamburger component made with 100% CSS. 🍔
