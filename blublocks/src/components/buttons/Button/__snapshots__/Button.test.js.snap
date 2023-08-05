@@ -10,6 +10,17 @@ exports[`Button renders 1`] = `
 </button>
 `;
 
+exports[`Button renders aria label 1`] = `
+<button
+  aria-disabled="false"
+  aria-label="Aria Label"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb jmfcCj"
+  type="button"
+>
+  Button
+</button>
+`;
+
 exports[`Button renders bold 1`] = `
 <button
   aria-disabled="false"
