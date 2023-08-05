@@ -188,6 +188,12 @@ declare module "@bluframe/blublocks" {
     +size?: number
   |}
 
+  declare type ModalProps = {|
+    +children: React$Node,
+    +isOpen: boolean,
+    +onClose: () => void
+  |}
+
   declare type ProviderProps = {|
     +children: React$Node,
     +theme: BaseTheme
@@ -249,6 +255,7 @@ declare module "@bluframe/blublocks" {
   declare type IconComponent = React$ComponentType<IconProps>
   declare type InputTextComponent = React$ComponentType<InputTextProps>
   declare type LoadingComponent = React$ComponentType<LoadingProps>
+  declare type ModalComponent = React$ComponentType<ModalProps>
   declare type ProviderComponent = React$ComponentType<ProviderProps>
   declare type RadioComponent = React$ComponentType<RadioProps>
   declare type RadioGroupComponent = React$ComponentType<RadioGroupProps>
@@ -278,6 +285,7 @@ declare module "@bluframe/blublocks" {
   declare var Icon: IconComponent
   declare var InputText: InputTextComponent
   declare var Loading: LoadingComponent
+  declare var Modal: ModalComponent
   declare var Paragraph: StyledComponent<{||}, Theme, HTMLParagraphElement>
   declare var Radio: RadioComponent
   declare var RadioGroup: RadioGroupComponent
@@ -402,6 +410,12 @@ declare module "@bluframe/blublocks/Loading" {
   import type { LoadingComponent } from "@bluframe/blublocks"
 
   declare export default LoadingComponent
+}
+
+declare module "@bluframe/blublocks/Modal" {
+  import type { ModalComponent } from "@bluframe/blublocks"
+
+  declare export default ModalComponent
 }
 
 declare module "@bluframe/blublocks/Typography/Paragraph" {
