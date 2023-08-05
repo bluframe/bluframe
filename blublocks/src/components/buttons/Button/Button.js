@@ -1,5 +1,5 @@
 // @flow
-/* eslint-disable no-ternary, max-lines-per-function */
+/* eslint-disable no-ternary, max-lines-per-function, no-nested-ternary */
 
 import { Icon, IconEnd, IconStart, Wrapper } from "./styled"
 import type { ComponentProps } from "."
@@ -7,6 +7,7 @@ import Loading from "components/Loading"
 import React from "react"
 
 const Button = ({
+  ariaLabel,
   bold,
   className,
   disabled,
@@ -30,7 +31,7 @@ const Button = ({
 }: ComponentProps): React$Node => (
   <Wrapper
     aria-disabled={disabled ? "true" : "false"}
-    aria-label={iconOnly ? label : undefined}
+    aria-label={ariaLabel ? ariaLabel : iconOnly ? label : undefined}
     bold={bold}
     className={className}
     disabled={disabled}

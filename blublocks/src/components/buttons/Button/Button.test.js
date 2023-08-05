@@ -116,4 +116,15 @@ describe("Button", () => {
 
     expect(container.firstChild).toMatchSnapshot()
   })
+
+  it("renders aria label", () => {
+    const { container, getByLabelText } = render(
+      <Button {...props} ariaLabel="Aria Label" />
+    )
+
+    const button = getByLabelText("Aria Label")
+
+    expect(button).toBeInTheDocument()
+    expect(container.firstChild).toMatchSnapshot()
+  })
 })

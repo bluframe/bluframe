@@ -99,6 +99,7 @@ declare module "@bluframe/blublocks" {
   |}
 
   declare type ButtonProps = {|
+    +ariaLabel?: string,
     +bold?: boolean,
     +className?: string,
     +disabled?: boolean,
