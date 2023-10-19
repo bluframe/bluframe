@@ -60,6 +60,9 @@ declare module "@react-icons/all-files/io5/IoHelpOutline" {
 declare module "@react-icons/all-files/io5/IoHomeOutline" {
   declare export var IoHomeOutline: React$ComponentType<IconProps>
 }
+declare module "@react-icons/all-files/io5/IoImageOutline" {
+  declare export var IoImageOutline: React$ComponentType<IconProps>
+}
 declare module "@react-icons/all-files/io5/IoLaptopOutline" {
   declare export var IoLaptopOutline: React$ComponentType<IconProps>
 }

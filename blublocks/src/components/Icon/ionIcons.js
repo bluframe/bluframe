@@ -18,6 +18,7 @@ import { IoEaselOutline } from "@react-icons/all-files/io5/IoEaselOutline"
 import { IoHeartOutline } from "@react-icons/all-files/io5/IoHeartOutline"
 import { IoHelpOutline } from "@react-icons/all-files/io5/IoHelpOutline"
 import { IoHomeOutline } from "@react-icons/all-files/io5/IoHomeOutline"
+import { IoImageOutline } from "@react-icons/all-files/io5/IoImageOutline"
 import { IoLaptopOutline } from "@react-icons/all-files/io5/IoLaptopOutline"
 import { IoLogoFacebook } from "@react-icons/all-files/io5/IoLogoFacebook"
 import { IoLogoTwitter } from "@react-icons/all-files/io5/IoLogoTwitter"
@@ -54,6 +55,7 @@ const ionIcons = Object.freeze({
   IoHeartOutline,
   IoHelpOutline,
   IoHomeOutline,
+  IoImageOutline,
   IoLaptopOutline,
   IoLogoFacebook,
   IoLogoTwitter,
