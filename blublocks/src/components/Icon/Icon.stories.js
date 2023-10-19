@@ -27,6 +27,7 @@ const stories = {
           "IoHeartOutline",
           "IoHelpOutline",
           "IoHomeOutline",
+          "IoImageOutline",
           "IoLaptopOutline",
           "IoLogoFacebook",
           "IoLogoTwitter",
