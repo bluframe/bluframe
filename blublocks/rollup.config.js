@@ -8,6 +8,7 @@ import postcss from "rollup-plugin-postcss"
 const input = {
   Animations: "src/components/animations/index.js",
   Badge: "src/components/Badge/index.js",
+  Bio: "src/components/Bio/index.js",
   BluBlocksProvider: "src/styles/theme/Provider.js",
   Button: "src/components/buttons/Button/index.js",
   Checkbox: "src/components/inputs/Checkbox/index.js",

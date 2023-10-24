@@ -1,6 +1,6 @@
 {
   "name": "@bluframe/blublocks",
-  "version": "0.22.0",
+  "version": "0.22.1",
   "description": "Blu Frame UI Components Library (Blu Blocks)",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
@@ -21,6 +21,10 @@
     "./Badge": {
       "import": "./lib/esm/Badge.js",
       "require": "./lib/cjs/Badge.js"
+    },
+    "./Bio": {
+      "import": "./lib/esm/Bio.js",
+      "require": "./lib/cjs/Bio.js"
     },
     "./BluBlocksProvider": {
       "import": "./lib/esm/BluBlocksProvider.js",
