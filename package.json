@@ -1,6 +1,6 @@
 {
   "name": "@bluframe/bluframe",
-  "version": "0.24.3",
+  "version": "0.25.0",
   "description": "A collection of React UI Components and Hooks by Blu Frame",
   "repository": "git@github.com:bluframe/bluframe.git",
   "author": "Edoardo L'Astorina <edoardo@blufra.me>",
