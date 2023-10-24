@@ -519,6 +519,102 @@ function App() {
     </div>
   );
 }
+```
+
+### Bio
+
+Our Bio component is a versatile, customizable block that allows you to display a biography section with ease. Perfect for about pages, team member profiles and more. 🚀
+
+#### Props
+
+- `avatar`: (required) string | React$Node - A link to an avatar image or a React component to display as the avatar.
+- `description`: (required) string - A string containing the bio description. This description can include markdown format text.
+- `name`: (required) string - The name to be displayed.
+- `color`: (optional) string - A color definition for the bio content links.
+
+#### Usage 
+
+First, import the Bio component from blublocks:
+
+```javascript
+import Bio from "@bluframe/blublocks/Bio"
+```
+
+Use the Bio component in your app:
+
+```javascript
+  function App() {
+    return (
+      <Bio
+        avatar="https://somelinktoanimage.jpg"
+        description="This is my awesome bio!"
+        name="John Doe" />
+    )
+  }
+```
+  
+#### Avatar Image
+
+The avatar prop can accept a URL string indicating the path to an image:
+
+```javascript
+<Bio 
+  avatar="https://somelinktoanimage.jpg"
+  description="This is my awesome bio!"
+  name="John Doe" 
+/>
+```
+
+Alternatively, the avatar prop can accept a React component:
+
+```javascript
+import CustomAvatar from "./CustomAvatar"
+
+<Bio
+  avatar={<CustomAvatar />}
+  description="This is an awesome bio!"
+  name="John Doe"
+/>
+```
+
+#### Markdown Formatting
+
+The description prop supports markdown formatting. Here's an example:
+
+```javascript
+<Bio
+  avatar="https://somelinktoanimage.jpg"
+  description="This is my *awesome* bio! [Visit my website!](https://mywebsite.com)"
+  name="John Doe"
+/>
+```
+  
+This will render the description with italic text and a hyperlink to the website.
+
+#### Customization
+
+If you want to customize the appearance even further, you can use styled-components to override the styles. Here's an example how to create a custom Bio component with extra styles:
+
+```javascript
+import styled from "styled-components";
+import Bio from "@bluframe/blublocks/Bio";
+
+const CustomBio = styled(Bio)`
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: #ff0000;
+`;
+
+function App() {
+  return (
+    <CustomBio 
+      avatar="https://somelinktoanimage.jpg"
+      description="This is my awesome bio!"
+      name="John Doe" 
+    />
+  );
+}
+```
+
 
 ### Hamburger
 
