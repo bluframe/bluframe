@@ -57,7 +57,7 @@ This is a Badge component, often used to highlight a certain feature or aspect o
 #### Usage
 
 ```js
-  import Badge from "./Badge"
+  import Badge from "@bluframe/blublocks/Badge"
   
   function App() {
     return (
