@@ -1,6 +1,6 @@
 // @flow
 
-import { Image, Name, Right, Section } from "./styled"
+import { Image, Name, Section, Top } from "./styled"
 import type { ComponentProps } from "."
 import Content from "components/Content"
 import React from "react"
@@ -12,13 +12,12 @@ const Bio = ({
   name
 }: ComponentProps): React$Node => (
   <Section>
-    <Image alt={name} src={avatar} />
-
-    <Right>
+    <Top>
+      <Image alt={name} src={avatar} />
       <Name>{name}</Name>
+    </Top>
 
-      <Content components={components} content={description} />
-    </Right>
+    <Content components={components} content={description} />
   </Section>
 )
 
