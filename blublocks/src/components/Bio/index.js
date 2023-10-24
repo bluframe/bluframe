@@ -1,7 +1,7 @@
 // @flow
 
 import type { BioProps, ContentComponents } from "@bluframe/blublocks"
-import { Description, Link } from "./styled"
+import { Description, Image, Link } from "./styled"
 import Bio from "./Bio"
 import React from "react"
 import { prepareComponent } from "@bluframe/grapple"
@@ -11,11 +11,13 @@ export type Props = {|
 |}
 
 export type ComponentProps = {|
-  ...$Diff<BioProps, {| +color?: string |}>,
-  +components: ContentComponents
+  ...$Diff<BioProps, {| +avatar: React$Node | string, +color?: string |}>,
+  +components: ContentComponents,
+  +image: React$Node
 |}
 
 export const usePrepareComponent = ({
+  avatar,
   color,
   ...props
 }: Props): ComponentProps => {
@@ -31,9 +33,16 @@ export const usePrepareComponent = ({
     p: (componentProps) => <Description {...componentProps} />
   }
 
+  let image = avatar
+
+  if (typeof avatar === "string") {
+    image = <Image alt={props.name} src={avatar} />
+  }
+
   return {
     ...props,
-    components
+    components,
+    image
   }
 }
 

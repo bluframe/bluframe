@@ -9,8 +9,7 @@ exports[`Bio renders 1`] = `
   >
     <img
       alt="Edoardo L'Astorina"
-      class="styled__Image-sc-18tmtr1-1 dLrYlc"
-      src="https://0.gravatar.com/avatar/c88fdd33c5a3a417782e94a0774cee15?s=96&#038;d=mm&#038;r=g"
+      src="https://0.gravatar.com/avatar/c88fdd33c5a3a417782e94a0774cee15?s=96&d=mm&r=g"
     />
     <h4
       class="styled__Name-sc-18tmtr1-3 kdrMhK"

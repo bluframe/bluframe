@@ -99,7 +99,7 @@ declare module "@bluframe/blublocks" {
   |}
 
   declare type BioProps = {|
-    +avatar: string,
+    +avatar: React$Node | string,
     +color?: string,
     +description: string,
     +name: string
