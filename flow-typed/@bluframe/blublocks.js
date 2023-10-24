@@ -98,6 +98,13 @@ declare module "@bluframe/blublocks" {
     +label: string
   |}
 
+  declare type BioProps = {|
+    +avatar: string,
+    +color?: string,
+    +description: string,
+    +name: string
+  |}
+
   declare type ButtonProps = {|
     +ariaLabel?: string,
     +bold?: boolean,

@@ -1,7 +1,6 @@
 // @flow
 
 import Badge, { type Props } from "components/Badge"
-import type { BadgeProps } from "@bluframe/blublocks"
 import React from "react"
 import type { Story } from "@storybook/react"
 
@@ -10,7 +9,7 @@ const stories = {
   title: "Components/Badge"
 }
 
-const Template = (args: BadgeProps) => <Badge {...args} />
+const Template = (args: Props) => <Badge {...args} />
 
 export const Default: Story<Props> = Template.bind({})
 Default.args = {
