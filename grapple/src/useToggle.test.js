@@ -1,7 +1,7 @@
 // @flow
 /* eslint-disable no-ternary */
 
-import { render, screen } from "tests"
+import { act, render, screen } from "tests"
 import React from "react"
 import useToggle from "./useToggle"
 
@@ -23,7 +23,9 @@ describe("useToggle", () => {
     render(<TestComponent />)
     expect(screen.getByText("Not Toggled")).toBeInTheDocument()
 
-    screen.getByText("Toggle").click()
+    act(() => {
+      screen.getByText("Toggle").click()
+    })
     expect(screen.getByText("Toggled")).toBeInTheDocument()
   })
 })

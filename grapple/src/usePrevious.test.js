@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-no-bind */
 
 import React, { useState } from "react"
-import { render, screen } from "tests"
+import { act, render, screen } from "tests"
 import usePrevious from "./usePrevious"
 
 const ONE = 1
@@ -35,7 +35,9 @@ describe("usePrevious", () => {
     expect(screen.getByText("Current count: 0")).toBeInTheDocument()
     expect(screen.getByText("Previous count:")).toBeInTheDocument()
 
-    screen.getByText("Increment").click()
+    act(() => {
+      screen.getByText("Increment").click()
+    })
     expect(screen.getByText("Current count: 1")).toBeInTheDocument()
     expect(screen.getByText("Previous count: 0")).toBeInTheDocument()
   })
