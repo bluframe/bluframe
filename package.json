@@ -9,13 +9,13 @@
     "node": "16"
   },
   "scripts": {
-    "build": "yarn workspaces foreach -pt --exclude @bluframe/bluframe run build",
-    "build:ci": "yarn workspaces foreach -pt --exclude @bluframe/bluframe run build:ci",
-    "clean": "yarn workspaces foreach -p --exclude @bluframe/bluframe run clean",
-    "flow": "yarn workspaces foreach -pi --exclude @bluframe/bluframe run flow",
-    "flow:ci": "yarn workspaces foreach -p -j 3 --exclude @bluframe/bluframe run flow:ci",
-    "lint": "yarn workspaces foreach -pi --exclude @bluframe/bluframe run lint",
-    "lint:ci": "yarn workspaces foreach -p -j 4 --exclude @bluframe/bluframe run lint:ci",
+    "build": "yarn workspaces foreach -pt -A --exclude @bluframe/bluframe run build",
+    "build:ci": "yarn workspaces foreach -pt -A --exclude @bluframe/bluframe run build:ci",
+    "clean": "yarn workspaces foreach -p -A --exclude @bluframe/bluframe run clean",
+    "flow": "yarn workspaces foreach -pi -A --exclude @bluframe/bluframe run flow",
+    "flow:ci": "yarn workspaces foreach -p -j 3 -A --exclude @bluframe/bluframe run flow:ci",
+    "lint": "yarn workspaces foreach -pi -A --exclude @bluframe/bluframe run lint",
+    "lint:ci": "yarn workspaces foreach -p -j 4 -A --exclude @bluframe/bluframe run lint:ci",
     "logs": "docker compose logs",
     "postinstall": "husky install",
     "prepublish": "yarn lint:ci && yarn flow:ci && yarn test:ci && yarn build:ci",
@@ -25,8 +25,8 @@
     "show:version": "cd scripts && node ./showVersion.js",
     "start": "docker compose up -d",
     "stop": "docker compose down",
-    "test": "yarn workspaces foreach -pi --exclude @bluframe/bluframe run test",
-    "test:ci": "yarn workspaces foreach -p -j 3 --exclude @bluframe/bluframe run test:ci --runInBand"
+    "test": "yarn workspaces foreach -pi -A --exclude @bluframe/bluframe run test",
+    "test:ci": "yarn workspaces foreach -p -j 3 -A --exclude @bluframe/bluframe run test:ci --runInBand"
   },
   "devDependencies": {
     "@babel/core": "^7.18.2",
@@ -52,7 +52,7 @@
     "jest": "^27.5.0",
     "prettier": "^2.5.1"
   },
-  "packageManager": "yarn@3.2.0",
+  "packageManager": "yarn@4.0.2",
   "workspaces": [
     "blublocks",
     "grapple"
