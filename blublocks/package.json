@@ -143,10 +143,10 @@
     "test:ci": "jest --coverage --silent"
   },
   "dependencies": {
-    "@bluframe/grapple": "^0.6.0",
+    "@bluframe/grapple": "^1.0.0",
     "@react-icons/all-files": "^4.1.0",
     "counterup2": "^2.0.2",
-    "next": "^12.2.6",
+    "next": "^14.0.3",
     "polished": "^4.1.4",
     "ramda": "^0.28.0",
     "react": "^18.2.0",
