@@ -9,12 +9,12 @@ import { rgba } from "polished"
 const BACKDROP_ALPHA = 0.2
 
 export const Wrapper: StyledComponent<
-  {| +isOpen: boolean |},
+  {| +$isOpen: boolean |},
   Theme,
   HTMLDivElement
 > = styled.div`
   background: ${rgba(colors.black, BACKDROP_ALPHA)};
-  display: ${({ isOpen }) => (isOpen ? "block" : "none")};
+  display: ${({ $isOpen }) => ($isOpen ? "block" : "none")};
   position: fixed;
   z-index: 9999;
   left: 0;

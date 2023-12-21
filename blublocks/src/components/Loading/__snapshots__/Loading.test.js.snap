@@ -2,7 +2,7 @@
 
 exports[`Loading renders in disabled state 1`] = `
 <div
-  class="styled__Wrapper-sc-1pom3vg-0 fGbevz"
+  class="styled__Wrapper-sc-1pom3vg-0 PSvRx"
   disabled=""
   size="16"
 />
@@ -10,28 +10,28 @@ exports[`Loading renders in disabled state 1`] = `
 
 exports[`Loading renders with contrast color 1`] = `
 <div
-  class="styled__Wrapper-sc-1pom3vg-0 hYLaup"
+  class="styled__Wrapper-sc-1pom3vg-0 hNvEqb"
   size="16"
 />
 `;
 
 exports[`Loading renders with custom size 1`] = `
 <div
-  class="styled__Wrapper-sc-1pom3vg-0 jOwmlb"
+  class="styled__Wrapper-sc-1pom3vg-0 fRtoGJ"
   size="32"
 />
 `;
 
 exports[`Loading renders with default props 1`] = `
 <div
-  class="styled__Wrapper-sc-1pom3vg-0 kNmpvj"
+  class="styled__Wrapper-sc-1pom3vg-0 gAabnp"
   size="16"
 />
 `;
 
 exports[`Loading renders with multiple custom props 1`] = `
 <div
-  class="styled__Wrapper-sc-1pom3vg-0 kxoJVd"
+  class="styled__Wrapper-sc-1pom3vg-0 gZJleH"
   disabled=""
   size="40"
 />
@@ -39,7 +39,7 @@ exports[`Loading renders with multiple custom props 1`] = `
 
 exports[`Loading renders with secondary color 1`] = `
 <div
-  class="styled__Wrapper-sc-1pom3vg-0 kzVTip"
+  class="styled__Wrapper-sc-1pom3vg-0 cgtggP"
   size="16"
 />
 `;

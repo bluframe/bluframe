@@ -9,7 +9,7 @@ const FadeIn = ({
   fadeIn,
   isAnimated
 }: ComponentProps): React$Node => (
-  <Wrapper fadeIn={fadeIn} isAnimated={isAnimated}>
+  <Wrapper $fadeIn={fadeIn} $isAnimated={isAnimated}>
     {children}
   </Wrapper>
 )

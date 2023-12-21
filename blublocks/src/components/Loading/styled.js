@@ -6,9 +6,9 @@ import type { Theme } from "@bluframe/blublocks"
 import getColorGrades from "helpers/getColorGrades"
 
 type Props = {
-  +contrast?: boolean,
+  +$contrast?: boolean,
+  +$secondary?: boolean,
   +disabled?: boolean,
-  +secondary?: boolean,
   +size: number
 }
 
@@ -24,7 +24,7 @@ const rotation = keyframes`
 const getColor = (props: { ...Props, +theme: Theme }) => {
   const colorGrades = getColorGrades(props)
 
-  return props.contrast ? colorGrades.contrast : colorGrades.main
+  return props.$contrast ? colorGrades.contrast : colorGrades.main
 }
 
 export const Wrapper: StyledComponent<

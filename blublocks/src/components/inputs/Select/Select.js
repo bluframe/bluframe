@@ -41,15 +41,15 @@ const Select: React$AbstractComponent<ComponentProps, React$Node> = forwardRef(
       tabIndex={-1}
     >
       <Control onClick={onToggleIsOpen}>
-        <Label id={`${name}-label`} isShrunk={isLabelShrunk}>
+        <Label $isShrunk={isLabelShrunk} id={`${name}-label`}>
           {label}
         </Label>
         <DisplayValue
-          isSelected={Boolean((!isControlled && defaultValue) || value)}
+          $isSelected={Boolean((!isControlled && defaultValue) || value)}
         >
           {displayValue}
         </DisplayValue>
-        <Triangle isOpen={isOpen} />
+        <Triangle $isOpen={isOpen} />
       </Control>
       {isOpen ? (
         <Options

@@ -13,9 +13,9 @@ const Loading = ({
   size = DEFAULT_SIZE
 }: ComponentProps): React$Node => (
   <Wrapper
-    contrast={contrast}
+    $contrast={contrast}
+    $secondary={secondary}
     disabled={disabled}
-    secondary={secondary}
     size={size}
   />
 )

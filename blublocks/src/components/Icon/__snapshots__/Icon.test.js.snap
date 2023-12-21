@@ -2,7 +2,7 @@
 
 exports[`Icon renders color 1`] = `
 <span
-  class="styled__Icon-sc-ztr6p6-0 gSA-dqd"
+  class="styled__Icon-sc-ztr6p6-0 kHWcXr"
 >
   SelectedIcon
 </span>
@@ -10,7 +10,7 @@ exports[`Icon renders color 1`] = `
 
 exports[`Icon renders default size 1`] = `
 <span
-  class="styled__Icon-sc-ztr6p6-0 gSA-dqd"
+  class="styled__Icon-sc-ztr6p6-0 kHWcXr"
 >
   SelectedIcon
 </span>
@@ -18,7 +18,7 @@ exports[`Icon renders default size 1`] = `
 
 exports[`Icon renders size 1`] = `
 <span
-  class="styled__Icon-sc-ztr6p6-0 gSA-dqd"
+  class="styled__Icon-sc-ztr6p6-0 kHWcXr"
 >
   SelectedIcon
 </span>

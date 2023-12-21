@@ -30,22 +30,22 @@ const Button = ({
   type = "button"
 }: ComponentProps): React$Node => (
   <Wrapper
+    $bold={bold}
+    $expanded={expanded}
+    $iconOnly={iconOnly}
+    $outlined={outlined}
+    $padded={padded}
+    $raised={raised}
+    $rounded={rounded}
+    $secondary={secondary}
+    $small={small}
+    $transparent={transparent}
     aria-disabled={disabled ? "true" : "false"}
     aria-label={ariaLabel ? ariaLabel : iconOnly ? label : undefined}
-    bold={bold}
     className={className}
     disabled={disabled}
-    expanded={expanded}
-    iconOnly={iconOnly}
     noHoverHighlight={noHoverHighlight}
     onClick={onClick}
-    outlined={outlined}
-    padded={padded}
-    raised={raised}
-    rounded={rounded}
-    secondary={secondary}
-    small={small}
-    transparent={transparent}
     type={type}
   >
     {iconOnly ? <Icon>{icon}</Icon> : null}
