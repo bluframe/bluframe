@@ -33,6 +33,7 @@ const Button = ({
     $bold={bold}
     $expanded={expanded}
     $iconOnly={iconOnly}
+    $noHoverHighlight={noHoverHighlight}
     $outlined={outlined}
     $padded={padded}
     $raised={raised}
@@ -44,7 +45,6 @@ const Button = ({
     aria-label={ariaLabel ? ariaLabel : iconOnly ? label : undefined}
     className={className}
     disabled={disabled}
-    noHoverHighlight={noHoverHighlight}
     onClick={onClick}
     type={type}
   >

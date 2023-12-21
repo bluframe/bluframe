@@ -12,6 +12,7 @@ type Props = {|
   +$bold?: boolean,
   +$expanded?: boolean,
   +$iconOnly?: boolean,
+  +$noHoverHighlight?: boolean,
   +$outlined?: boolean,
   +$padded?: boolean,
   +$raised?: boolean,
@@ -19,8 +20,7 @@ type Props = {|
   +$secondary?: boolean,
   +$small?: boolean,
   +$transparent?: boolean,
-  +disabled?: boolean,
-  +noHoverHighlight?: boolean
+  +disabled?: boolean
 |}
 
 const BACKGROUND_ALPHA = 0.7
@@ -97,7 +97,7 @@ export const Wrapper: StyledComponent<
 
   &:hover {
     ${(props) =>
-      !props.noHoverHighlight &&
+      !props.$noHoverHighlight &&
       `background:
       ${
         props.disabled || props.$transparent
