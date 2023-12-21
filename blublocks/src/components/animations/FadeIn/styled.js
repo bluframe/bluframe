@@ -8,18 +8,18 @@ import fadeInRight from "components/animations/FadeIn/fadeInRight"
 import fadeInUp from "components/animations/FadeIn/fadeInUp"
 
 export const Wrapper: StyledComponent<
-  {| +fadeIn: "Left" | "Right" | "Up", +isAnimated: boolean |},
+  {| +$fadeIn: "Left" | "Right" | "Up", +$isAnimated: boolean |},
   Theme,
   HTMLDivElement
 > = styled.div`
-  animation: ${({ fadeIn }) =>
-    fadeIn === "Left"
+  animation: ${({ $fadeIn }) =>
+    $fadeIn === "Left"
       ? fadeInLeft
-      : fadeIn === "Right"
+      : $fadeIn === "Right"
       ? fadeInRight
       : fadeInUp};
   animation-duration: 1s;
   animation-fill-mode: both;
-  animation-play-state: ${({ isAnimated }) =>
-    isAnimated ? "running" : "paused"};
+  animation-play-state: ${({ $isAnimated }) =>
+    $isAnimated ? "running" : "paused"};
 `

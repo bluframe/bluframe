@@ -4,13 +4,13 @@ import type { ColorGrades, Theme } from "@bluframe/blublocks"
 
 type Props = {
   +disabled?: boolean,
-  +secondary?: boolean
+  +$secondary?: boolean
 }
 
 const getColorGrades = (props: { ...Props, +theme: Theme }): ColorGrades => {
   let colorGrades = props.theme.palette.primary
 
-  if (props.secondary) {
+  if (props.$secondary) {
     colorGrades = props.theme.palette.secondary
   }
 

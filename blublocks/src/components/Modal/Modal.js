@@ -8,7 +8,7 @@ import Icon from "components/Icon"
 import React from "react"
 
 const Modal = ({ children, isOpen, onClose }: ComponentProps): React$Node => (
-  <Wrapper isOpen={isOpen} onClick={onClose} role="presentation">
+  <Wrapper $isOpen={isOpen} onClick={onClose} role="presentation">
     <Container
       aria-modal="true"
       onClick={(event) => event.stopPropagation()}

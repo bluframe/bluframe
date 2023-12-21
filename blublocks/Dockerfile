@@ -1,4 +1,4 @@
-FROM node:16.15
+FROM node:20.10
 
 ENV HOME /home/bluframe
 ENV SRV /srv/bluframe

@@ -3,18 +3,18 @@
 exports[`RadioGroup renders 1`] = `
 <div
   aria-labelledby="fruit-radiogroup-label"
-  class="styled__Wrapper-sc-129dihy-0 knMTzk"
+  class="styled__Wrapper-sc-129dihy-0 hKQxru"
   id="fruit-radiogroup"
   role="radiogroup"
 >
   <label
-    class="styled__Label-sc-129dihy-1 fRwasi"
+    class="styled__Label-sc-129dihy-1 ljQWBy"
     id="fruit-radiogroup-label"
   >
     Select a fruit
   </label>
   <div
-    class="styled__Options-sc-129dihy-2 clhLkl"
+    class="styled__Options-sc-129dihy-2 gSCsOv"
   >
     <radio-component
       inputid="fruit-radiogroup-apple"

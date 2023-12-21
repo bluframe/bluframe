@@ -3,7 +3,7 @@
 exports[`Button renders 1`] = `
 <button
   aria-disabled="false"
-  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb jmfcCj"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 denUQx kXAAVc"
   type="button"
 >
   Button
@@ -14,7 +14,7 @@ exports[`Button renders aria label 1`] = `
 <button
   aria-disabled="false"
   aria-label="Aria Label"
-  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb jmfcCj"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 denUQx kXAAVc"
   type="button"
 >
   Button
@@ -24,7 +24,7 @@ exports[`Button renders aria label 1`] = `
 exports[`Button renders bold 1`] = `
 <button
   aria-disabled="false"
-  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb flNLwv"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 denUQx bAUlSk"
   type="button"
 >
   Button
@@ -34,7 +34,7 @@ exports[`Button renders bold 1`] = `
 exports[`Button renders disabled 1`] = `
 <button
   aria-disabled="true"
-  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb iwdSqg"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 denUQx ePEaKH"
   disabled=""
   type="button"
 >
@@ -46,14 +46,14 @@ exports[`Button renders iconOnly button 1`] = `
 <button
   aria-disabled="false"
   aria-label="Button"
-  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb ktCvPV"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 denUQx fTbwJi"
   type="button"
 >
   <span
     class="styled__Icon-sc-pzlzbh-1"
   >
     <span
-      class="styled__Icon-sc-ztr6p6-0 gSA-dqd"
+      class="styled__Icon-sc-ztr6p6-0 kHWcXr"
     >
       <svg
         fill="currentColor"
@@ -80,7 +80,7 @@ exports[`Button renders iconOnly button 1`] = `
 exports[`Button renders outlined 1`] = `
 <button
   aria-disabled="false"
-  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb hgIteE"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 denUQx ggKYWj"
   type="button"
 >
   Button
@@ -90,7 +90,7 @@ exports[`Button renders outlined 1`] = `
 exports[`Button renders padded 1`] = `
 <button
   aria-disabled="false"
-  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb evbCcq"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 denUQx gukFqF"
   type="button"
 >
   Button
@@ -100,7 +100,7 @@ exports[`Button renders padded 1`] = `
 exports[`Button renders secondary 1`] = `
 <button
   aria-disabled="false"
-  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb jYPexT"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 denUQx xvXxY"
   type="button"
 >
   Button
@@ -110,7 +110,7 @@ exports[`Button renders secondary 1`] = `
 exports[`Button renders small 1`] = `
 <button
   aria-disabled="false"
-  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb cMPaWn"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 denUQx FCyNU"
   type="button"
 >
   Button
@@ -121,14 +121,14 @@ exports[`Button renders transparent iconOnly button 1`] = `
 <button
   aria-disabled="false"
   aria-label="Button"
-  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb iGSjSq"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 denUQx eeHoBl"
   type="button"
 >
   <span
     class="styled__Icon-sc-pzlzbh-1"
   >
     <span
-      class="styled__Icon-sc-ztr6p6-0 gSA-dqd"
+      class="styled__Icon-sc-ztr6p6-0 kHWcXr"
     >
       <svg
         fill="currentColor"
@@ -155,7 +155,7 @@ exports[`Button renders transparent iconOnly button 1`] = `
 exports[`Button renders with expanded and outlined 1`] = `
 <button
   aria-disabled="false"
-  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb Mxfpj"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 denUQx ehTkqY"
   type="button"
 >
   Button
@@ -165,7 +165,7 @@ exports[`Button renders with expanded and outlined 1`] = `
 exports[`Button renders with iconStart and iconEnd 1`] = `
 <button
   aria-disabled="false"
-  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb jmfcCj"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 denUQx kXAAVc"
   type="button"
 >
   <span
@@ -189,7 +189,7 @@ exports[`Button renders with iconStart and iconEnd 1`] = `
 exports[`Button renders with secondary, rounded, and raised 1`] = `
 <button
   aria-disabled="false"
-  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 eNpAQb leFBBt"
+  class="Reset__Button-sc-ohlhxz-0 styled__Wrapper-sc-pzlzbh-0 denUQx dmIkJm"
   type="button"
 >
   Button

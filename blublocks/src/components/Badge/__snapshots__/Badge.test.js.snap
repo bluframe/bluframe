@@ -3,7 +3,7 @@
 exports[`Badge renders with default props 1`] = `
 <span
   aria-label="badge-Apples"
-  class="styled__Wrapper-sc-1n59qnd-0 eIasA-d"
+  class="styled__Wrapper-sc-1n59qnd-0 cbqPwt"
   color="primary"
 >
   Apples
@@ -13,7 +13,7 @@ exports[`Badge renders with default props 1`] = `
 exports[`Badge renders with secondary color 1`] = `
 <span
   aria-label="badge-Apples"
-  class="styled__Wrapper-sc-1n59qnd-0 qMFjL"
+  class="styled__Wrapper-sc-1n59qnd-0 cUpfLf"
   color="secondary"
 >
   Apples
