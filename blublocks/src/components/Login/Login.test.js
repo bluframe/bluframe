@@ -56,4 +56,18 @@ describe("Login", () => {
     // Assuming 'Welcome' is a unique text that would only be rendered if 'name' prop was provided.
     expect(queryByText("Welcome")).not.toBeInTheDocument()
   })
+
+  it("disables login button and shows loading state when 'isLoading' is true", () => {
+    const { getByRole, getByText } = render(
+      <Login {...defaultProps} isLoading />
+    )
+
+    const loginButton = getByText("Login")
+
+    // Check if the button is disabled
+    expect(loginButton).toBeDisabled()
+
+    // Check for loading spinner
+    expect(getByRole("status", { name: "Loading" })).toBeInTheDocument()
+  })
 })
