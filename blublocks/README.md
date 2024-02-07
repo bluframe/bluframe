@@ -386,6 +386,48 @@ function App() {
 }
 ```
 
+### Login
+
+A secure and customizable login component.
+
+#### Props
+
+- `isLoading`: (optional) boolean - Indicates if the login process is ongoing. Defaults to `false`.
+- `name`: (optional) string - Displays a welcome message or heading above the login form.
+- `onSubmitLogin`: function - The callback function that is executed when the login form is submitted. It should handle the actual login logic, like API calls.
+
+#### Usage
+
+```js
+import { useState } from "react";
+import Login from "@bluframe/blublocks/Login";
+
+function App() {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmitLogin = ({ username, password }) => {
+    console.log(username, password);
+    setIsLoading(true);
+    // Here you can handle the login logic, e.g., making an API call.
+    setIsLoading(false);
+  };
+
+  return (
+    <Login
+      isLoading={isLoading}
+      name="Welcome to Our App"
+      onSubmitLogin={handleSubmitLogin}
+    />
+  );
+}
+```
+
+The `Login` component makes it simple to add a login form to your application. It supports loading states and customization for a welcome message. This component requires you to handle the actual login logic in the `onSubmitLogin` prop, where you receive the username and password entered by the user.
+
+### Customization
+
+Like other components in the Blu Frame UI Building Blocks library, the `Login` component can be customized in terms of styling and appearance. You can override the default styles using styled-components or CSS classes to match your application's branding and design requirements.
+
 ### Typography
 
 Beautiful and customizable typography components. ✍️

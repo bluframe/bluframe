@@ -82,6 +82,10 @@
       "import": "./lib/esm/Loading.js",
       "require": "./lib/cjs/Loading.js"
     },
+    "./Login": {
+      "import": "./lib/esm/Login.js",
+      "require": "./lib/cjs/Login.js"
+    },
     "./Modal": {
       "import": "./lib/esm/Modal.js",
       "require": "./lib/cjs/Modal.js"

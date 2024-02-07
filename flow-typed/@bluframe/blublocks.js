@@ -196,6 +196,16 @@ declare module "@bluframe/blublocks" {
     +size?: number
   |}
 
+  declare type LoginInput = {| +password: string, +username: string |}
+
+  declare type OnSubmitLogin = (login: LoginInput) => void
+
+  declare type LoginProps = {|
+    +isLoading?: boolean,
+    +name?: string,
+    +onSubmitLogin: OnSubmitLogin
+  |}
+
   declare type ModalProps = {|
     +children: React$Node,
     +isOpen: boolean,
@@ -264,6 +274,7 @@ declare module "@bluframe/blublocks" {
   declare type IconComponent = React$ComponentType<IconProps>
   declare type InputTextComponent = React$ComponentType<InputTextProps>
   declare type LoadingComponent = React$ComponentType<LoadingProps>
+  declare type LoginComponent = React$ComponentType<LoginProps>
   declare type ModalComponent = React$ComponentType<ModalProps>
   declare type ProviderComponent = React$ComponentType<ProviderProps>
   declare type RadioComponent = React$ComponentType<RadioProps>
@@ -295,6 +306,7 @@ declare module "@bluframe/blublocks" {
   declare var Icon: IconComponent
   declare var InputText: InputTextComponent
   declare var Loading: LoadingComponent
+  declare var Login: LoginComponent
   declare var Modal: ModalComponent
   declare var Paragraph: StyledComponent<{||}, Theme, HTMLParagraphElement>
   declare var Radio: RadioComponent
@@ -426,6 +438,12 @@ declare module "@bluframe/blublocks/Loading" {
   import type { LoadingComponent } from "@bluframe/blublocks"
 
   declare export default LoadingComponent
+}
+
+declare module "@bluframe/blublocks/Login" {
+  import type { LoginComponent } from "@bluframe/blublocks"
+
+  declare export default LoginComponent
 }
 
 declare module "@bluframe/blublocks/Modal" {
