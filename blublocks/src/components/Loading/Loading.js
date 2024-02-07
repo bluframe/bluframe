@@ -15,7 +15,9 @@ const Loading = ({
   <Wrapper
     $contrast={contrast}
     $secondary={secondary}
+    aria-label="Loading"
     disabled={disabled}
+    role="status"
     size={size}
   />
 )

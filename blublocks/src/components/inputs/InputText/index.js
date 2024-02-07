@@ -39,4 +39,4 @@ const usePrepareComponent = (props: Props): ComponentProps => {
 
 export default (prepareComponent<Props, ComponentProps>(usePrepareComponent)(
   InputText
-): React$ComponentType<Props>)
+): React$AbstractComponent<Props, HTMLInputElement>)
