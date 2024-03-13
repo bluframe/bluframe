@@ -78,7 +78,6 @@ jobs:
   publishblublocks:
     executor: node 
     environment:
-      NODE_ENV: production
       NODE_OPTIONS: --max_old_space_size=4096
     resource_class: large
 
