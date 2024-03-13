@@ -55,7 +55,7 @@ export const Label: StyledComponent<
   HTMLLabelElement
 > = styled.label`
   color: ${({ theme }) => theme.palette.text.light};
-  font-size: 14px;
+  font-size: 16px;
   left: 16px;
   pointer-events: none;
   position: absolute;
