@@ -253,6 +253,26 @@ declare module "@bluframe/blublocks" {
     +value?: OptionValue | null
   |}
 
+  declare type TextAreaProps = {|
+    +className?: string,
+    +cols?: number,
+    +defaultValue?: string,
+    +error?: boolean,
+    +helperText?: string,
+    +inputId?: string,
+    +isFullBorder?: boolean,
+    +label?: string,
+    +onBlur?: (event: SyntheticEvent<*>) => void,
+    +onChange?: (event: SyntheticInputEvent<HTMLInputElement>) => void,
+    +name: string,
+    +placeholder?: string,
+    +ref?: ElementRef<*>,
+    +required?: boolean,
+    +rows?: number,
+    +type?: string,
+    +value?: string
+  |}
+
   // Components
   declare type AnimationComponents = {| +[key: AnimationName]: KeyFrames |}
   declare type BadgeComponent = React$ComponentType<BadgeProps>
@@ -285,6 +305,7 @@ declare module "@bluframe/blublocks" {
     HTMLButtonElement
   >
   declare type SelectComponent = React$ComponentType<SelectProps>
+  declare type TextAreaComponent = React$ComponentType<TextAreaProps>
 
   // Exports
   declare var Animations: AnimationComponents
@@ -481,6 +502,12 @@ declare module "@bluframe/blublocks/Select" {
   import type { SelectComponent } from "@bluframe/blublocks"
 
   declare export default SelectComponent
+}
+
+declare module "@bluframe/blublocks/TextArea" {
+  import type { TextAreaComponent } from "@bluframe/blublocks"
+
+  declare export default TextAreaComponent
 }
 
 declare module "@bluframe/blublocks/Typography/SubtitleH1" {

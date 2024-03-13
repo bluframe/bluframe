@@ -110,6 +110,10 @@
       "import": "./lib/esm/Select.js",
       "require": "./lib/cjs/Select.js"
     },
+    "./TextArea": {
+      "import": "./lib/esm/TextArea.js",
+      "require": "./lib/cjs/TextArea.js"
+    },
     "./Typography/SubtitleH1": {
       "import": "./lib/esm/Typography/SubtitleH1.js",
       "require": "./lib/cjs/Typography/SubtitleH1.js"

@@ -1,11 +1,10 @@
 // @flow
-
-import InputText from "./InputText"
-import type { InputTextProps } from "@bluframe/blublocks"
+import TextArea from "./TextArea"
+import type { TextAreaProps } from "@bluframe/blublocks"
 import { prepareComponent } from "@bluframe/grapple"
 
 export type Props = {|
-  ...InputTextProps
+  ...TextAreaProps
 |}
 
 export type ComponentProps = {|
@@ -37,5 +36,5 @@ const usePrepareComponent = (props: Props): ComponentProps => {
 }
 
 export default (prepareComponent<Props, ComponentProps>(usePrepareComponent)(
-  InputText
+  TextArea
 ): React$AbstractComponent<Props, HTMLInputElement>)
