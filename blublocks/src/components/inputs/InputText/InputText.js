@@ -29,9 +29,9 @@ const InputText: React$AbstractComponent<ComponentProps, React$Node> =
     ): React$Node => (
       <Wrapper className={className}>
         <Input
+          $error={error}
           aria-invalid={error ? "true" : "false"}
           defaultValue={defaultValue}
-          error={error}
           id={inputId}
           isFullBorder={isFullBorder}
           name={name}

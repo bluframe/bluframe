@@ -15,16 +15,19 @@ export const Input: StyledComponent<
   {| +isFullBorder?: boolean |},
   Theme,
   HTMLInputElement
-> = styled.input.attrs({ placeholder: " " })`
-  ${({ error, isFullBorder, theme }) =>
+> = styled.input.attrs(({ defaultValue, value }) => ({
+  $hasContent: defaultValue ?? value,
+  placeholder: " "
+}))`
+  ${({ $error, isFullBorder, theme }) =>
     isFullBorder
       ? `border: 1px solid ${
-          error ? theme.palette.error.main : theme.colors.gray.light
+          $error ? theme.palette.error.main : theme.colors.gray.light
         }`
       : `
   border: none;
 border-bottom: 1px solid ${
-          error ? theme.palette.error.main : theme.colors.gray.light
+          $error ? theme.palette.error.main : theme.colors.gray.light
         };
   `};
   border-radius: 4px;
@@ -48,7 +51,8 @@ border-bottom: 1px solid ${theme.colors.gray.light};
   }
 
   :not(:placeholder-shown) + label,
-  &:focus + label {
+  &:focus + label,
+  ${({ $hasContent }) => $hasContent && "& + label"} {
     font-size: 12px;
     left: 16px;
     top: ${({ isFullBorder }) => (isFullBorder ? "-24px" : "0")};
