@@ -23,6 +23,7 @@ const input = {
   RadioGroup: "src/components/inputs/RadioGroup/index.js",
   ResetButton: "src/components/buttons/Reset.js",
   Select: "src/components/inputs/Select/index.js",
+  TextArea: "src/components/inputs/TextArea/index.js",
   "Typography/H1": "src/components/Typography/H1.js",
   "Typography/H2": "src/components/Typography/H2.js",
   "Typography/H3": "src/components/Typography/H3.js",
