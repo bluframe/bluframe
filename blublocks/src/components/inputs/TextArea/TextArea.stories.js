@@ -39,3 +39,10 @@ WithPlaceholder.args = {
   ...Default.args,
   placeholder: "Placeholder text here..."
 }
+
+export const ColsAndRows: Story<Props> = Template.bind({})
+ColsAndRows.args = {
+  ...Default.args,
+  cols: 20,
+  rows: 5
+}

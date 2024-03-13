@@ -133,6 +133,7 @@ function App() {
 - Radio
 - RadioGroup
 - Checkbox
+- TextArea
 
 All our input components support ARIA attributes. 💯
 
@@ -381,6 +382,51 @@ function App() {
       name="fruit"
       value="apple"
       onChange={handleChange}
+    />
+  );
+}
+```
+
+### TextArea
+
+A versatile TextArea component for those larger inputs. Supports customization and theming.
+
+#### Props
+
+- `className`: (optional) string - The class name for the textarea wrapper.
+- `cols`: (optional) number - The visible width of the text control, in average character widths. Defaults to `50`.
+- `defaultValue`: (optional) string - The default value of the textarea.
+- `inputId`: (optional) string - The id attribute for the textarea element. 🆔
+- `label`: (optional) React$Node - The label for the textarea.
+- `labelId`: (optional) string - The id for the label element.
+- `name`: (required) string - The name attribute for the textarea element.
+- `onBlur`: (optional) function - The callback that is fired when the textarea loses focus.
+- `onChange`: (required) function - The callback that is fired when the content of the textarea changes.
+- `placeholder`: (optional) string - The placeholder text for the textarea.
+- `required`: (optional) boolean - If `true`, the textarea will be required.
+- `rows`: (optional) number - The number of visible text lines for the control. Defaults to `10`.
+- `value`: (optional) string - The value of the textarea.
+
+#### Usage
+
+```js
+import TextArea from "@bluframe/blublocks/TextArea";
+
+function App() {
+  const [content, setContent] = useState("");
+
+  const handleChange = (event) => {
+    setContent(event.target.value);
+  };
+
+  return (
+    <TextArea
+      inputId="my-textarea"
+      label="My Textarea"
+      name="myTextArea"
+      onChange={handleChange}
+      placeholder="Start typing..."
+      value={content}
     />
   );
 }
