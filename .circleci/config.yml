@@ -80,7 +80,7 @@ jobs:
     environment:
       NODE_ENV: production
       NODE_OPTIONS: --max_old_space_size=4096
-    resource_class: xlarge
+    resource_class: large
 
     steps:
       - git-shallow-clone/checkout
