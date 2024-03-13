@@ -42,10 +42,10 @@ border-bottom: 1px solid ${
   &:focus {
     ${({ isFullBorder, theme }) =>
       isFullBorder
-        ? `border: 1px solid ${theme.colors.gray.light}`
+        ? `border: 1px solid ${theme.palette.primary.main}`
         : `
   border: none;
-border-bottom: 1px solid ${theme.colors.gray.light};
+border-bottom: 1px solid ${theme.palette.primary.main};
   `};
     box-shadow: none;
   }
