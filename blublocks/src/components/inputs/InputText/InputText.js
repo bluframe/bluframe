@@ -12,6 +12,7 @@ const InputText: React$AbstractComponent<ComponentProps, React$Node> =
         className,
         defaultValue,
         error,
+        hasContent,
         helperText,
         inputId,
         isFullBorder,
@@ -20,6 +21,7 @@ const InputText: React$AbstractComponent<ComponentProps, React$Node> =
         name,
         onBlur,
         onChange,
+        onInput,
         required,
         step,
         type = "text",
@@ -30,6 +32,7 @@ const InputText: React$AbstractComponent<ComponentProps, React$Node> =
       <Wrapper className={className}>
         <Input
           $error={error}
+          $hasContent={hasContent}
           aria-invalid={error ? "true" : "false"}
           defaultValue={defaultValue}
           id={inputId}
@@ -37,6 +40,7 @@ const InputText: React$AbstractComponent<ComponentProps, React$Node> =
           name={name}
           onBlur={onBlur}
           onChange={onChange}
+          onInput={onInput}
           ref={ref}
           required={required}
           step={step}

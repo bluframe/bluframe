@@ -1,7 +1,7 @@
 // @flow
 /* eslint-disable no-ternary */
 
-import styled, { type StyledComponent } from "styled-components"
+import styled, { type StyledComponent, css } from "styled-components"
 import type { Theme } from "@bluframe/blublocks"
 
 export const Wrapper: StyledComponent<{||}, Theme, HTMLDivElement> = styled.div`
@@ -11,14 +11,18 @@ export const Wrapper: StyledComponent<{||}, Theme, HTMLDivElement> = styled.div`
   width: 100%;
 `
 
+const labelShrinkCss = css`
+  font-size: 12px;
+  left: 16px;
+  top: ${({ isFullBorder }) => (isFullBorder ? "-24px" : "0")};
+  transition: all 200ms;
+`
+
 export const Input: StyledComponent<
   {| +isFullBorder?: boolean |},
   Theme,
   HTMLInputElement
-> = styled.input.attrs(({ defaultValue, value }) => ({
-  $hasContent: defaultValue ?? value,
-  placeholder: " "
-}))`
+> = styled.input.attrs({ placeholder: " " })`
   ${({ $error, isFullBorder, theme }) =>
     isFullBorder
       ? `border: 1px solid ${
@@ -50,13 +54,18 @@ border-bottom: 1px solid ${theme.palette.primary.main};
     box-shadow: none;
   }
 
-  :not(:placeholder-shown) + label,
-  &:focus + label,
-  ${({ $hasContent }) => $hasContent && "& + label"} {
-    font-size: 12px;
-    left: 16px;
-    top: ${({ isFullBorder }) => (isFullBorder ? "-24px" : "0")};
+  &:not(:placeholder-shown) + label,
+  &:focus + label {
+    ${labelShrinkCss}
   }
+
+  ${({ $hasContent }) =>
+    $hasContent &&
+    css`
+      & + label {
+        ${labelShrinkCss}
+      }
+    `}
 `
 
 export const Label: StyledComponent<

@@ -10,12 +10,14 @@ jest.mock(".", () => ({}))
 
 describe("InputText", () => {
   const props: ComponentProps = {
+    hasContent: false,
     inputId: "name-input",
     label: "Name",
     labelId: "name-label",
     name: "name",
     onBlur: jest.fn(),
-    onChange: jest.fn()
+    onChange: jest.fn(),
+    onInput: jest.fn()
   }
 
   it("renders with defaultValue", () => {
