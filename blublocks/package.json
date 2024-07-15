@@ -1,6 +1,6 @@
 {
   "name": "@bluframe/blublocks",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "description": "Blu Frame UI Components Library (Blu Blocks)",
   "main": "./lib/esm/index.js",
   "types": "./lib/esm/index.d.ts",
