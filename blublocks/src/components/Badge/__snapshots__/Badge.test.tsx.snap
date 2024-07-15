@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Badge renders with default props 1`] = `
+<span
+  aria-label="badge-Apples"
+  class="sc-bdDqHD eHSnjs"
+  color="primary"
+>
+  Apples
+</span>
+`;
+
+exports[`Badge renders with secondary color 1`] = `
+<span
+  aria-label="badge-Apples"
+  class="sc-bdDqHD kJHdtO"
+  color="secondary"
+>
+  Apples
+</span>
+`;

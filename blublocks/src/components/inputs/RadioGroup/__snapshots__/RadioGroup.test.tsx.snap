@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadioGroup renders 1`] = `
+<div
+  aria-labelledby="fruit-radiogroup-label"
+  class="sc-bdDqHD bxppiR"
+  id="fruit-radiogroup"
+  role="radiogroup"
+>
+  <label
+    class="sc-gtcySc eLlnIn"
+    id="fruit-radiogroup-label"
+  >
+    Select a fruit
+  </label>
+  <div
+    class="sc-dkXqGt fiRLlX"
+  >
+    <div
+      class="sc-hKVqoC faJTeG"
+    >
+      <div
+        aria-checked="false"
+        aria-labelledby="fruit-radiogroup-apple-label"
+        class="sc-eCQicT gYJHvi"
+        id="fruit-radiogroup-apple"
+        role="radio"
+      />
+      <input
+        class="sc-jSpqns cwdDgD"
+        name="fruit"
+        type="radio"
+        value="apple"
+      />
+      <label
+        class="sc-gKkibJ goWKlK"
+        id="fruit-radiogroup-apple-label"
+      >
+        Apple
+      </label>
+    </div>
+    <div
+      class="sc-hKVqoC faJTeG"
+    >
+      <div
+        aria-checked="true"
+        aria-labelledby="fruit-radiogroup-banana-label"
+        class="sc-eCQicT bvcDAG"
+        id="fruit-radiogroup-banana"
+        role="radio"
+      />
+      <input
+        checked=""
+        class="sc-jSpqns cwdDgD"
+        name="fruit"
+        type="radio"
+        value="banana"
+      />
+      <label
+        class="sc-gKkibJ goWKlK"
+        id="fruit-radiogroup-banana-label"
+      >
+        Banana
+      </label>
+    </div>
+  </div>
+</div>
+`;

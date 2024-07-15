@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox renders 1`] = `
+<div
+  class="sc-bdDqHD BFODt"
+>
+  <input
+    checked=""
+    class="sc-gtcySc hwatXx"
+    name="Fruit"
+    type="checkbox"
+    value="apple"
+  />
+  <div
+    aria-checked="true"
+    class="sc-dkXqGt eHzDSA"
+    id="apple-checkbox"
+    role="checkbox"
+  >
+    <svg
+      class="sc-hKVqoC iqYjLd"
+      viewBox="0 0 24 24"
+    >
+      <polyline
+        class="sc-eCQicT"
+        points="20 6 9 17 4 12"
+      />
+    </svg>
+  </div>
+  <label
+    class="sc-jSpqns kviUPp"
+  >
+    Apple
+  </label>
+</div>
+`;

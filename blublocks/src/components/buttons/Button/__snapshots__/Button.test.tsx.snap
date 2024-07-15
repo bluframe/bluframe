@@ -1,0 +1,179 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders 1`] = `
+<button
+  aria-disabled="false"
+  class="sc-gtcySc sc-dkXqGt jzIWcR blyLPZ"
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`Button renders aria label 1`] = `
+<button
+  aria-disabled="false"
+  aria-label="Aria Label"
+  class="sc-gtcySc sc-dkXqGt jzIWcR blyLPZ"
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`Button renders bold 1`] = `
+<button
+  aria-disabled="false"
+  class="sc-gtcySc sc-dkXqGt jzIWcR nQHqd"
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`Button renders disabled 1`] = `
+<button
+  aria-disabled="true"
+  class="sc-gtcySc sc-dkXqGt jzIWcR dOfsFC"
+  disabled=""
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`Button renders iconOnly button 1`] = `
+<button
+  aria-disabled="false"
+  aria-label="Button"
+  class="sc-gtcySc sc-dkXqGt jzIWcR cDCkzP"
+  data-variant="iconOnly"
+  type="button"
+>
+  <svg
+    fill="currentColor"
+    height="16px"
+    stroke="currentColor"
+    stroke-width="0"
+    viewBox="0 0 512 512"
+    width="16px"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M244 400 100 256l144-144M120 256h292"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="48"
+    />
+  </svg>
+</button>
+`;
+
+exports[`Button renders outlined 1`] = `
+<button
+  aria-disabled="false"
+  class="sc-gtcySc sc-dkXqGt jzIWcR fSoSJu"
+  data-variant="outlined"
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`Button renders padded 1`] = `
+<button
+  aria-disabled="false"
+  class="sc-gtcySc sc-dkXqGt jzIWcR wURXs"
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`Button renders secondary 1`] = `
+<button
+  aria-disabled="false"
+  class="sc-gtcySc sc-dkXqGt jzIWcR ejoqTZ"
+  data-variant="secondary"
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`Button renders small 1`] = `
+<button
+  aria-disabled="false"
+  class="sc-gtcySc sc-dkXqGt jzIWcR bLxuPV"
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`Button renders transparent iconOnly button 1`] = `
+<button
+  aria-disabled="false"
+  aria-label="Button"
+  class="sc-gtcySc sc-dkXqGt jzIWcR eZaQhs"
+  data-variant="iconOnly"
+  type="button"
+>
+  <svg
+    fill="currentColor"
+    height="16px"
+    stroke="currentColor"
+    stroke-width="0"
+    viewBox="0 0 512 512"
+    width="16px"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M244 400 100 256l144-144M120 256h292"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="48"
+    />
+  </svg>
+</button>
+`;
+
+exports[`Button renders with expanded and outlined 1`] = `
+<button
+  aria-disabled="false"
+  class="sc-gtcySc sc-dkXqGt jzIWcR jeVAMt"
+  data-variant="outlined"
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`Button renders with iconStart and iconEnd 1`] = `
+<button
+  aria-disabled="false"
+  class="sc-gtcySc sc-dkXqGt jzIWcR blyLPZ"
+  type="button"
+>
+  <div>
+    Icon Start
+  </div>
+  Button
+  <div>
+    Icon End
+  </div>
+</button>
+`;
+
+exports[`Button renders with secondary, rounded, and raised 1`] = `
+<button
+  aria-disabled="false"
+  class="sc-gtcySc sc-dkXqGt jzIWcR iwXuar"
+  data-variant="secondary"
+  type="button"
+>
+  Button
+</button>
+`;
