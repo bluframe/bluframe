@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Content renders and uses custom components and plugins 1`] = `
+<span
+  class="sc-bdDqHD jkXIsu"
+>
+  <div>
+    
+        ## Markdown Content
+
+        Looks **awesome!!**
+      
+  </div>
+</span>
+`;

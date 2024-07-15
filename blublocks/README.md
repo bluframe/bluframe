@@ -8,8 +8,6 @@
 
 </p>
 
-  
-
 # Blu Frame UI Building Blocks 🚀
 
 Blu Frame UI Building Blocks provides a collection of customizable React components to speed up your web development process. 🎨
@@ -33,13 +31,13 @@ npm i @bluframe/blublocks
 You can import the components individually:
 
 ```js
-import  Button  from  "@bluframe/blublocks/Button";
+import Button from "@bluframe/blublocks/Button"
 ```
 
 Or import multiple components at once:
 
 ```js
-import { Button, InputText } from  "@bluframe/blublocks";
+import { Button, InputText } from "@bluframe/blublocks"
 ```
 
 ## Components 🧩
@@ -57,17 +55,11 @@ This is a Badge component, often used to highlight a certain feature or aspect o
 #### Usage
 
 ```js
-  import Badge from "@bluframe/blublocks/Badge"
-  
-  function App() {
-    return (
-      <Badge 
-        className="custom-class"
-        color="secondary"
-        label="Apples"
-      />
-    )
-  }
+import Badge from "@bluframe/blublocks/Badge"
+
+function App() {
+  return <Badge className="custom-class" color="secondary" label="Apples" />
+}
 ```
 
 ### Button
@@ -98,12 +90,12 @@ A simple button component that can be styled to all needs.
 #### Usage
 
 ```js
-import Button from "@bluframe/blublocks/Button";
+import Button from "@bluframe/blublocks/Button"
 
 function App() {
   const handleClick = () => {
-    console.log("Button clicked");
-  };
+    console.log("Button clicked")
+  }
 
   return (
     <Button
@@ -122,7 +114,7 @@ function App() {
       secondary={false}
       small={false}
     />
-  );
+  )
 }
 ```
 
@@ -133,6 +125,7 @@ function App() {
 - Radio
 - RadioGroup
 - Checkbox
+- Toggle
 - TextArea
 
 All our input components support ARIA attributes. 💯
@@ -161,23 +154,23 @@ A customizable input text component that supports ARIA attributes.
 #### Usage
 
 ```js
-import InputText from "@bluframe/blublocks/InputText";
+import InputText from "@bluframe/blublocks/InputText"
 
 function App() {
-  const [value, setValue] = useState("");
-  const [error, setError] = useState(false);
+  const [value, setValue] = useState("")
+  const [error, setError] = useState(false)
 
   const handleBlur = (event) => {
     if (event.target.value === "") {
-      setError(true);
+      setError(true)
     } else {
-      setError(false);
+      setError(false)
     }
-  };
+  }
 
   const handleChange = (event) => {
-    setValue(event.target.value);
-  };
+    setValue(event.target.value)
+  }
 
   return (
     <InputText
@@ -191,7 +184,7 @@ function App() {
       onChange={handleChange}
       value={value}
     />
-  );
+  )
 }
 ```
 
@@ -214,10 +207,10 @@ A customizable select component that supports ARIA attributes, automatically sel
 #### Usage
 
 ```js
-import Select from "@bluframe/blublocks/Select";
+import Select from "@bluframe/blublocks/Select"
 
 function App() {
-  const [selectedValue, setSelectedValue] = useState(null);
+  const [selectedValue, setSelectedValue] = useState(null)
 
   const options = [
     {
@@ -227,17 +220,17 @@ function App() {
     {
       label: "Orange",
       value: "orange"
-    },
+    }
     // ... more options
-  ];
+  ]
 
   const handleBlur = () => {
-    console.log("Select lost focus");
-  };
+    console.log("Select lost focus")
+  }
 
   const handleChange = (newValue) => {
-    setSelectedValue(newValue);
-  };
+    setSelectedValue(newValue)
+  }
 
   return (
     <Select
@@ -249,7 +242,7 @@ function App() {
       placeholder="Select a fruit"
       value={selectedValue}
     />
-  );
+  )
 }
 ```
 
@@ -269,14 +262,14 @@ A customizable radio component that supports ARIA attributes. 📻
 #### Usage
 
 ```js
-import Radio from "@bluframe/blublocks/Radio";
+import Radio from "@bluframe/blublocks/Radio"
 
 function App() {
-  const [selectedValue, setSelectedValue] = useState("apple");
+  const [selectedValue, setSelectedValue] = useState("apple")
 
   const handleChange = (newValue) => {
-    setSelectedValue(newValue);
-  };
+    setSelectedValue(newValue)
+  }
 
   return (
     <>
@@ -297,7 +290,7 @@ function App() {
         value="orange"
       />
     </>
-  );
+  )
 }
 ```
 
@@ -317,14 +310,14 @@ A customizable radio group component that supports ARIA attributes and automatic
 #### Usage
 
 ```js
-import RadioGroup from "@bluframe/blublocks/RadioGroup";
+import RadioGroup from "@bluframe/blublocks/RadioGroup"
 
 function App() {
-  const [selectedValue, setSelectedValue] = useState(null);
+  const [selectedValue, setSelectedValue] = useState(null)
 
   const handleChange = (newValue) => {
-    setSelectedValue(newValue);
-  };
+    setSelectedValue(newValue)
+  }
 
   const options = [
     {
@@ -335,7 +328,7 @@ function App() {
       label: "Banana",
       value: "banana"
     }
-  ];
+  ]
 
   return (
     <RadioGroup
@@ -345,7 +338,7 @@ function App() {
       options={options}
       selected={selectedValue}
     />
-  );
+  )
 }
 ```
 
@@ -365,14 +358,14 @@ A customizable checkbox component that supports ARIA attributes. ☑️
 #### Usage
 
 ```js
-import Checkbox from "@bluframe/blublocks/Checkbox";
+import Checkbox from "@bluframe/blublocks/Checkbox"
 
 function App() {
-  const [isChecked, setIsChecked] = useState(true);
+  const [isChecked, setIsChecked] = useState(true)
 
   const handleChange = (value) => {
-    setIsChecked(!isChecked);
-  };
+    setIsChecked(!isChecked)
+  }
 
   return (
     <Checkbox
@@ -383,9 +376,47 @@ function App() {
       value="apple"
       onChange={handleChange}
     />
-  );
+  )
 }
 ```
+
+### Toggle
+
+A customizable toggle switch component that supports ARIA attributes.
+
+#### Props
+
+- `checked`: (optional) boolean - Determines whether the toggle is checked or not. Default to `false`.
+- `disabled`: (optional) boolean - If `true`, the toggle will be displayed in a disabled state. Default to `false`.
+- `defaultChecked`: (optional) boolean - Determines whether the toggle is checked by default.
+- `inputId`: (optional) string - The id attribute for the input element. 🆔
+- `name`: string - The name attribute for the input element.
+- `onChange`: (optional) function - The callback that is fired when the toggle state changes.
+- `ref`: (optional) ForwardedRef<HTMLInputElement> - A forwarded ref for the input element.
+
+#### Usage
+
+```js
+import Toggle from "@bluframe/blublocks/Toggle"
+
+function App() {
+  const handleChange = (checked) => {
+    console.log("Toggle state:", checked)
+  }
+
+  return (
+    <Toggle
+      checked={false}
+      disabled={false}
+      inputId="toggle-id"
+      name="toggle-name"
+      onChange={handleChange}
+    />
+  )
+}
+```
+
+The `Toggle` component makes it simple to add a toggle switch to your application. It supports both controlled and uncontrolled states and is accessible via keyboard (Space key and Enter key). This component can be customized further by overriding its default styles using `styled-components` or CSS classes.
 
 ### TextArea
 
@@ -410,14 +441,14 @@ A versatile TextArea component for those larger inputs. Supports customization a
 #### Usage
 
 ```js
-import TextArea from "@bluframe/blublocks/TextArea";
+import TextArea from "@bluframe/blublocks/TextArea"
 
 function App() {
-  const [content, setContent] = useState("");
+  const [content, setContent] = useState("")
 
   const handleChange = (event) => {
-    setContent(event.target.value);
-  };
+    setContent(event.target.value)
+  }
 
   return (
     <TextArea
@@ -428,7 +459,7 @@ function App() {
       placeholder="Start typing..."
       value={content}
     />
-  );
+  )
 }
 ```
 
@@ -445,18 +476,18 @@ A secure and customizable login component.
 #### Usage
 
 ```js
-import { useState } from "react";
-import Login from "@bluframe/blublocks/Login";
+import { useState } from "react"
+import Login from "@bluframe/blublocks/Login"
 
 function App() {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false)
 
   const handleSubmitLogin = ({ username, password }) => {
-    console.log(username, password);
-    setIsLoading(true);
+    console.log(username, password)
+    setIsLoading(true)
     // Here you can handle the login logic, e.g., making an API call.
-    setIsLoading(false);
-  };
+    setIsLoading(false)
+  }
 
   return (
     <Login
@@ -464,7 +495,7 @@ function App() {
       name="Welcome to Our App"
       onSubmitLogin={handleSubmitLogin}
     />
-  );
+  )
 }
 ```
 
@@ -494,8 +525,8 @@ Beautiful and customizable typography components. ✍️
 #### Usage
 
 ```js
-import H1 from "@bluframe/blublocks/Typography/H1";
-import SubtitleH1 from "@bluframe/blublocks/Typography/SubtitleH1";
+import H1 from "@bluframe/blublocks/Typography/H1"
+import SubtitleH1 from "@bluframe/blublocks/Typography/SubtitleH1"
 
 function App() {
   return (
@@ -503,7 +534,7 @@ function App() {
       <H1>This is a Heading</H1>
       <SubtitleH1>This is a Subtitle</SubtitleH1>
     </>
-  );
+  )
 }
 ```
 
@@ -515,25 +546,25 @@ Here's an example of how to create a custom H1 component with your own styles:
 
 ```js
 // CustomH1.js
-import styled from "styled-components";
-import H1 from "@bluframe/blublocks/Typography/H1";
+import styled from "styled-components"
+import H1 from "@bluframe/blublocks/Typography/H1"
 
 const CustomH1 = styled(H1)`
   color: #ff0000;
   font-family: "Comic Sans MS", cursive, sans-serif;
   font-weight: 400;
-`;
+`
 
-export default CustomH1;
+export default CustomH1
 ```
 
 And then you can use your custom H1 component in your app:
 
 ```js
-import CustomH1 from "./CustomH1";
+import CustomH1 from "./CustomH1"
 
 function App() {
-  return <CustomH1>This is a custom Heading</CustomH1>;
+  return <CustomH1>This is a custom Heading</CustomH1>
 }
 ```
 
@@ -553,7 +584,7 @@ A versatile component that accepts markdown and beautifully displays it on your 
 #### Usage
 
 ```js
-import Content from "@bluframe/blublocks/Content";
+import Content from "@bluframe/blublocks/Content"
 
 function App() {
   const markdownContent = `
@@ -563,7 +594,7 @@ function App() {
 
     - This is a list item
     - Another list item
-  `;
+  `
 
   return (
     <Content
@@ -573,7 +604,7 @@ function App() {
       paragraphAs="div"
       stripMarkdown={false}
     />
-  );
+  )
 }
 ```
 
@@ -586,17 +617,17 @@ A modal component to manage and display overlay content.
 - `children`: React$Node - The content to display inside the modal.
 - `isOpen`: boolean - Determines whether the modal is open or not.
 - `onClose`: function - The callback that is fired when the modal is closed.
-  
+
 #### Usage
 
 ```js
-import Modal from "@bluframe/blublocks/Modal";
+import Modal from "@bluframe/blublocks/Modal"
 
 function App() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
-  const handleOpen = () => setIsOpen(true);
-  const handleClose = () => setIsOpen(false);
+  const handleOpen = () => setIsOpen(true)
+  const handleClose = () => setIsOpen(false)
 
   return (
     <div>
@@ -605,7 +636,7 @@ function App() {
         <p>Modal Content!</p>
       </Modal>
     </div>
-  );
+  )
 }
 ```
 
@@ -620,7 +651,7 @@ Our Bio component is a versatile, customizable block that allows you to display 
 - `name`: (required) string - The name to be displayed.
 - `color`: (optional) string - A color definition for the bio content links.
 
-#### Usage 
+#### Usage
 
 First, import the Bio component from blublocks:
 
@@ -631,25 +662,26 @@ import Bio from "@bluframe/blublocks/Bio"
 Use the Bio component in your app:
 
 ```javascript
-  function App() {
-    return (
-      <Bio
-        avatar="https://somelinktoanimage.jpg"
-        description="This is my awesome bio!"
-        name="John Doe" />
-    )
-  }
+function App() {
+  return (
+    <Bio
+      avatar="https://somelinktoanimage.jpg"
+      description="This is my awesome bio!"
+      name="John Doe"
+    />
+  )
+}
 ```
-  
+
 #### Avatar Image
 
 The avatar prop can accept a URL string indicating the path to an image:
 
 ```javascript
-<Bio 
+<Bio
   avatar="https://somelinktoanimage.jpg"
   description="This is my awesome bio!"
-  name="John Doe" 
+  name="John Doe"
 />
 ```
 
@@ -658,7 +690,7 @@ Alternatively, the avatar prop can accept a React component:
 ```javascript
 import CustomAvatar from "./CustomAvatar"
 
-<Bio
+;<Bio
   avatar={<CustomAvatar />}
   description="This is an awesome bio!"
   name="John Doe"
@@ -676,7 +708,7 @@ The description prop supports markdown formatting. Here's an example:
   name="John Doe"
 />
 ```
-  
+
 This will render the description with italic text and a hyperlink to the website.
 
 #### Customization
@@ -684,25 +716,24 @@ This will render the description with italic text and a hyperlink to the website
 If you want to customize the appearance even further, you can use styled-components to override the styles. Here's an example how to create a custom Bio component with extra styles:
 
 ```javascript
-import styled from "styled-components";
-import Bio from "@bluframe/blublocks/Bio";
+import styled from "styled-components"
+import Bio from "@bluframe/blublocks/Bio"
 
 const CustomBio = styled(Bio)`
   font-family: "Comic Sans MS", cursive, sans-serif;
   color: #ff0000;
-`;
+`
 
 function App() {
   return (
-    <CustomBio 
+    <CustomBio
       avatar="https://somelinktoanimage.jpg"
       description="This is my awesome bio!"
-      name="John Doe" 
+      name="John Doe"
     />
-  );
+  )
 }
 ```
-
 
 ### Hamburger
 
@@ -717,14 +748,14 @@ A classic Hamburger component made with 100% CSS. 🍔
 #### Usage
 
 ```js
-import Hamburger from "@bluframe/blublocks/Hamburger";
+import Hamburger from "@bluframe/blublocks/Hamburger"
 
 function App() {
-  const [isMenuExpanded, setIsMenuExpanded] = useState(false);
+  const [isMenuExpanded, setIsMenuExpanded] = useState(false)
 
   const handleHamburgerClick = () => {
-    setIsMenuExpanded(!isMenuExpanded);
-  };
+    setIsMenuExpanded(!isMenuExpanded)
+  }
 
   return (
     <Hamburger
@@ -732,7 +763,7 @@ function App() {
       menuId="main-navigation"
       onClick={handleHamburgerClick}
     />
-  );
+  )
 }
 ```
 
@@ -744,7 +775,7 @@ We welcome contributions to improve Blu Frame UI Building Blocks! If you'd like 
 2. Create a new branch for your feature or bugfix. 🌿
 3. Make your changes and commit them to your branch. 📝
 4. Submit a pull request with a detailed description of your changes. 📬
-  
+
 Please ensure that your code follows our coding style and passes all tests. 🔎
 
 ## License

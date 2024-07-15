@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageCanvas renders correctly 1`] = `
+<div>
+  <canvas
+    class="sc-bdDqHD fEUNSC"
+  />
+</div>
+`;

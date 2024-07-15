@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading renders in disabled state 1`] = `
+<div
+  aria-label="Loading"
+  class="sc-bdDqHD gpOZpg"
+  disabled=""
+  role="status"
+  size="16"
+/>
+`;
+
+exports[`Loading renders with contrast color 1`] = `
+<div
+  aria-label="Loading"
+  class="sc-bdDqHD fnoIOa"
+  role="status"
+  size="16"
+/>
+`;
+
+exports[`Loading renders with custom size 1`] = `
+<div
+  aria-label="Loading"
+  class="sc-bdDqHD bzCA-dM"
+  role="status"
+  size="32"
+/>
+`;
+
+exports[`Loading renders with default props 1`] = `
+<div
+  aria-label="Loading"
+  class="sc-bdDqHD kbywGc"
+  role="status"
+  size="16"
+/>
+`;
+
+exports[`Loading renders with multiple custom props 1`] = `
+<div
+  aria-label="Loading"
+  class="sc-bdDqHD kcwmPS"
+  disabled=""
+  role="status"
+  size="40"
+/>
+`;
+
+exports[`Loading renders with secondary color 1`] = `
+<div
+  aria-label="Loading"
+  class="sc-bdDqHD kzYUtK"
+  role="status"
+  size="16"
+/>
+`;

@@ -1,164 +1,52 @@
 {
   "name": "@bluframe/blublocks",
-  "version": "1.4.4",
+  "version": "2.2.1",
   "description": "Blu Frame UI Components Library (Blu Blocks)",
-  "main": "lib/cjs/index.js",
-  "module": "lib/esm/index.js",
+  "main": "./lib/esm/index.js",
+  "types": "./lib/esm/index.d.ts",
   "author": "Edoardo L'Astorina",
   "license": "MIT",
   "engines": {
-    "node": "16"
+    "node": "18"
   },
   "exports": {
     ".": {
       "import": "./lib/esm/index.js",
-      "require": "./lib/cjs/index.js"
+      "require": "./lib/esm/index.js"
     },
-    "./Animations": {
-      "import": "./lib/esm/Animations.js",
-      "require": "./lib/cjs/Animations.js"
-    },
-    "./Badge": {
-      "import": "./lib/esm/Badge.js",
-      "require": "./lib/cjs/Badge.js"
-    },
-    "./Bio": {
-      "import": "./lib/esm/Bio.js",
-      "require": "./lib/cjs/Bio.js"
-    },
-    "./BluBlocksProvider": {
-      "import": "./lib/esm/BluBlocksProvider.js",
-      "require": "./lib/cjs/BluBlocksProvider.js"
-    },
-    "./Button": {
-      "import": "./lib/esm/Button.js",
-      "require": "./lib/cjs/Button.js"
-    },
-    "./Checkbox": {
-      "import": "./lib/esm/Checkbox.js",
-      "require": "./lib/cjs/Checkbox.js"
-    },
-    "./Content": {
-      "import": "./lib/esm/Content.js",
-      "require": "./lib/cjs/Content.js"
-    },
-    "./Typography/H1": {
-      "import": "./lib/esm/Typography/H1.js",
-      "require": "./lib/cjs/Typography/H1.js"
-    },
-    "./Typography/H2": {
-      "import": "./lib/esm/Typography/H2.js",
-      "require": "./lib/cjs/Typography/H2.js"
-    },
-    "./Typography/H3": {
-      "import": "./lib/esm/Typography/H3.js",
-      "require": "./lib/cjs/Typography/H3.js"
-    },
-    "./Typography/H4": {
-      "import": "./lib/esm/Typography/H4.js",
-      "require": "./lib/cjs/Typography/H4.js"
-    },
-    "./Typography/H5": {
-      "import": "./lib/esm/Typography/H5.js",
-      "require": "./lib/cjs/Typography/H5.js"
-    },
-    "./Typography/H6": {
-      "import": "./lib/esm/Typography/H6.js",
-      "require": "./lib/cjs/Typography/H6.js"
-    },
-    "./Hamburger": {
-      "import": "./lib/esm/Hamburger.js",
-      "require": "./lib/cjs/Hamburger.js"
-    },
-    "./InputText": {
-      "import": "./lib/esm/InputText.js",
-      "require": "./lib/cjs/InputText.js"
-    },
-    "./Icon": {
-      "import": "./lib/esm/Icon.js",
-      "require": "./lib/cjs/Icon.js"
-    },
-    "./Loading": {
-      "import": "./lib/esm/Loading.js",
-      "require": "./lib/cjs/Loading.js"
-    },
-    "./Login": {
-      "import": "./lib/esm/Login.js",
-      "require": "./lib/cjs/Login.js"
-    },
-    "./Modal": {
-      "import": "./lib/esm/Modal.js",
-      "require": "./lib/cjs/Modal.js"
-    },
-    "./Typography/Paragraph": {
-      "import": "./lib/esm/Typography/Paragraph.js",
-      "require": "./lib/cjs/Typography/Paragraph.js"
-    },
-    "./Radio": {
-      "import": "./lib/esm/Radio.js",
-      "require": "./lib/cjs/Radio.js"
-    },
-    "./RadioGroup": {
-      "import": "./lib/esm/RadioGroup.js",
-      "require": "./lib/cjs/RadioGroup.js"
-    },
-    "./ResetButton": {
-      "import": "./lib/esm/ResetButton.js",
-      "require": "./lib/cjs/ResetButton.js"
-    },
-    "./Select": {
-      "import": "./lib/esm/Select.js",
-      "require": "./lib/cjs/Select.js"
-    },
-    "./TextArea": {
-      "import": "./lib/esm/TextArea.js",
-      "require": "./lib/cjs/TextArea.js"
-    },
-    "./Typography/SubtitleH1": {
-      "import": "./lib/esm/Typography/SubtitleH1.js",
-      "require": "./lib/cjs/Typography/SubtitleH1.js"
-    },
-    "./Typography/SubtitleH2": {
-      "import": "./lib/esm/Typography/SubtitleH2.js",
-      "require": "./lib/cjs/Typography/SubtitleH2.js"
-    },
-    "./Typography/SubtitleH3": {
-      "import": "./lib/esm/Typography/SubtitleH3.js",
-      "require": "./lib/cjs/Typography/SubtitleH3.js"
-    },
-    "./blublocks.css": "./lib/css/blublocks.css",
-    "./mediaQueries": {
-      "import": "./lib/esm/mediaQueries.js",
-      "require": "./lib/cjs/mediaQueries.js"
-    }
+    "./blublocks.css": "./lib/css/foundation.css"
   },
-  "files": [
-    "lib"
-  ],
   "scripts": {
-    "build": "rollup -c",
-    "build:ci": "NODE_ENV=production rollup -c",
+    "build": "tsc --project tsconfig.build.json && tsc-alias -p tsconfig.build.json && yarn copy:css",
+    "build:all": "yarn build && yarn build:cjs",
+    "build:ci": "tsc --project tsconfig.build.json && tsc-alias -p tsconfig.build.json && yarn copy:css",
+    "build:cjs": "tsc --project tsconfig.build.cjs.json && tsc-alias -p tsconfig.build.cjs.json",
+    "build:cjs:ci": "tsc --project tsconfig.build.cjs.json && tsc-alias -p tsconfig.build.cjs.json",
     "build-storybook": "storybook build",
-    "clean": "rm -fr lib/*",
-    "flow": "flow",
-    "flow:ci": "flow --quiet",
-    "lint": "eslint src/",
-    "lint:ci": "eslint --quiet src/",
-    "prepublish": "yarn lint:ci && yarn flow:ci && yarn test:ci && yarn build:ci",
-    "publish": "yarn npm publish --access public",
-    "storybook": "storybook dev -p 6006 -s ./public",
-    "test": "jest --coverage --verbose",
-    "test:ci": "jest --coverage --silent"
+    "clean": "rm -fr build/esm/{*,.tsbuildinfo} || echo 'Build folder already clean!'",
+    "clean:cjs": "rm -fr build/cjs/{*,.tsbuildinfo} || echo 'Build folder already clean!'",
+    "copy:css": "copyfiles -u 4 src/styles/foundation/css/foundation.css src/styles/foundation/css/foundation.css.map lib/css",
+    "flow": "yarn type-check",
+    "flow:ci": "yarn type-check:ci",
+    "lint": "eslint --ext .ts src/",
+    "lint:ci": "eslint --ext .ts --quiet src/",
+    "storybook": "storybook dev -p 6006",
+    "test": "jest --verbose",
+    "test:ci": "jest --coverage --silent",
+    "test:coverage": "jest --coverage --verbose",
+    "test:local": "jest --onlyChanged --silent",
+    "type-check": "tsc --noEmit",
+    "type-check:ci": "tsc --noEmit --noEmitOnError"
   },
   "dependencies": {
     "@bluframe/grapple": "^1.0.0",
-    "@react-icons/all-files": "^4.1.0",
     "counterup2": "^2.0.2",
-    "next": "^14.0.3",
+    "next": "^14.0.4",
     "polished": "^4.1.4",
     "ramda": "^0.28.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.2.1",
     "react-is": "^18.2.0",
     "react-markdown": "^9.0.1",
     "react-transition-group": "^4.4.2",
@@ -167,50 +55,43 @@
     "what-input": "^5.2.10"
   },
   "devDependencies": {
-    "@babel/core": "^7.18.2",
-    "@babel/eslint-parser": "^7.18.2",
-    "@babel/plugin-syntax-flow": "^7.17.12",
-    "@babel/plugin-transform-react-jsx": "^7.17.12",
-    "@babel/preset-env": "^7.18.2",
-    "@babel/preset-flow": "^7.17.12",
-    "@babel/preset-react": "^7.17.12",
-    "@babel/runtime": "^7.18.3",
-    "@rollup/plugin-babel": "^5.3.0",
-    "@rollup/plugin-image": "^2.1.1",
-    "@rollup/plugin-node-resolve": "^13.1.3",
-    "@storybook/addon-actions": "^7.6.6",
-    "@storybook/addon-docs": "^7.6.6",
-    "@storybook/addon-essentials": "^7.6.6",
-    "@storybook/addon-links": "^7.6.6",
-    "@storybook/nextjs": "^7.6.6",
-    "@storybook/react": "^7.6.6",
-    "@storybook/source-loader": "^7.6.6",
+    "@storybook/addon-actions": "^8.2.2",
+    "@storybook/addon-docs": "^8.2.2",
+    "@storybook/addon-essentials": "^8.2.2",
+    "@storybook/addon-links": "^8.2.2",
+    "@storybook/manager-api": "^8.2.2",
+    "@storybook/nextjs": "^8.2.2",
+    "@storybook/react": "^8.2.2",
+    "@storybook/source-loader": "^8.2.2",
     "@svgr/webpack": "^6.2.1",
     "@testing-library/jest-dom": "^6.1.5",
     "@testing-library/react": "^14.1.2",
-    "@types/react": "^18.2.45",
-    "babel-jest": "^27.5.0",
-    "babel-loader": "^8.2.5",
-    "babel-plugin-named-asset-import": "^0.3.8",
-    "babel-plugin-styled-components": "^2.0.2",
+    "@types/copyfiles": "^2",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.25",
+    "@types/react": "^18.2.46",
+    "@types/react-dom": "^18.2.18",
+    "@types/styled-components": "^5.1.34",
+    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "@typescript-eslint/parser": "^7.1.1",
     "camelcase": "^6.3.0",
+    "copyfiles": "^2.4.1",
     "dotenv": "^10.0.0",
     "dotenv-expand": "^5.1.0",
     "enhanced-resolve": "^5.9.0",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.10.0",
-    "eslint-plugin-flowtype": "^7.0.0",
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-html": "^6.2.0",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-jest": "^25.7.0",
-    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jest": "^27.2.1",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-storybook": "^0.6.15",
-    "flow-bin": "^0.169.0",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^27.5.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "jest-resolve": "^27.5.0",
     "jest-styled-components": "^7.0.8",
     "jest-watch-typeahead": "^0.6.5",
@@ -220,44 +101,22 @@
     "react-dev-utils": "^11.0.4",
     "react-test-renderer": "^18.0.0",
     "resolve": "^1.22.0",
-    "rollup": "^2.67.1",
-    "rollup-plugin-copy": "^3.4.0",
-    "rollup-plugin-includepaths": "^0.2.4",
-    "rollup-plugin-postcss": "^4.0.2",
     "semver": "^7.3.5",
-    "storybook": "^7.6.3",
+    "storybook": "^8.2.2",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "tsc-alias": "^1.8.8",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.2",
     "webpack": "^5"
   },
   "peerDependencies": {
-    "@bluframe/grapple": "^0.5.3",
-    "styled-components": "^5.3.5"
+    "@bluframe/grapple": "^1.0.0",
+    "styled-components": "^6.1.2"
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not op_mini all"
-  ],
-  "keywords": [
-    "bluframe",
-    "blublocks",
-    "react",
-    "react-components",
-    "ui-components",
-    "frontend-framework",
-    "design-system",
-    "web-development",
-    "javascript",
-    "styled-components",
-    "typography",
-    "input-fields",
-    "buttons",
-    "loading-spinner",
-    "hamburger-menu",
-    "content-markdown",
-    "radio-group",
-    "checkbox",
-    "icon",
-    "reset-button",
-    "select"
   ]
 }

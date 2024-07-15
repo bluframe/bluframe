@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hamburger renders 1`] = `
+<button
+  aria-controls="main-navigation"
+  aria-expanded="false"
+  aria-label="Toggle navigation"
+  class="sc-gtcySc kGZfzc"
+  role="menu"
+  type="button"
+>
+  <span
+    class="sc-dkXqGt czXpdt"
+  >
+    Toggle navigation
+  </span>
+  <span
+    class="sc-bdDqHD dzqzmq"
+  />
+  <span
+    class="sc-bdDqHD dzqzmq"
+  />
+  <span
+    class="sc-bdDqHD dzqzmq"
+  />
+</button>
+`;
