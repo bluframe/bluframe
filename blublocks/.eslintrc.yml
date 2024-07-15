@@ -8,11 +8,10 @@ globals:
 extends:
   - eslint:all
   - plugin:react/all
-  - plugin:flowtype/recommended
   - plugin:jest/recommended
   - plugin:prettier/recommended
 
-parser: "@babel/eslint-parser"
+parser: "@typescript-eslint/parser"
 
 parserOptions:
   ecmaFeatures:
@@ -21,11 +20,13 @@ parserOptions:
   sourceType: module
 
 plugins:
+  - "@typescript-eslint"
   - react
   - react-hooks
-  - flowtype
   - html
   - jest
+
+root: true
 
 settings:
   react:
@@ -33,7 +34,9 @@ settings:
     version: "16.13"
 
 rules:
-  no-unused-vars: 1
+  no-unused-vars:
+    - warn
+    - ignoreRestSiblings: true
   linebreak-style:
     - error
     - unix
@@ -104,3 +107,4 @@ rules:
   multiline-comment-style: 0
   jest/no-mocks-import: 0
   no-undefined: 0
+  init-declarations: 0
