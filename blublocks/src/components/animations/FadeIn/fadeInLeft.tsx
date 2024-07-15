@@ -1,8 +1,6 @@
-// @flow
+import { keyframes } from "styled-components"
 
-import { type KeyFrames, keyframes } from "styled-components"
-
-const fadeInLeft: KeyFrames = keyframes`
+const fadeInLeft = keyframes`
 0% {
     opacity: 0;
     transform: translateX(-20px);

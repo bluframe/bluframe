@@ -1,8 +1,6 @@
-// @flow
+import { keyframes } from "styled-components"
 
-import { type KeyFrames, keyframes } from "styled-components"
-
-const flipInX: KeyFrames = keyframes`
+const flipInX = keyframes`
 0% {
   -webkit-transform: perspective(400px) rotateX(90deg);
   transform: perspective(400px) rotateX(90deg);

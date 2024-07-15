@@ -1,14 +1,8 @@
-// @flow
-
-import { type ComponentProps } from "."
+import { ComponentProps } from "."
 import React from "react"
 import { Wrapper } from "./styled"
 
-const FadeIn = ({
-  children,
-  fadeIn,
-  isAnimated
-}: ComponentProps): React$Node => (
+const FadeIn = ({ children, fadeIn, isAnimated }: ComponentProps) => (
   <Wrapper $fadeIn={fadeIn} $isAnimated={isAnimated}>
     {children}
   </Wrapper>

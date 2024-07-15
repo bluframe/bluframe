@@ -1,8 +1,6 @@
-// @flow
+import { keyframes } from "styled-components"
 
-import { type KeyFrames, keyframes } from "styled-components"
-
-const bounceIn: KeyFrames = keyframes`
+const bounceIn = keyframes`
   0% {
     opacity: 0;
     transform: scale(.3);

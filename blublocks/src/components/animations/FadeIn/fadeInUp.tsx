@@ -1,8 +1,6 @@
-// @flow
+import { keyframes } from "styled-components"
 
-import { type KeyFrames, keyframes } from "styled-components"
-
-const fadeInUp: KeyFrames = keyframes`
+const fadeInUp = keyframes`
 0% {
     opacity: 0;
     transform: translateY(20px);

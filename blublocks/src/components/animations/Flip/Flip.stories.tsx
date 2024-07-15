@@ -1,5 +1,3 @@
-// @flow
-
 import Flip, { type Props } from "components/animations/Flip"
 import React from "react"
 

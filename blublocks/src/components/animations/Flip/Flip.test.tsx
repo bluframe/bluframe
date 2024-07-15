@@ -1,22 +1,21 @@
-// @flow
-
-import FadeIn from "./FadeIn"
+import { ComponentProps } from "."
+import Flip from "./Flip"
 import React from "react"
 import { render } from "tests"
 
 jest.mock(".", () => ({}))
 
-describe("FadeIn", () => {
+describe("Flip", () => {
   it("renders", () => {
-    const props = {
-      fadeIn: "Left",
+    const props: Omit<ComponentProps, "children"> = {
+      flip: "X",
       isAnimated: false
     }
 
     const { container } = render(
-      <FadeIn {...props}>
+      <Flip {...props}>
         <div />
-      </FadeIn>
+      </Flip>
     )
 
     expect(container.firstChild).toMatchSnapshot()

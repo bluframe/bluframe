@@ -1,5 +1,3 @@
-// @flow
-
 import bounceIn from "./bounceIn"
 import bounceOut from "./bounceOut"
 import fadeIn from "./fadeIn"

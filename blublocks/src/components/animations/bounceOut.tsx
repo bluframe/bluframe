@@ -1,8 +1,6 @@
-// @flow
+import { keyframes } from "styled-components"
 
-import { type KeyFrames, keyframes } from "styled-components"
-
-const bounceOut: KeyFrames = keyframes`
+const bounceOut = keyframes`
   0% {
     transform: scale(1);
   }

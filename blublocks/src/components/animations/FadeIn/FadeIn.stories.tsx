@@ -1,6 +1,4 @@
-// @flow
-
-import FadeIn, { type Props } from "components/animations/FadeIn"
+import FadeIn, { Props } from "components/animations/FadeIn"
 import React from "react"
 
 const stories = {
