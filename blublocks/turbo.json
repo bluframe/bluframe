@@ -1,0 +1,23 @@
+{
+  "extends": [
+    "//"
+  ],
+  "tasks": {
+    "build:ci": {
+      "dependsOn": [
+        "^build:ci"
+      ],
+      "outputs": [
+        "build/**"
+      ]
+    },
+    "build:cjs:ci": {
+      "dependsOn": [
+        "^build:cjs:ci"
+      ],
+      "outputs": [
+        "build/**"
+      ]
+    }
+  }
+}
