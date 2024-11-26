@@ -1,8 +1,11 @@
-import styled from "styled-components"
+/* eslint-disable no-ternary */
+
+import BaseLink from "components/Typography/Link"
 import Paragraph from "components/Typography/Paragraph"
 import { Theme } from "styles/theme"
 import colors from "styles/colors"
 import mediaQueries from "styles/mediaQueries"
+import styled from "styled-components"
 
 export const Section = styled.section`
   background: ${colors.white};
@@ -21,11 +24,37 @@ export const Image = styled.img`
   width: 80px;
 `
 
-export const Top = styled.div`
+export const Top = styled.div<{
+  $isAvatarCircle?: boolean
+  $isShowName?: boolean
+}>`
   align-items: center;
   column-gap: 20px;
   display: grid;
   grid-template-columns: 80px 1fr;
+
+  ${({ $isShowName }) =>
+    $isShowName
+      ? ""
+      : `
+grid-template-columns: auto; 
+align-items: start;
+justify-items: center;
+`}
+
+  & img {
+    border-radius: ${({ $isAvatarCircle }) => ($isAvatarCircle ? "50%" : "0")};
+    width: 80px;
+  }
+
+  ${mediaQueries.tablet} {
+    column-gap: 40px;
+  }
+`
+
+export const NameAndSocialLinks = styled.div`
+  display: grid;
+  row-gap: 10px;
 `
 
 export const Name = styled.h4`
@@ -42,13 +71,6 @@ export const Description = styled(Paragraph)`
   text-align: justify;
 `
 
-export const Link = styled.a`
-  color: ${({ color, theme }: { color?: string; theme: Theme }) =>
-    color || theme.palette.primary.main};
+export const Link = styled(BaseLink)`
   font-weight: bold;
-
-  &:hover {
-    color: ${({ color, theme }: { color?: string; theme: Theme }) =>
-    color || theme.palette.primary.main};
-  }
 `

@@ -30,7 +30,10 @@ const Button = ({
   <Wrapper
     $bold={bold}
     $expanded={expanded}
+    $hasIconEnd={Boolean(iconEnd)}
+    $hasIconStart={Boolean(iconStart)}
     $iconOnly={iconOnly}
+    $loading={loading}
     $noHoverHighlight={noHoverHighlight}
     $outlined={outlined}
     $padded={padded}
@@ -47,9 +50,9 @@ const Button = ({
     type={type}
   >
     {iconOnly ? icon : null}
-    {!iconOnly && iconStart ? iconStart : null}
+    {!iconOnly && iconStart ? iconStart : <span />}
     {iconOnly ? null : label}
-    {!iconOnly && iconEnd ? iconEnd : null}
+    {!iconOnly && iconEnd ? iconEnd : <span />}
     {loading ? <Loading contrast={!outlined} /> : null}
   </Wrapper>
 )

@@ -1,14 +1,14 @@
 /* eslint-disable no-ternary, react/jsx-no-bind */
 
 import { Button } from "./styled"
-import type { ComponentProps } from "."
+import { ComponentProps } from "."
 import Icon from "components/Icon"
-import React from "react"
 
 const EditButton = ({
   isDisabled,
   label,
   onClick,
+  secondary,
   size = "24px"
 }: ComponentProps) => (
   <Button
@@ -19,6 +19,7 @@ const EditButton = ({
     onClick={onClick}
     raised
     rounded
+    secondary={secondary}
   />
 )
 

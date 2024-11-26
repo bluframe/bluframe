@@ -1,21 +1,21 @@
+import { render, screen } from "tests"
 import Checkbox from "./Checkbox"
 import { ComponentProps } from "."
-import React from "react"
-import { render } from "tests"
 
 describe("Checkbox", () => {
   const props: ComponentProps = {
-    inputId: "apple-checkbox",
+    inputId: "apple",
     isChecked: true,
     label: "Apple",
+    labelId: "apple-label",
     name: "Fruit",
-    onClick: jest.fn(),
+    onChange: jest.fn(),
     value: "apple"
   }
 
   it("renders", () => {
-    const { container } = render(<Checkbox {...props} />)
+    render(<Checkbox {...props} />)
 
-    expect(container.firstChild).toMatchSnapshot()
+    expect(screen.getByRole("checkbox", { name: "Apple" })).toBeInTheDocument()
   })
 })

@@ -1,7 +1,6 @@
 import { render, screen } from "tests"
 import { ComponentProps } from "."
 import Icon from "./Icon"
-import React from "react"
 import ionIcons from "./ionIcons"
 
 describe("Icon", () => {

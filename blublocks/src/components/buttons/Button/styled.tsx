@@ -10,7 +10,10 @@ import styled from "styled-components"
 type Props = {
   $bold?: boolean
   $expanded?: boolean
+  $hasIconEnd: boolean
+  $hasIconStart: boolean
   $iconOnly?: boolean
+  $loading?: boolean
   $noHoverHighlight?: boolean
   $outlined?: boolean
   $padded?: boolean
@@ -82,12 +85,18 @@ export const Wrapper = styled(Reset).attrs((props: Props) => ({
   column-gap: 10px;
   cursor: ${({ disabled }: { disabled?: boolean }) =>
     disabled ? "not-allowed" : "pointer"};
-  display: flex;
+  display: grid;
   font-family: ${({ theme }: { theme: Theme }) => theme.font.family};
   font-size: ${({ $small }: { $small?: boolean }) =>
     $small ? "14px" : "16px"};
   font-weight: ${({ $bold }: { $bold?: boolean }) => ($bold ? "700" : "300")};
-  justify-content: center;
+grid-template-columns: ${({ $hasIconEnd, $hasIconStart, $loading }: Props) =>
+  $loading
+    ? "auto auto auto auto"
+    : $hasIconEnd || $hasIconStart
+    ? "auto auto auto"
+    : "auto"};
+  justify-items: center;
   line-height: 1.33;
       padding: ${({ $padded, $rounded, $small, $iconOnly }: Props) =>
         $small

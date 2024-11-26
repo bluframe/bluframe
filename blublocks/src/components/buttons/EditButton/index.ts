@@ -5,6 +5,7 @@ export interface Props {
   isDisabled?: boolean
   label: string
   onClick: MouseEventHandler<HTMLButtonElement>
+  secondary?: boolean
   size?: string
 }
 

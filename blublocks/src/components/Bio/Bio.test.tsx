@@ -1,10 +1,14 @@
+/* eslint-disable max-lines-per-function */
+
+import { render, screen } from "tests"
 import Bio from "./Bio"
-import React from "react"
-import { render } from "tests"
+import { ComponentProps } from "."
 
 describe("Bio", () => {
-  it("renders", () => {
-    const props = {
+  let props: ComponentProps
+
+  beforeEach(() => {
+    props = {
       components: {},
       description:
         "Edoardo L'Astorina has 15 years of experience in software development. Edoardo has had a major role in the new [Transport for London](https://tfl.gov.uk) site and led the development of the new [Royal Opera House](https://roh.org.uk) site. Edoardo has developed sites and apps for [Intuit](https://intuit.com), [Stint](https://stint.co), [JPC](https://thinkjpc.com), [The Crocodile](//thecroc.com) and [Miura](https://miura.gi) Edoardo started [Blu Frame](https://blufra.me) to help companies develop sites that stand out, load fast and are easy for users to access Edoardo is passionate about risotto, Terrence Malick movies, Oasis songs and rowing",
@@ -16,9 +20,45 @@ describe("Bio", () => {
       ),
       name: "Edoardo L'Astorina"
     }
+  })
 
-    const { container } = render(<Bio {...props} />)
+  it("renders", () => {
+    render(<Bio {...props} />)
 
-    expect(container.firstChild).toMatchSnapshot()
+    expect(
+      screen.getByRole("region", { name: "Edoardo L'Astorina" })
+    ).toBeInTheDocument()
+
+    expect(
+      screen.getByRole("img", { name: "Edoardo L'Astorina" })
+    ).toBeInTheDocument()
+    expect(
+      screen.getByRole("heading", { level: 4, name: "Edoardo L'Astorina" })
+    ).toBeInTheDocument()
+  })
+
+  it("renders social links", () => {
+    props.socialLinks = {
+      instagram: "mightychroma"
+    }
+
+    render(<Bio {...props} />)
+
+    expect(
+      screen.getByRole("list", { name: "Social Links" })
+    ).toBeInTheDocument()
+    expect(
+      screen.getByRole("listitem", { name: "Instagram" })
+    ).toBeInTheDocument()
+    expect(screen.getByTitle("Instagram")).toBeInTheDocument()
+    expect(screen.getByRole("link", { name: "Instagram" })).toBeInTheDocument()
+    expect(screen.getByRole("link", { name: "Instagram" })).toHaveAttribute(
+      "href",
+      "https://instagram.com/mightychroma"
+    )
+    expect(screen.getByRole("link", { name: "Instagram" })).toHaveAttribute(
+      "target",
+      "__blank"
+    )
   })
 })
