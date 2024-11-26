@@ -8,6 +8,7 @@ export interface Props {
   disabled?: boolean
   defaultChecked?: boolean
   inputId?: string
+  label?: string
   name: string
   // eslint-disable-next-line no-unused-vars
   onChange?: (checked: boolean) => void
@@ -18,6 +19,7 @@ export interface ComponentProps extends Omit<Props, "onChange"> {
   labelId?: string
   onChange: ChangeEventHandler<HTMLInputElement>
   onKeyDown: KeyboardEventHandler<HTMLLabelElement>
+  switchId?: string
 }
 
 const usePrepareComponent = (props: Props): ComponentProps => {
@@ -32,8 +34,11 @@ const usePrepareComponent = (props: Props): ComponentProps => {
   }
 
   const labelId = props.inputId && `${props.inputId}-label`
+  const switchId = props.inputId && `${props.inputId}-switch`
 
   const onChange: ChangeEventHandler<HTMLInputElement> = (event) => {
+    event.stopPropagation()
+
     props.onChange?.(event.target.checked)
   }
 
@@ -49,7 +54,8 @@ const usePrepareComponent = (props: Props): ComponentProps => {
     ...props,
     labelId,
     onChange,
-    onKeyDown
+    onKeyDown,
+    switchId
   }
 }
 

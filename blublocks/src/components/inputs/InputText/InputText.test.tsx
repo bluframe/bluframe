@@ -1,9 +1,8 @@
 /* eslint-disable max-lines-per-function */
 
 import { fireEvent, render } from "tests"
-import type { ComponentProps } from "."
+import { ComponentProps } from "."
 import InputText from "./InputText"
-import React from "react"
 
 describe("InputText", () => {
   const props: ComponentProps = {

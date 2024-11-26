@@ -1,7 +1,6 @@
+import { render, screen } from "tests"
 import { ComponentProps } from "."
-import React from "react"
 import Select from "./Select"
-import { render } from "tests"
 
 describe("Select", () => {
   const props: ComponentProps = {
@@ -29,18 +28,16 @@ describe("Select", () => {
   }
 
   it("renders with defaultValue", () => {
-    const { getByText } = render(
-      <Select {...props} defaultValue="orange" displayValue="Orange" />
-    )
-    const displayValue = getByText("Orange")
-    expect(displayValue).toBeInTheDocument()
+    render(<Select {...props} defaultValue="orange" displayValue="Orange" />)
+
+    expect(screen.getByText("Orange")).toBeInTheDocument()
   })
 
   it("renders with value", () => {
-    const { getByText } = render(
+    render(
       <Select {...props} displayValue="Apple" isControlled value="apple" />
     )
-    const displayValue = getByText("Apple")
-    expect(displayValue).toBeInTheDocument()
+
+    expect(screen.getByText("Apple")).toBeInTheDocument()
   })
 })

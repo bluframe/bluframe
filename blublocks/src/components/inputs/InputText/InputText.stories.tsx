@@ -135,4 +135,11 @@ export const LabelIcon: Story = {
   }
 }
 
+export const Loading: Story = {
+  args: {
+    ...args,
+    loading: true
+  }
+}
+
 export default meta

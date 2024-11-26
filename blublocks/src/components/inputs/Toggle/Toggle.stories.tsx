@@ -25,6 +25,14 @@ export const DefaultChecked: Story = {
   }
 }
 
+export const Label: Story = {
+  ...Default,
+  args: {
+    ...Default.args,
+    label: "Toggle Label"
+  }
+}
+
 export const ControlledChecked: Story = {
   ...Default,
   args: {

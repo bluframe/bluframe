@@ -14,6 +14,10 @@ export const Input = styled.input`
     left: 22px;
   }
 
+  &:checked + label {
+    background: ${({ theme }: { theme: Theme }) => theme.palette.primary.main};
+  }
+
   &:disabled + label {
     background: ${({ theme }: { theme: Theme }) => theme.palette.disabled.main};
     cursor: not-allowed;
@@ -21,11 +25,28 @@ export const Input = styled.input`
   }
 `
 
+export const SwitchAndLabel = styled.div<{ $hasLabel: boolean }>`
+  display: grid;
+  ${({ $hasLabel }) =>
+    $hasLabel
+      ? `
+align-items: center;
+column-gap: 4px;
+grid-template-columns: auto 1fr;`
+      : ""}
+`
+
 export const Label = styled.label`
+  color: ${({ theme }: { theme: Theme }) => theme.palette.text.main};
+  cursor: pointer;
+  font-size: 16px;
+`
+
+export const Switch = styled.label`
   position: relative;
   width: 40px;
   height: 20px;
-  background: ${({ theme }: { theme: Theme }) => theme.palette.primary.main};
+  background: ${({ theme }: { theme: Theme }) => theme.palette.disabled.main};
   border-radius: 20px;
   cursor: pointer;
 

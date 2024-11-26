@@ -1,7 +1,10 @@
 /* eslint-disable no-ternary, no-nested-ternary */
 
 import { Theme } from "styles/theme"
+import { rgba } from "polished"
 import styled from "styled-components"
+
+const DISABLED_ALPHA = 0.38
 
 export const TextAreaWrapper = styled.div`
   display: flex;
@@ -16,7 +19,10 @@ export const TextAreaInput = styled.textarea<{
   $error?: boolean
   $success?: boolean
 }>`
-  background: ${({ theme }: { theme: Theme }) => theme.palette.text.contrast};
+  background: ${({ disabled, theme }: { disabled?: boolean; theme: Theme }) =>
+    disabled
+      ? rgba(theme.palette.disabled.main, DISABLED_ALPHA)
+      : theme.palette.text.contrast};
   border: 0;
   border-bottom: 1px solid
     ${({

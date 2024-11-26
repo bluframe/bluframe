@@ -5,11 +5,13 @@ import {
   InfoText,
   Input,
   Label,
+  LoadingWrapper,
   SuccessText,
   Wrapper
 } from "./styled"
 import { ForwardedRef, forwardRef } from "react"
 import { ComponentProps } from "."
+import Loading from "components/Loading"
 
 const InputText = forwardRef(
   (
@@ -26,6 +28,7 @@ const InputText = forwardRef(
       isFullBorder,
       label,
       labelId,
+      loading,
       max,
       min,
       name,
@@ -34,6 +37,7 @@ const InputText = forwardRef(
       onInput,
       onKeyDown,
       required,
+      size,
       step,
       success,
       successText,
@@ -47,12 +51,13 @@ const InputText = forwardRef(
         {...inputProps}
         $error={error}
         $hasContent={hasContent}
+        $isFullBorder={isFullBorder}
+        $loading={loading}
         $success={success}
         aria-invalid={error ? "true" : "false"}
         defaultValue={defaultValue}
         disabled={disabled}
         id={inputId}
-        isFullBorder={isFullBorder}
         max={max}
         min={min}
         name={name}
@@ -62,6 +67,7 @@ const InputText = forwardRef(
         onKeyDown={onKeyDown}
         ref={ref}
         required={required}
+        size={size}
         step={step}
         type={type}
         value={value}
@@ -69,6 +75,13 @@ const InputText = forwardRef(
       <Label htmlFor={inputId} id={labelId} isFullBorder={isFullBorder}>
         {label}
       </Label>
+
+      {loading ? (
+        <LoadingWrapper>
+          <Loading />
+        </LoadingWrapper>
+      ) : null}
+
       {errorText ? <ErrorText role="alert">{errorText}</ErrorText> : null}
       {infoText ? <InfoText aria-live="polite">{infoText}</InfoText> : null}
       {successText ? (
