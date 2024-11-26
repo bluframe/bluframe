@@ -10,6 +10,7 @@ extends:
   - plugin:react/all
   - plugin:jest/recommended
   - plugin:prettier/recommended
+  - "plugin:@typescript-eslint/eslint-recommended"
 
 parser: "@typescript-eslint/parser"
 
