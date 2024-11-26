@@ -608,6 +608,35 @@ function App() {
 }
 ```
 
+### Breadcrumbs
+
+The `Breadcrumbs` component is a navigation aid that helps users understand and navigate through a website. It typically shows the user's current location within the website's hierarchy and allows quick navigation back to previous sections.
+
+#### Props
+
+- `LinkComponent`: (optional) `React.ComponentType<{children: React.ReactNode; href: string}` - A custom link component
+- `className`: (optional) `string` - The class name for the breadcrumbs wrapper.
+- `items`: `Array<{ label: string, href?: string }>` - An array of breadcrumb items. Each item should have a `label` and may have an `href` for navigation.
+
+#### Usage
+
+```js
+import Breadcrumbs from "@bluframe/blublocks/Breadcrumbs"
+
+function App() {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Category", href: "/category" },
+    { label: "Subcategory", href: "/category/subcategory" },
+    { label: "Current Page" }
+  ]
+
+  return <Breadcrumbs items={breadcrumbItems} />
+}
+```
+
+The `Breadcrumbs` component accepts an array of items, where each item has a `label` and optionally an `href`. If an item has an `href`, it will be rendered as a link. If not, it will be rendered as plain text.
+
 ### Modal
 
 A modal component to manage and display overlay content.
@@ -636,6 +665,44 @@ function App() {
         <p>Modal Content!</p>
       </Modal>
     </div>
+  )
+}
+```
+
+### FormModal
+
+The `FormModal` component is used to display modals with form content. It supports customizable children, and actions for submission and cancellation. The component also accepts props to control its state (e.g., disabled or loading).
+
+#### Props
+
+- `cancelLabel`: (optional) string - The label for the cancel button. Defaults to `"Cancel"`.
+- `children`: React.ReactNode - The content of the modal. Usually, this will include form fields and other elements.
+- `isDisabled`: (optional) boolean - If `true`, the submit button will be disabled. Defaults to `false`.
+- `isLoading`: (optional) boolean - If `true`, the submit button will show a loading spinner and be disabled. Defaults to `false`.
+- `onClose`: () => void - The callback that is fired when the cancel button is clicked.
+- `onSubmit`: FormEventHandler<HTMLFormElement> - The callback that is fired when the form is submitted.
+- `submitLabel`: (optional) string - The label for the submit button. Defaults to `"Submit"`.
+
+#### Usage
+
+```js
+import FormModal from "@bluframe/blublocks/FormModal"
+import InputText from "@bluframe/blublocks/InputText"
+
+function App() {
+  const handleClose = () => {
+    console.log("Modal closed")
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    console.log("Form submitted")
+  }
+
+  return (
+    <FormModal onClose={handleClose} onSubmit={handleSubmit}>
+      <InputText label="Name" name="name" />
+    </FormModal>
   )
 }
 ```
@@ -689,7 +756,6 @@ Alternatively, the avatar prop can accept a React component:
 
 ```javascript
 import CustomAvatar from "./CustomAvatar"
-
 ;<Bio
   avatar={<CustomAvatar />}
   description="This is an awesome bio!"
@@ -731,6 +797,112 @@ function App() {
       description="This is my awesome bio!"
       name="John Doe"
     />
+  )
+}
+```
+
+### Carousel
+
+A Carousel component to display a collection of content in a sliding view.
+
+#### Props
+
+- `children`: React.ReactNode - The slides to display within the carousel.
+- `className`: (optional) string - The class name for the carousel.
+- `slidesToShow`: (optional) number - The number of slides to show at a time. Defaults to `1`.
+- `slidesToScroll`: (optional) number - The number of slides to scroll on each action. Defaults to `1`.
+
+#### Usage
+
+```js
+import { useState } from "react"
+import Carousel from "@bluframe/blublocks/Carousel"
+
+function App() {
+  const slides = [
+    <img
+      key="1"
+      src="https://source.unsplash.com/random/200x200?sig=1"
+      alt="slide 1"
+    />,
+    <img
+      key="2"
+      src="https://source.unsplash.com/random/200x200?sig=2"
+      alt="slide 2"
+    />,
+    <img
+      key="3"
+      src="https://source.unsplash.com/random/200x200?sig=3"
+      alt="slide 3"
+    />,
+    <img
+      key="4"
+      src="https://source.unsplash.com/random/200x200?sig=4"
+      alt="slide 4"
+    />
+  ]
+
+  return (
+    <Carousel slidesToShow={3} slidesToScroll={1}>
+      {slides}
+    </Carousel>
+  )
+}
+```
+
+This will set up a Carousel component that shows 3 slides at a time and scrolls one slide upon each action. The `children` prop is used to pass in the slides which can be any React node like images or custom components.
+
+#### Customization
+
+The `Carousel` component is designed to be highly customizable. You can adjust the number of slides displayed at one time and how many slides to scroll with each action using the `slidesToShow` and `slidesToScroll` props respectively. Additionally, you can customize the appearance of the carousel by adding your own class names or by using styled-components to override the default styles.
+
+Here's an example of how to create a custom styled Carousel:
+
+```js
+import styled from "styled-components"
+import Carousel from "@bluframe/blublocks/Carousel"
+
+const CustomCarousel = styled(Carousel)`
+  background-color: #f8f9fa;
+  border-radius: 8px;
+`
+
+export default CustomCarousel
+```
+
+And then, use your custom Carousel in your app:
+
+```js
+import CustomCarousel from "./CustomCarousel"
+
+function App() {
+  const slides = [
+    <img
+      key="1"
+      src="https://source.unsplash.com/random/200x200?sig=1"
+      alt="slide 1"
+    />,
+    <img
+      key="2"
+      src="https://source.unsplash.com/random/200x200?sig=2"
+      alt="slide 2"
+    />,
+    <img
+      key="3"
+      src="https://source.unsplash.com/random/200x200?sig=3"
+      alt="slide 3"
+    />,
+    <img
+      key="4"
+      src="https://source.unsplash.com/random/200x200?sig=4"
+      alt="slide 4"
+    />
+  ]
+
+  return (
+    <CustomCarousel slidesToShow={2} slidesToScroll={1}>
+      {slides}
+    </CustomCarousel>
   )
 }
 ```

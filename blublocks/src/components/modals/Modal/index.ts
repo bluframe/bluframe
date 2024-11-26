@@ -4,6 +4,7 @@ import React from "react"
 export interface Props {
   children: React.ReactNode
   isOpen: boolean
+  name?: string
   onClose: () => void
 }
 

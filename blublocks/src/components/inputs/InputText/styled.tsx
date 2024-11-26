@@ -2,6 +2,9 @@
 
 import styled, { css } from "styled-components"
 import { Theme } from "styles/theme"
+import { rgba } from "polished"
+
+const DISABLED_ALPHA = 0.38
 
 export const Wrapper = styled.div`
   display: grid;
@@ -26,11 +29,22 @@ const labelShrinkCss = css`
 export const Input = styled.input.attrs({ placeholder: " " })<{
   $error?: boolean
   $hasContent: boolean
+  $isFullBorder?: boolean
+  $loading?: boolean
   $success?: boolean
-  isFullBorder?: boolean
 }>`
-  ${({ $error, $success, isFullBorder, theme }) =>
-    isFullBorder
+  background-color: ${({
+    disabled,
+    theme
+  }: {
+    disabled?: boolean
+    theme: Theme
+  }) =>
+    disabled
+      ? rgba(theme.palette.disabled.main, DISABLED_ALPHA)
+      : theme.palette.text.contrast};
+  ${({ $error, $success, $isFullBorder, theme }) =>
+    $isFullBorder
       ? `border: 1px solid ${
           $error
             ? theme.palette.error.main
@@ -48,19 +62,20 @@ border-bottom: 1px solid ${
             : theme.colors.gray.light
         };
   `};
-  border-radius: 4px;
+  ${({ $isFullBorder }) => ($isFullBorder ? "border-radius: 4px" : "")};
   box-shadow: none;
   color: ${({ disabled, theme }: { disabled?: boolean; theme: Theme }) =>
     disabled ? theme.palette.text.light : theme.palette.text.main};
   font-size: 16px;
-  height: ${({ isFullBorder }) => (isFullBorder ? "44px" : "50px")};
+  height: ${({ $isFullBorder }) => ($isFullBorder ? "44px" : "50px")};
   margin: 0;
-  padding: ${({ isFullBorder }) => (isFullBorder ? "8px 16px" : "16px 16px 0")};
+  padding: ${({ $isFullBorder, $loading }) =>
+    $loading ? "16px 25px 0 16px" : $isFullBorder ? "8px 16px" : "16px 16px 0"};
   width: 100%;
 
   &:focus {
-    ${({ isFullBorder, theme }) =>
-      isFullBorder
+    ${({ $isFullBorder, theme }) =>
+      $isFullBorder
         ? `border: 1px solid ${theme.palette.primary.main}`
         : `
   border: none;
@@ -107,4 +122,10 @@ export const InfoText = styled.div`
 export const SuccessText = styled.div`
   color: ${({ theme }: { theme: Theme }) => theme.palette.success.main};
   font-size: 12px;
+`
+
+export const LoadingWrapper = styled.div`
+  position: absolute;
+  right: 5px;
+  top: 25px;
 `

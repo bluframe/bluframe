@@ -12,16 +12,21 @@ describe("Toggle", () => {
       checked: false,
       disabled: false,
       inputId: "toggle-id",
+      label: "Toggle",
+      labelId: "toggle-label",
       name: "toggle-name",
       onChange: jest.fn(),
       onKeyDown: jest.fn()
     }
   })
 
-  it("renders with the correct initial state", () => {
+  it("renders", () => {
     render(<Toggle {...props} />)
 
-    expect(screen.getByRole("switch")).toHaveAttribute("aria-checked", "false")
+    expect(screen.getByRole("switch", { name: "Toggle" })).toHaveAttribute(
+      "aria-checked",
+      "false"
+    )
   })
 
   it("toggles the checked state when clicked", () => {

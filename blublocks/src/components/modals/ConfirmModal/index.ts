@@ -2,6 +2,8 @@ import ConfirmModal from "./ConfirmModal"
 import React from "react"
 
 export interface Props {
+  cancelLabel?: string
+  confirmLabel?: string
   isDisabled?: boolean
   isLoading?: boolean
   onClose: () => void

@@ -23,3 +23,7 @@ storybook-static
 
 # Misc
 .cache
+*.tsbuildinfo
+
+# Turbo Repo
+.turbo

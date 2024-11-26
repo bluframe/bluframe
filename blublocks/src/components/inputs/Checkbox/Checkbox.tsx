@@ -9,17 +9,23 @@ const Checkbox = ({
   label,
   labelId,
   name,
-  onClick,
+  onChange,
   value
 }: ComponentProps) => (
-  <Wrapper onClick={onClick}>
-    <Input defaultChecked={isChecked} name={name} value={value} />
+  <Wrapper>
+    <Input
+      defaultChecked={isChecked}
+      id={inputId}
+      name={name}
+      onChange={onChange}
+      value={value}
+    />
 
     <StyledCheckbox
+      $checked={isChecked}
       aria-checked={isChecked}
       aria-labelledby={labelId}
-      checked={isChecked}
-      id={inputId}
+      htmlFor={inputId}
       role="checkbox"
     >
       <Icon viewBox="0 0 24 24">
@@ -27,7 +33,9 @@ const Checkbox = ({
       </Icon>
     </StyledCheckbox>
 
-    <Label id={labelId}>{label}</Label>
+    <Label htmlFor={inputId} id={labelId}>
+      {label}
+    </Label>
   </Wrapper>
 )
 

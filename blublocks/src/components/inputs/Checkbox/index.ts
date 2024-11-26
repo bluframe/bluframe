@@ -1,4 +1,4 @@
-import React, { MouseEventHandler } from "react"
+import React, { ChangeEventHandler } from "react"
 import Checkbox from "./Checkbox"
 import { prepareComponent } from "@bluframe/grapple"
 
@@ -16,20 +16,22 @@ export interface Props {
 
 export interface ComponentProps extends Omit<Props, "onChange"> {
   labelId?: string
-  onClick: MouseEventHandler<HTMLElement>
+  onChange: ChangeEventHandler<HTMLInputElement>
 }
 
 const usePrepareComponent = (props: Props): ComponentProps => {
   const labelId = props.inputId && `${props.inputId}-label`
 
-  const onClick = () => {
+  const onChange: ChangeEventHandler<HTMLInputElement> = (event) => {
+    event.stopPropagation()
+
     props.onChange(props.value)
   }
 
   return {
     ...props,
     labelId,
-    onClick
+    onChange
   }
 }
 

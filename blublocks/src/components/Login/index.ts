@@ -1,3 +1,5 @@
+"use client"
+
 import { FormEventHandler, RefObject, useRef } from "react"
 import Login from "./Login"
 import prepareComponent from "@bluframe/grapple/prepareComponent"

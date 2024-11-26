@@ -1,0 +1,99 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ]
+    },
+    "build:all": {
+      "dependsOn": [
+        "^build:all"
+      ]
+    },
+    "build:ci": {
+      "dependsOn": [
+        "^build:ci"
+      ]
+    },
+    "build:cjs": {
+      "dependsOn": [
+        "^build:cjs"
+      ]
+    },
+    "build:cjs:ci": {
+      "dependsOn": [
+        "^build:cjs:ci"
+      ]
+    },
+    "build:esm": {
+      "dependsOn": [
+        "^build:esm"
+      ]
+    },
+    "build:esm:ci": {
+      "dependsOn": [
+        "^build:esm"
+      ]
+    },
+    "build:types": {
+      "dependsOn": [
+        "^build:types"
+      ]
+    },
+    "flow": {
+      "dependsOn": [
+        "^flow"
+      ]
+    },
+    "flow:ci": {
+      "dependsOn": [
+        "^flow:ci"
+      ]
+    },
+    "lint": {
+      "dependsOn": [
+        "^lint"
+      ]
+    },
+    "lint:ci": {
+      "dependsOn": [
+        "^lint:ci"
+      ]
+    },
+    "test": {
+      "dependsOn": [
+        "^test"
+      ]
+    },
+    "test:ci": {
+      "dependsOn": [
+        "^test:ci"
+      ]
+    },
+    "test:e2e:ci": {
+      "dependsOn": [
+        "^test:e2e:ci"
+      ]
+    },
+    "test:unit:ci": {
+      "dependsOn": [
+        "^test:unit:ci"
+      ]
+    },
+    "type-check": {
+      "dependsOn": [
+        "^type-check"
+      ]
+    },
+    "type-check:ci": {
+      "dependsOn": [
+        "^type-check:ci"
+      ]
+    },
+    "dev": {
+      "persistent": true,
+      "cache": false
+    }
+  }
+}

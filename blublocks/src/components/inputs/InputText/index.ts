@@ -1,3 +1,5 @@
+"use client"
+
 import React, {
   ChangeEvent,
   FocusEvent,
@@ -33,6 +35,7 @@ export interface Props {
   }
   isFullBorder?: boolean
   label: React.ReactNode
+  loading?: boolean
   max?: number
   min?: number
   // eslint-disable-next-line no-unused-vars
@@ -44,6 +47,7 @@ export interface Props {
   name: string
   ref?: ForwardedRef<HTMLInputElement>
   required?: boolean
+  size?: number
   step?: string
   success?: boolean
   successText?: string
