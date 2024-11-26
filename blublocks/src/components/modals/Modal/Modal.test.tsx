@@ -1,7 +1,8 @@
-import { fireEvent, render } from "tests"
+/* eslint-disable max-lines-per-function */
+
+import { fireEvent, render, screen } from "tests"
 import { ComponentProps } from "."
 import Modal from "./Modal"
-import React from "react"
 
 describe("Modal component", () => {
   let props: ComponentProps = {
@@ -11,8 +12,31 @@ describe("Modal component", () => {
   }
 
   it("renders modal correctly with props", () => {
-    const { getByRole } = render(<Modal {...props} />)
-    expect(getByRole("dialog")).toHaveTextContent("Modal Content")
+    render(<Modal {...props} />)
+
+    expect(
+      screen.getByRole("presentation", { name: "Modal" })
+    ).toBeInTheDocument()
+
+    expect(screen.getByRole("dialog", { name: "Dialog" })).toHaveTextContent(
+      "Modal Content"
+    )
+  })
+
+  it("renders aria-label from name", () => {
+    props = {
+      ...props,
+      name: "Content"
+    }
+
+    render(<Modal {...props} />)
+
+    expect(
+      screen.getByRole("presentation", { name: "Content Modal" })
+    ).toBeInTheDocument()
+    expect(
+      screen.getByRole("dialog", { name: "Content Dialog" })
+    ).toBeInTheDocument()
   })
 
   it("doesn't modal when not open", () => {
@@ -22,20 +46,26 @@ describe("Modal component", () => {
       onClose: jest.fn()
     }
 
-    const { queryByRole } = render(<Modal {...props} />)
-    expect(queryByRole("dialog")).toBeNull()
+    render(<Modal {...props} />)
+
+    expect(screen.queryByRole("dialog")).toBeNull()
   })
 
   it("fires the onClose prop when the close button is clicked", () => {
-    const { getByLabelText } = render(<Modal {...props} />)
-    const closeButton = getByLabelText("Close Dialog")
+    render(<Modal {...props} />)
+
+    const closeButton = screen.getByLabelText("Close Dialog")
+
     fireEvent.click(closeButton)
+
     expect(props.onClose).toHaveBeenCalled()
   })
 
   it("fires the onClose prop when clicking outside modal content", () => {
     const { container } = render(<Modal {...props} />)
+
     fireEvent.click(container.firstChild)
+
     expect(props.onClose).toHaveBeenCalled()
   })
 })

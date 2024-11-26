@@ -1,14 +1,19 @@
-/* eslint-disable react/jsx-no-bind */
+/* eslint-disable react/jsx-no-bind, no-ternary */
 
 import { Container, Content, Top, Wrapper } from "./styled"
 import Button from "components/buttons/Button"
-import type { ComponentProps } from "."
+import { ComponentProps } from "."
 import Icon from "components/Icon"
-import React from "react"
 
-const Modal = ({ children, isOpen, onClose }: ComponentProps) => (
-  <Wrapper $isOpen={isOpen} onClick={onClose} role="presentation">
+const Modal = ({ children, isOpen, name, onClose }: ComponentProps) => (
+  <Wrapper
+    $isOpen={isOpen}
+    aria-label={name ? `${name} Modal` : "Modal"}
+    onClick={onClose}
+    role="presentation"
+  >
     <Container
+      aria-label={name ? `${name} Dialog` : "Dialog"}
       aria-modal="true"
       onClick={(event) => event.stopPropagation()}
       role="dialog"

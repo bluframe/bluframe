@@ -3,9 +3,10 @@
 import { Buttons, Content, Message } from "./styled"
 import Button from "components/buttons/Button"
 import { ComponentProps } from "."
-import React from "react"
 
 const ConfirmModal = ({
+  cancelLabel,
+  confirmLabel,
   isDisabled,
   isLoading,
   message,
@@ -17,13 +18,13 @@ const ConfirmModal = ({
     <Buttons>
       <Button
         disabled={isDisabled || isLoading}
-        label="Cancel"
+        label={cancelLabel ?? "Cancel"}
         onClick={onClose}
         outlined
       />
       <Button
         disabled={isDisabled || isLoading}
-        label="Confirm"
+        label={confirmLabel ?? "Confirm"}
         loading={isLoading}
         onClick={onConfirm}
       />
